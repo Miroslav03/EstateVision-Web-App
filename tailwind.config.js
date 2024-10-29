@@ -58,8 +58,9 @@ export default {
                 },
             },
             fontFamily: {
-                serif: ["Times New Roman", "serif"],
+                main: ["Times New Roman", "serif"],
             },
+            
         },
     },
     plugins: [],
