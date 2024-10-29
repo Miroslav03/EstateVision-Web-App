@@ -1,7 +1,7 @@
 export default function HeroSection2() {
     return (
         <>
-            <section className="w-full flex flex-wrap h-[650px] mt-8">
+            <section className="w-full flex flex-wrap min-h-[650px] mt-8">
                 <div className="grow max-w-[50%] flex flex-col items-center justify-center">
                     <div className="max-w-[75%]">
                         <div className="flex items-center">

@@ -9,7 +9,7 @@ export default function Navigation() {
   return (
     <>
       <BigMenu isOpen={isOpen} setIsOpen={setIsOpen}/>
-      <div className="w-full z-40 flex items-center py-5">
+      <div className="w-full absolute top-0 z-40 flex items-center py-5">
         {/* Logo container */}
         <div className="flex items-center justify-start sm:justify-center w-80 ps-4 sm:ps-0">
           <img
