@@ -6,4 +6,12 @@
     .black-bg {
         background-color: rgba(0, 0, 0, 0.3);
     }
+    .test {
+        border-radius: 100% 20% 45% 58% / 42% 44% 50% 80%;
+    }
+    .test1 {
+        background-image: radial-gradient(white 1px, transparent 0);
+        background-size: 40px 40px;
+        background-position: -19px -19px;
+    }
 }
