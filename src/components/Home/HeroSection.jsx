@@ -31,7 +31,7 @@ export default function HeroSection() {
                 <img
                     src="k1-2.jpg"
                     alt=""
-                    className="h-full object-cover z-10 border-l-8 border-yellow-500"
+                    className="h-full object-cover z-10 border-l-8 border-yellow-400"
                 />
             </div>
         </div>
