@@ -1,9 +1,10 @@
-import Navigation from "./components/Navigation/Navigation";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
 
 export default function App() {
     return (
-        <main className="w-full absolute min-h-screen bg-dark-500 font-main overflow-x-hidden">
-            <Navigation />
-        </main>
-    )
+        <Routes>
+            <Route path="/" Component={Home}/>
+        </Routes>
+    );
 }

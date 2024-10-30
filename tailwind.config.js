@@ -58,7 +58,7 @@ export default {
                 },
             },
             fontFamily: {
-                main: ["Times New Roman", "serif"],
+                main: ["Lora", "serif"],
             },
             
         },
