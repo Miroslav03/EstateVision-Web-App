@@ -11,7 +11,7 @@ export default function ServiceSection() {
     ];
 
     return (
-        <div className="h-screen flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 ">
+        <div className="h-[110vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 ">
             <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-start px-6">
                 <div className="border-b-8 border-yellow-500">
                     <h2 className="text-6xl font-semibold mt-16 text-white mb-4">
@@ -38,10 +38,10 @@ export default function ServiceSection() {
             </div>
 
             <div className="flex gap-6 w-full max-w-[90%] lg:max-w-[90%] transition-all duration-300 mt-8 ">
-                {["k.png", "3dmodel.jpg", "drone.jpg"].map((img, index) => (
+                {["k.png", "3dmodel.jpg", "drone1.jpg"].map((img, index) => (
                     <div
                         key={index}
-                        className={`relative bg-white h-[75vh] shadow-lg overflow-hidden transform transition-all duration-300 ${
+                        className={`relative bg-white h-[75vh] shadow-lg overflow-hidden transform transition-all duration-300 hover:border-l-8 border-yellow-500 ${
                             hoveredIndex === index
                                 ? index === 1
                                     ? "flex-[1.2]"
