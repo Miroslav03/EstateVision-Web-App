@@ -1,7 +1,7 @@
 export default function HeroSection() {
     return (
         <div className="h-screen flex sm:flex-col">
-            <div className="w-[55%] bg-dark-500 flex justify-center items-center flex-col sm:w-[100%] sm:h-screen">
+            <div className="w-[55%]  bg-gradient-to-r  from-dark-700 to-dark-600 flex justify-center items-center flex-col sm:w-[100%] sm:h-screen">
                 <div className="flex flex-col items-start px-[4.5rem] sm:px-0">
                     <h1 className="text-white font-main text-[5rem] leading-tight sm:text-[3.4rem] sm:leading-[1] sm:px-[1.5rem] font-semibold ">
                         Откроете визията и завършете презентацията си
