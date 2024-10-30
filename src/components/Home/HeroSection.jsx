@@ -23,7 +23,7 @@ export default function HeroSection() {
       </div>
       <div className="w-[50%] hidden h-full lg:flex overflow-hidden relative">
         <div className="w-full h-full z-20 absolute bg-black opacity-30"></div>
-        <img src="k1-2.jpg" alt="" className="h-full object-cover z-10" />
+        <img src="k1-2.jpg" alt="" className="h-full object-cover z-10 border-l-8 border-yellow-500" />
       </div>
     </div>
   );
