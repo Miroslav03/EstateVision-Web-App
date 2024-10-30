@@ -48,8 +48,8 @@ export default function ServiceSection() {
                         } ${
                             hoveredIndex === index
                                 ? index === 1
-                                    ? "flex-[1.2]"
-                                    : "flex-[1.4]"
+                                    ? "flex-[1.4]"
+                                    : "flex-[1.5]"
                                 : hoveredIndex === 1 && index !== 1
                                 ? "flex-[0.9]"
                                 : "flex-1"
@@ -82,7 +82,7 @@ export default function ServiceSection() {
                             <p className="text-xl sm:text-2xl font-semibold">
                                 {hoverText[index]}
                             </p>
-                            <div className="h-[0.1rem] sm:h-1 bg-yellow-500 mt-2 w-[100%] sm:w-full"></div>
+                            <div className="h-[0.1rem] sm:h-1 bg-yellow-500 mt-2 w-[100%] sm:w-full "></div>
                         </div>
                     </div>
                 ))}
