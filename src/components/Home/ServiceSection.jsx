@@ -64,7 +64,13 @@ export default function ServiceSection() {
                                 hoveredIndex === index ? "scale-105" : ""
                             }`}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-dark-700 to-transparent opacity-40 transition-opacity duration-300"></div>
+                        <div
+                            className={`absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent transition-opacity duration-300 ${
+                                hoveredIndex === index
+                                    ? "opacity-30"
+                                    : "opacity-80"
+                            }`}
+                        ></div>
 
                         <div
                             className={`absolute bottom-4 left-4 text-white mb-2 sm:mb-8 ml:2 sm:ml-5 transition-all duration-300 transform ${
