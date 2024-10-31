@@ -4,6 +4,7 @@ import HeroSection2 from "../../components/Home/HeroSection2";
 import ServiceSection from "../../components/Home/ServiceSection";
 import Navigation from "../../components/Navigation/Navigation";
 import LiveDemoSection from "../../components/Home/LiveDemoSection";
+import StepByStep from "../../components/Home/StepByStep";
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
             <Navigation />
             <HeroSection />
             <LiveDemoSection />
+            <StepByStep />
             <ServiceSection />
         </main>
     );
