@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export default function StaticPhotography() {
     return (
-        <div className="h-[90vh] flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 border-t-8 border-yellow-500">
+        <div className="h-[90vh] flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 border-t-[5px] border-yellow-500">
             <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-end gap-4 mb-10">
-                <div className="border-b-8 border-yellow-500">
+                <div className="border-b-[4px] border-yellow-500">
                     <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
                         Потопи се в света на фотографията
                     </h2>
