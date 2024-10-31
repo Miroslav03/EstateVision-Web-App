@@ -11,7 +11,7 @@ export default function ServiceSection() {
     ];
 
     return (
-        <div className="h-[110vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500">
+        <div className="h-[110vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 border-t-8 border-yellow-500">
             <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-start ">
                 <div className="border-b-8 border-yellow-500">
                     <h2 className="text-4xl sm:text-6xl font-semibold mt-16 text-white mb-4">

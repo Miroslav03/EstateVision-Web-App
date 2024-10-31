@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function StaticPhotography() {
     return (
-        <div className="h-[90vh] flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8">
+        <div className="h-[90vh] flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 border-t-8 border-yellow-500">
             <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-end gap-4 mb-10">
                 <div className="border-b-8 border-yellow-500">
                     <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
@@ -15,9 +15,7 @@ export default function StaticPhotography() {
                     </p>
                 </div>
             </div>
-            {/* First Section: Images and Swedish Text */}
-            <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-row items-center gap-32">
-                {/* Images on the left */}
+            <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-row items-center gap-32 mb-20">
                 <div className="flex relative w-1/2 justify-end">
                     <img
                         src="/k2.png"
@@ -31,7 +29,6 @@ export default function StaticPhotography() {
                     />
                 </div>
 
-                {/* Text on the right */}
                 <div className="flex flex-col items-start w-1/2">
                     <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
                         Присъствие чрез{" "}
@@ -44,7 +41,6 @@ export default function StaticPhotography() {
                         подчертават вашата уникалност и професионализъм.
                     </p>
 
-                    {/* Button */}
                     <Link
                         className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                         to=""
@@ -58,7 +54,6 @@ export default function StaticPhotography() {
                 </div>
             </div>
 
-            {/* Second Section: Original "Услуги" Content */}
         </div>
     );
 }
