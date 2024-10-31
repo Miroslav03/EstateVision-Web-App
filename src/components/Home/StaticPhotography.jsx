@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function StepByStep() {
+export default function StaticPhotography() {
     return (
         <div className="h-[90vh] flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8">
             <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-end gap-4 mb-10">
