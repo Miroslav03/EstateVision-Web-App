@@ -5,12 +5,14 @@ import ServiceSection from "../../components/Home/ServiceSection";
 import Navigation from "../../components/Navigation/Navigation";
 import LiveDemoSection from "../../components/Home/LiveDemoSection";
 import StaticPhotography from "../../components/Home/StaticPhotography";
+import Stats from "../../components/Home/Stats";
 
 export default function Home() {
     return (
         <main className="w-full overflow-x-hidden font-main min-h-screen bg-dark-500">
             <Navigation />
             <HeroSection />
+            <Stats />
             <LiveDemoSection />
             <StaticPhotography />
             <ServiceSection />
