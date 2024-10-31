@@ -20,12 +20,12 @@ export default function StaticPhotography() {
                     <img
                         src="/k2.png"
                         alt="First"
-                        className="w-[90%] h-auto shadow-lg border-l-8 border-yellow-500"
+                        className="w-[90%] h-auto shadow-lg border-l-8 border-yellow-500 transform transition-transform duration-500 hover:scale-110"
                     />
                     <img
                         src="/k1.png"
                         alt="Second"
-                        className="w-[40%] h-auto shadow-lg absolute -bottom-12 -right-12 border-l-8 border-yellow-500"
+                        className="w-[40%] h-auto shadow-lg absolute -bottom-12 -right-12 border-l-8 border-yellow-500 transform transition-transform duration-500 hover:scale-110"
                     />
                 </div>
 
@@ -45,7 +45,7 @@ export default function StaticPhotography() {
                         className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                         to=""
                     >
-                        <p className="z-20 group-hover:text-dark-500"></p>
+                        <p className="z-20 group-hover:text-dark-500">Разгледай</p>
                         <span className="ms-2 z-20 group-hover:text-dark-500">
                             &rarr;
                         </span>
@@ -53,7 +53,6 @@ export default function StaticPhotography() {
                     </Link>
                 </div>
             </div>
-
         </div>
     );
 }
