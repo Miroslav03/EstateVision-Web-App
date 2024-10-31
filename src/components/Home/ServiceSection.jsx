@@ -11,29 +11,17 @@ export default function ServiceSection() {
     ];
 
     return (
-        <div className="h-[110vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 border-t-8 border-yellow-500">
-            <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-start ">
+        <div className="h-[110vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 ">
+            <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-end gap-4 mb-10 mt-28">
                 <div className="border-b-8 border-yellow-500">
-                    <h2 className="text-4xl sm:text-6xl font-semibold mt-16 text-white mb-4">
+                    <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
                         Услуги
                     </h2>
                 </div>
-                <div className="flex sm:flex-row flex-col sm:gap-0 gap-6 justify-between items-start sm:items-center w-full mt-2">
+                <div className="flex flex-col sm:gap-0 gap-6 items-end sm:items-end w-full mt-2">
                     <p className="text-gray-500 text-md sm:text-xl">
                         Разгледай и избери услугата за теб
                     </p>
-                    <Link
-                        className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 sm:mx-0 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
-                        href=""
-                    >
-                        <p className="z-20 group-hover:text-dark-500">
-                            Виж цени
-                        </p>
-                        <span className="ms-2 z-20 group-hover:text-dark-500">
-                            &rarr;
-                        </span>
-                        <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></div>
-                    </Link>
                 </div>
             </div>
 

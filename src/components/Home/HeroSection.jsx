@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function HeroSection() {
     return (
         <div className="h-max lg:h-screen max-h-max flex flex-col sm:flex-row">
-            <div className="lg:w-[55%] bg-gradient-to-r from-dark-700 to-dark-500 flex justify-center items-center flex-col w-full lg:h-full pb-4 sm:pb-0">
+            <div className="lg:w-[55%] bg-gradient-to-r from-dark-700 to-dark-600 flex justify-center items-center flex-col w-full lg:h-full pb-4 sm:pb-0">
                 <div className="flex flex-col items-start sm:px-[4.5rem] px-4 mt-4 sm:mt-8 lg:mt-0 pb-6">
                     <h1 className="text-white font-main lg:text-6xl xl:text-6xl 2xl:text-[5rem] sm:leading-tight text-[3rem] leading-[1] px-[1.5rem] sm:px-0 pt-24 lg:pt-8">
                         <span className="text-yellow-400">

@@ -12,10 +12,10 @@ export default function Home() {
         <main className="w-full overflow-x-hidden font-main min-h-screen bg-dark-500">
             <Navigation />
             <HeroSection />
+            <ServiceSection />
             <Stats />
             <LiveDemoSection />
             <StaticPhotography />
-            <ServiceSection />
         </main>
     );
 }
