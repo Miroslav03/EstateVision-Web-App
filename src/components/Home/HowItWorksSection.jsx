@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 export default function HowItWorksSection() {
     return (
-        <section className="py-20 overflow-hidden bg-gradient-to-r from-dark-700 to-dark-500">
+        <section className="py-10 overflow-hidden bg-gradient-to-r from-dark-700 to-dark-500">
             <div className="container px-4 mx-auto">
                 <div className="max-w-5xl mx-auto">
                     <div className="flex  items-center gap-24">
                         <div className="w-full lg:w-1/2 px-5 mb-20 lg:mb-0">
                             <div className="max-w-md">
                                 <div className="border-b-8 border-yellow-500 mb-10">
-                                    <h2 className=" mb-4 text-5xl font-extrabold leading-tight text-gray-800 dark:text-gray-200">
+                                    <h2 className=" mb-4 text-5xl font-extrabold leading-tight text-white">
                                         Launch Your Journey with Ease
                                     </h2>
                                 </div>
@@ -38,19 +38,19 @@ export default function HowItWorksSection() {
                                 {[
                                     {
                                         step: 1,
-                                        title: "Create Your Account",
+                                        title: "Избери услугата за теб",
                                         description:
                                             "Sign up quickly and easily to access our full range of features.",
                                     },
                                     {
                                         step: 2,
-                                        title: "Personalize Your Experience",
+                                        title: "Свържи се с нашият екип",
                                         description:
                                             "Tailor tools and settings to fit your needs and preferences.",
                                     },
                                     {
                                         step: 3,
-                                        title: "Collaborate with Your Team",
+                                        title: "Получи услугата в най-кратък период",
                                         description:
                                             "Seamlessly work together, sharing insights and tools for better productivity.",
                                     },
