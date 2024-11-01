@@ -7,6 +7,7 @@ import LiveDemoSection from "../../components/Home/LiveDemoSection";
 import StaticPhotography from "../../components/Home/StaticPhotography";
 import Stats from "../../components/Home/Stats";
 import AboutSection from "../../components/Home/AboutSection";
+import HowItWorksSection from "../../components/Home/HowItWorksSection";
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
             <ServiceSection />
             <Stats />
             <AboutSection />
+            <HowItWorksSection />
             {/*  <LiveDemoSection />
             <StaticPhotography /> */}
         </main>
