@@ -43,18 +43,18 @@ export default function AboutSection() {
                                         </h2>
                                     </div>
                                 </div>
-                                <h2 className="mb-5 text-5xl font-semibold text-dark dark:text-white sm:text-[40px]/[48px]">
+                                <h2 className="mb-5 text-5xl font-semibold text-white sm:text-[40px]/[48px]">
                                     Направи клиентите си щастливи с{" "}
                                     <span className="text-yellow-500">
                                         нашите услуги.
                                     </span>
                                 </h2>
-                                <p className="mb-5 text-lg text-gray-500 dark:text-dark-6">
+                                <p className="mb-5 text-lg text-gray-500 ">
                                     В EstateVision вярваме, че всеки имот има
                                     своя история, която заслужава да бъде
                                     разказана по уникален и въздействащ начин.
                                 </p>
-                                <p className="mb-8 text-lg text-gray-500 dark:text-dark-6">
+                                <p className="mb-8 text-lg text-gray-500 ">
                                     С помощта на нашия екип от експерти в
                                     областта на дизайна и технологиите за
                                     виртуална реалност, ние превръщаме вашите
