@@ -59,7 +59,7 @@ export default function HowItWorksSection() {
                                         className="flex pb-10 mb-8 border-b-8 border-yellow-500 "
                                     >
                                         <div className="mr-8">
-                                            <span className="flex justify-center items-center w-14 h-14 bg-yellow-500  text-2xl font-bold  text-white ">
+                                            <span className="flex justify-center items-center w-14 h-14 bg-yellow-300  text-2xl font-bold  text-white ">
                                                 {step}
                                             </span>
                                         </div>

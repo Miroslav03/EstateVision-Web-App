@@ -10,6 +10,7 @@ import AboutSection from "../../components/Home/AboutSection";
 import HowItWorksSection from "../../components/Home/HowItWorksSection";
 import CallToActionSection from "../../components/Home/CTASection";
 import Footer from "../../components/Home/Footer";
+import IconSection from "../../components/Home/IconSection";
 
 export default function Home() {
     return (
@@ -19,6 +20,7 @@ export default function Home() {
             <ServiceSection />
             <Stats />
             <AboutSection />
+            <IconSection />
             <HowItWorksSection />
             <CallToActionSection />
             <Footer />

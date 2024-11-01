@@ -56,7 +56,7 @@ export default function Stats() {
                         key={stat.id}
                         className="flex flex-col items-center px-6 relative"
                     >
-                        <h3 className="text-7xl font-bold text-yellow-500">
+                        <h3 className="text-7xl font-bold text-yellow-300">
                             {counts[index]}%
                         </h3>
                         <p className="mt-4 text-lg text-white">{stat.text}</p>
