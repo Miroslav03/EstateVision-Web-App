@@ -42,11 +42,12 @@ export default function Stats() {
     return (
         <div className="h-[70vh] flex flex-col items-center justify-center gap-8 bg-gradient-to-r from-dark-700 to-dark-5">
             <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-center ">
-                <div className="border-b-8 border-yellow-500 mb-20">
+                <div className="border-b-8 border-yellow-500 mb-4">
                     <h2 className="text-4xl sm:text-6xl font-semibold mt-16 text-white mb-4">
                         Ние гарантираме
                     </h2>
                 </div>
+                <p className="text-xl text-gray-500 mb-8">Увеличи продажбите и спести времето си</p>
             </div>
 
             <div className="flex flex-row justify-center gap-44 text-center max-w-4xl mx-auto">
@@ -59,7 +60,6 @@ export default function Stats() {
                             {counts[index]}%
                         </h3>
                         <p className="mt-4 text-lg text-white">{stat.text}</p>
-                        {/* Persistent left border */}
                         <div className="absolute left-[-6px] top-0 h-full w-[0.3rem] bg-yellow-500"></div>
                     </div>
                 ))}

@@ -14,8 +14,8 @@ export default function Home() {
             <HeroSection />
             <ServiceSection />
             <Stats />
-            <LiveDemoSection />
-            <StaticPhotography />
+           {/*  <LiveDemoSection />
+            <StaticPhotography /> */}
         </main>
     );
 }
