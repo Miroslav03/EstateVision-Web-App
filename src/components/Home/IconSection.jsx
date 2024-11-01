@@ -1,6 +1,6 @@
 export default function IconSection() {
     return (
-        <section className="pb-12 pt-12 bg-gradient-to-r from-dark-700 to-dark-500 lg:pb-[90px] lg:pt-[80px]">
+        <section className="pb-12 pt-12 bg-gradient-to-r from-dark-700 to-dark-500 lg:pb-[90px] lg:pt-[50px]">
             <div className="container mx-auto">
                 <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4"></div>
