@@ -11,14 +11,14 @@ export default function AboutSection() {
                                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                                     <div className="py-3 sm:py-4 group">
                                         <img
-                                            src="https://i.ibb.co/gFb3ns6/image-1.jpg"
+                                            src="/public/person1.jpg"
                                             alt=""
                                             className="w-full transition-transform duration-300  border-l-8 border-yellow-500"
                                         />
                                     </div>
                                     <div className="py-3 sm:py-4 group">
                                         <img
-                                            src="https://i.ibb.co/rfHFq15/image-2.jpg"
+                                            src="/public/people1.jpg"
                                             alt=""
                                             className="w-full transition-transform duration-300  border-l-8 border-yellow-500"
                                         />
@@ -26,7 +26,7 @@ export default function AboutSection() {
                                 </div>
                                 <div className="w-full px-3 sm:px-4 xl:w-1/2 group">
                                     <img
-                                        src="https://i.ibb.co/9y7nYCD/image-3.jpg"
+                                        src="/public/person3.jpg"
                                         alt=""
                                         className="w-full transition-transform duration-300  border-l-8 border-yellow-500"
                                     />
@@ -44,29 +44,31 @@ export default function AboutSection() {
                                     </div>
                                 </div>
                                 <h2 className="mb-5 text-5xl font-semibold text-dark dark:text-white sm:text-[40px]/[48px]">
-                                    Направи клиентите щастливи{" "}
+                                    Направи клиентите си щастливи с{" "}
                                     <span className="text-yellow-500">
                                         нашите услуги.
                                     </span>
                                 </h2>
                                 <p className="mb-5 text-lg text-gray-500 dark:text-dark-6">
-                                    Дългогодишният ни опит и отдадеността ни на
-                                    високото качество на услугите ни помагат да
-                                    предоставим невероятно изживяване за всеки
-                                    клиент.
+                                    В EstateVision вярваме, че всеки имот има
+                                    своя история, която заслужава да бъде
+                                    разказана по уникален и въздействащ начин.
                                 </p>
                                 <p className="mb-8 text-lg text-gray-500 dark:text-dark-6">
-                                    Вниманието ни към детайлите и иновативният
-                                    подход създават устойчиви решения, които
-                                    допринасят за успеха на вашия бизнес.
+                                    С помощта на нашия екип от експерти в
+                                    областта на дизайна и технологиите за
+                                    виртуална реалност, ние превръщаме вашите
+                                    идеи в зашеметяващи визуални решения.
                                 </p>
                             </div>
-                            <div className="w-44">
+                            <div className="w-32">
                                 <Link
                                     className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                                     to=""
                                 >
-                                    <p className="z-20 group-hover:text-dark-500">Свържете се</p>
+                                    <p className="z-20 group-hover:text-dark-500">
+                                        За нас
+                                    </p>
                                     <span className="ms-2 z-20 group-hover:text-dark-500">
                                         &rarr;
                                     </span>

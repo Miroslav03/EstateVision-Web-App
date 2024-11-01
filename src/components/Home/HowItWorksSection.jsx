@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function HowItWorksSection() {
     return (
-        <section className="py-10 overflow-hidden bg-gradient-to-r from-dark-700 to-dark-500">
+        <section className=" pb-20 overflow-hidden bg-gradient-to-r from-dark-700 to-dark-500">
             <div className="container px-4 mx-auto">
                 <div className="max-w-5xl mx-auto">
                     <div className="flex  items-center gap-24">
@@ -10,12 +10,11 @@ export default function HowItWorksSection() {
                             <div className="max-w-md">
                                 <div className="border-b-8 border-yellow-500 mb-10">
                                     <h2 className=" mb-4 text-5xl font-extrabold leading-tight text-white">
-                                        Launch Your Journey with Ease
+                                        Започни бизнеса си с лекота
                                     </h2>
                                 </div>
                                 <p className="mb-16 text-lg text-gray-600 dark:text-gray-400">
-                                    Download our free mobile app and start
-                                    building today!
+                                    Открои се от конкуренцията и започни бързо и лесно!
                                 </p>
                                 <div className="w-44">
                                     <Link
@@ -50,7 +49,7 @@ export default function HowItWorksSection() {
                                     },
                                     {
                                         step: 3,
-                                        title: "Получи услугата в най-кратък период",
+                                        title: "Ние ще се погрижим за всичко останало",
                                         description:
                                             "Seamlessly work together, sharing insights and tools for better productivity.",
                                     },
