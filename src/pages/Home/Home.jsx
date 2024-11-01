@@ -6,6 +6,7 @@ import Navigation from "../../components/Navigation/Navigation";
 import LiveDemoSection from "../../components/Home/LiveDemoSection";
 import StaticPhotography from "../../components/Home/StaticPhotography";
 import Stats from "../../components/Home/Stats";
+import AboutSection from "../../components/Home/AboutSection";
 
 export default function Home() {
     return (
@@ -14,7 +15,8 @@ export default function Home() {
             <HeroSection />
             <ServiceSection />
             <Stats />
-           {/*  <LiveDemoSection />
+            <AboutSection />
+            {/*  <LiveDemoSection />
             <StaticPhotography /> */}
         </main>
     );
