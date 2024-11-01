@@ -1,0 +1,41 @@
+import { Link } from "react-router-dom";
+
+export default function CallToActionSection() {
+    return (
+        <section className="bg-yellow-500">
+            <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+                <img
+                    className="w-full hidden dark:block border-l-8 border-white"
+                    src="/public/3dmodel.jpg"
+                    alt="dashboard image"
+                />
+                <div className="mt-4 md:mt-0">
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                        Let's create more tools and ideas that brings us
+                        together.
+                    </h2>
+                    <p className="mb-6 font-base text-dark-600 md:text-lg ">
+                        Flowbite helps you connect with friends and communities
+                        of people who share your interests. Connecting with your
+                        friends and family as well as discovering new ones is
+                        easy with features like Groups.
+                    </p>
+                    <div className="w-44">
+                        <Link
+                            className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-dark-500 hover:ring-2 hover:ring-yellow-500"
+                            to=""
+                        >
+                            <p className="z-20 group-hover:text-dark-500">
+                                Свържете се
+                            </p>
+                            <span className="ms-2 z-20 group-hover:text-dark-500">
+                                &rarr;
+                            </span>
+                            <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></div>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

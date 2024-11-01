@@ -8,6 +8,8 @@ import StaticPhotography from "../../components/Home/StaticPhotography";
 import Stats from "../../components/Home/Stats";
 import AboutSection from "../../components/Home/AboutSection";
 import HowItWorksSection from "../../components/Home/HowItWorksSection";
+import CallToActionSection from "../../components/Home/CTASection";
+import Footer from "../../components/Home/Footer";
 
 export default function Home() {
     return (
@@ -18,6 +20,8 @@ export default function Home() {
             <Stats />
             <AboutSection />
             <HowItWorksSection />
+            <CallToActionSection />
+            <Footer />
             {/*  <LiveDemoSection />
             <StaticPhotography /> */}
         </main>
