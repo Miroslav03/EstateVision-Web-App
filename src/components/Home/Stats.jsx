@@ -40,7 +40,7 @@ export default function Stats() {
     }, []);
 
     return (
-        <div className="h-[70vh] flex flex-col items-center justify-center gap-8 bg-gradient-to-r from-dark-700 to-dark-500">
+        <div className="h-[55vh] flex flex-col items-center justify-center gap-8 bg-gradient-to-r from-dark-700 to-dark-500">
             <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-center ">
                 <div className="border-b-8 border-yellow-500 mb-4">
                     <h2 className="text-4xl sm:text-6xl font-semibold mt-6 text-white mb-4">
