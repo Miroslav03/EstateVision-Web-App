@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 export default function ServiceSection() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
 
     const hoverText = [
         "Eкстериорна фотография",
@@ -10,9 +12,25 @@ export default function ServiceSection() {
         "Фото и видео заснемане с дрон",
     ];
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) setIsVisible(true);
+            },
+            { threshold: 0.3 }
+        );
+        if (sectionRef.current) observer.observe(sectionRef.current);
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <div className="h-[110vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 ">
-               <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-center sm:items-end gap-4 mb-10 mt-16 sm:mt-28">
+        <div
+            ref={sectionRef}
+            className={`h-[110vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 ${
+                isVisible ? "animate-fade-in-up" : "opacity-0"
+            }`}
+        >
+            <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-center sm:items-end gap-4 mb-10 mt-16 sm:mt-28">
                 <div className="border-b-8 border-yellow-500">
                     <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
                         Услуги
@@ -41,7 +59,7 @@ export default function ServiceSection() {
                                 : hoveredIndex === 1 && index !== 1
                                 ? "flex-[0.9]"
                                 : "flex-1"
-                        }`}
+                        } ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
