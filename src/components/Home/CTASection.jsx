@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 export default function CallToActionSection() {
     return (
         <section className="bg-gradient-to-r from-dark-700 to-dark-500 ">
-            <div className="absolute top-0 right-0 h-2 w-[40%] bg-yellow-500"></div>
-            <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+          
+            <div className="gap-8 items-center py-16 px-6 sm:px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
                 <img
                     className="w-full hidden dark:block border-l-8 border-yellow-500"
                     src="/public/3dmodel.jpg"
@@ -18,7 +18,7 @@ export default function CallToActionSection() {
                         </span>{" "}
                         при първа поръчка!
                     </h2>
-                    <p className="mb-6 font-base text-gray-500 md:text-lg ">
+                    <p className="mb-6 text-lg sm:font-base text-gray-500 md:text-lg ">
                         Направете първата стъпка към професионално онлайн
                         присъствие! С нашите услуги ще получите визуална
                         привлекателност и функционалност, която ще ви отличи.
