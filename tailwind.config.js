@@ -60,7 +60,10 @@ export default {
             fontFamily: {
                 main: ["Lora", "serif"],
             },
-            
+        },
+        animation: {
+            "fade-in-up": "fadeInUp 1s ease-out forwards",
+            "slide-in-right": "slideInRight 1s ease-out forwards",
         },
     },
     plugins: [],

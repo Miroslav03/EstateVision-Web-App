@@ -11,14 +11,14 @@ export default function AboutSection() {
                                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                                     <div className="py-3 sm:py-4 group">
                                         <img
-                                            src="/public/person1.jpg"
+                                            src="/person1.jpg"
                                             alt=""
                                             className="w-full transition-transform duration-300  border-l-8 border-yellow-500"
                                         />
                                     </div>
                                     <div className="py-3 sm:py-4 group">
                                         <img
-                                            src="/public/people1.jpg"
+                                            src="/people1.jpg"
                                             alt=""
                                             className="w-full transition-transform duration-300  border-l-8 border-yellow-500"
                                         />
@@ -26,7 +26,7 @@ export default function AboutSection() {
                                 </div>
                                 <div className="w-full px-3 sm:px-4 xl:w-1/2 group">
                                     <img
-                                        src="/public/person3.jpg"
+                                        src="/person3.jpg"
                                         alt=""
                                         className="w-full transition-transform duration-300  border-l-8 border-yellow-500"
                                     />

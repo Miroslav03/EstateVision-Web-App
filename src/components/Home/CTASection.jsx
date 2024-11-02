@@ -7,7 +7,7 @@ export default function CallToActionSection() {
             <div className="gap-8 items-center py-16 px-6 sm:px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
                 <img
                     className="w-full hidden dark:block border-l-8 border-yellow-500"
-                    src="/public/3dmodel.jpg"
+                    src="/3dmodel.jpg"
                     alt="dashboard image"
                 />
                 <div className="mt-4 md:mt-0">
