@@ -12,13 +12,13 @@ export default function ServiceSection() {
 
     return (
         <div className="h-[110vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 ">
-               <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-end gap-4 mb-10 mt-28">
+               <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-center sm:items-end gap-4 mb-10 mt-16 sm:mt-28">
                 <div className="border-b-8 border-yellow-500">
                     <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
                         Услуги
                     </h2>
                 </div>
-                <div className="flex flex-col sm:gap-0 gap-6 items-end sm:items-end w-full mt-2">
+                <div className="flex flex-col sm:gap-0 gap-6 items-center sm:items-end w-full">
                     <p className="text-gray-500 text-md sm:text-xl">
                         Разгледай и избери услугата за теб
                     </p>

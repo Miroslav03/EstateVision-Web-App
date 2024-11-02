@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 export default function AboutSection() {
     return (
         <>
-            <section className="overflow-hidden pb-12 pt-10 bg-gradient-to-r from-dark-700 to-dark-500">
+            <section className="overflow-hidden pb-12 pt-24 sm:pt-10 bg-gradient-to-r from-dark-700 to-dark-500">
                 <div className="container mx-auto">
                     <div className="flex flex-wrap items-center justify-between -mx-4">
                         <div className="w-full px-4 lg:w-6/12">
-                            <div className="flex items-center -mx-3 sm:-mx-4">
+                            <div className="flex items-center -mx-3 sm:-mx-4 px-[1.5rem] sm:px-0">
                                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                                     <div className="py-3 sm:py-4 group">
                                         <img
@@ -35,7 +35,7 @@ export default function AboutSection() {
                         </div>
 
                         <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-                            <div className="mt-10 lg:mt-0">
+                            <div className="mt-10 lg:mt-0 px-6 sm:px-0">
                                 <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-start gap-4 mb-8">
                                     <div className="border-b-8 border-yellow-500">
                                         <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
@@ -61,7 +61,7 @@ export default function AboutSection() {
                                     идеи в зашеметяващи визуални решения.
                                 </p>
                             </div>
-                            <div className="w-32">
+                            <div className="w-44 px-6 sm:px-0">
                                 <Link
                                     className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                                     to=""

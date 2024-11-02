@@ -14,18 +14,19 @@ export default function HowItWorksSection() {
                                     </h2>
                                 </div>
                                 <p className="mb-16 text-lg text-gray-600 dark:text-gray-400">
-                                    Открои се от конкуренцията и започни бързо и лесно!
+                                    Открои се от конкуренцията и започни бързо и
+                                    лесно!
                                 </p>
-                                <div className="w-44">
+                                <div className="w-56">
                                     <Link
                                         className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                                         to=""
                                     >
                                         <p className="z-20 group-hover:text-dark-500">
-                                            Свържете се
+                                            Разгелдай услуги
                                         </p>
                                         <span className="ms-2 z-20 group-hover:text-dark-500">
-                                            &rarr;
+                                            &#8593;
                                         </span>
                                         <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></div>
                                     </Link>
@@ -39,19 +40,19 @@ export default function HowItWorksSection() {
                                         step: 1,
                                         title: "Избери услугата за теб",
                                         description:
-                                            "Sign up quickly and easily to access our full range of features.",
+                                            "Разгелдай и избери услугата за теб и твоят бизнес.",
                                     },
                                     {
                                         step: 2,
                                         title: "Свържи се с нашият екип",
                                         description:
-                                            "Tailor tools and settings to fit your needs and preferences.",
+                                            "Свържи се с нас и ние ще уговирим дата и час за среща.",
                                     },
                                     {
                                         step: 3,
                                         title: "Ние ще се погрижим за всичко останало",
                                         description:
-                                            "Seamlessly work together, sharing insights and tools for better productivity.",
+                                            "Ние погрижим за всички детайли, за да може вашият проект да се реализира без усилия от ваша страна",
                                     },
                                 ].map(({ step, title, description }) => (
                                     <li

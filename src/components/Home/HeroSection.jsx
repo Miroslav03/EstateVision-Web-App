@@ -20,9 +20,13 @@ export default function HeroSection() {
                         className="text-white font-main px-5 py-[0.5rem] mt-8 text-lg transition duration-300 mx-[1.5rem] sm:mx-0 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                         href=""
                     >
-                        <p className="z-20 group-hover:text-dark-500">Разгледай</p>
-                        <span className="ms-2 z-20 group-hover:text-dark-500">&rarr;</span>
-                        <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0" ></div>
+                        <p className="z-20 group-hover:text-dark-500">
+                            Разгледай
+                        </p>
+                        <span className="ms-2 z-20 group-hover:text-dark-500">
+                            &rarr;
+                        </span>
+                        <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></div>
                     </Link>
                 </div>
             </div>
@@ -31,7 +35,7 @@ export default function HeroSection() {
                 <img
                     src="k1-2.jpg"
                     alt=""
-                    className="h-full object-cover z-10 border-l-8 border-b-8 border-yellow-400"
+                    className="h-full object-cover z-10 border-l-8 border-b-0 sm:border-b-8 border-yellow-400"
                 />
             </div>
         </div>
