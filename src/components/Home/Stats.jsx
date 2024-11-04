@@ -4,9 +4,17 @@ import { motion } from "framer-motion";
 export default function Stats() {
     const stats = [
         { id: 1, endValue: 14, text: "Увеличение на продажбите." },
-        { id: 2, endValue: 50, text: "Намаляване на времето и разходите за пътуване." },
+        {
+            id: 2,
+            endValue: 50,
+            text: "Намаляване на времето и разходите за пътуване.",
+        },
         { id: 3, endValue: 30, text: "По-бързо завършване на проектите." },
-        { id: 4, endValue: 75, text: "Намаляване на разходите за планиране на проекти." },
+        {
+            id: 4,
+            endValue: 75,
+            text: "Намаляване на разходите за планиране на проекти.",
+        },
     ];
 
     const [counts, setCounts] = useState(stats.map(() => 0));
@@ -62,7 +70,9 @@ export default function Stats() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: index * 0.2 }}
                     >
-                        <h3 className="text-7xl font-bold text-yellow-300">
+                        <h3
+                            className="text-7xl font-bold text-yellow-300"
+                        >
                             {counts[index]}%
                         </h3>
                         <p className="mt-4 text-lg text-white">{stat.text}</p>

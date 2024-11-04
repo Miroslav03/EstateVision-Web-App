@@ -1,22 +1,71 @@
 import { Link } from "react-router-dom";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function HowItWorksSection() {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, {
+        triggerOnce: false,
+        threshold: 0.2,
+    });
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+        },
+    };
+
+    const headingVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+        },
+    };
+
     return (
-        <section className="pb-10 sm:pb-20 overflow-hidden bg-gradient-to-r from-dark-700 to-dark-500">
+        <section
+            ref={sectionRef}
+            className="pb-10 sm:pb-20 overflow-hidden bg-gradient-to-r from-dark-700 to-dark-500"
+        >
             <div className="container px-4 mx-auto">
                 <div className="max-w-5xl mx-auto">
-                    <div className="flex sm:flex-row flex-col  items-center gap-24">
+                    <div className="flex sm:flex-row flex-col items-center gap-24">
                         <div className="w-full lg:w-1/2 px-5 mb-4 sm:mb-20 lg:mb-0">
                             <div className="max-w-md">
-                                <div className="border-b-8 border-yellow-500 mb-4 sm:mb-10">
-                                    <h2 className=" mb-4 text-4xl sm:text-5xl font-extrabold leading-tight text-white">
+                                <motion.div
+                                    className="border-b-8 border-yellow-500 mb-4 sm:mb-10"
+                                    initial="hidden"
+                                    animate={isInView ? "visible" : "hidden"}
+                                    variants={headingVariants}
+                                >
+                                    <h2 className="mb-4 text-4xl sm:text-5xl font-extrabold leading-tight text-white">
                                         Започни бизнеса си с лекота
                                     </h2>
-                                </div>
-                                <p className="mb-10 sm:mb-16 text-md sm:text-lg text-gray-600 dark:text-gray-400">
+                                </motion.div>
+                                <motion.p
+                                    className="mb-10 sm:mb-16 text-md sm:text-lg text-gray-600 dark:text-gray-400"
+                                    initial="hidden"
+                                    animate={isInView ? "visible" : "hidden"}
+                                    variants={headingVariants}
+                                >
                                     Открои се от конкуренцията и започни бързо и
                                     лесно!
-                                </p>
+                                </motion.p>
                                 <div className="w-56">
                                     <Link
                                         className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
@@ -34,7 +83,11 @@ export default function HowItWorksSection() {
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2 px-5">
-                            <ul>
+                            <motion.ul
+                                initial="hidden"
+                                animate={isInView ? "visible" : "hidden"}
+                                variants={containerVariants}
+                            >
                                 {[
                                     {
                                         step: 1,
@@ -55,12 +108,19 @@ export default function HowItWorksSection() {
                                             "Ние погрижим за всички детайли, за да може вашият проект да се реализира без усилия от ваша страна",
                                     },
                                 ].map(({ step, title, description }) => (
-                                    <li
+                                    <motion.li
                                         key={step}
-                                        className="flex pb-10 mb-8 border-b-8 border-yellow-500 "
+                                        className="flex pb-10 mb-8 border-b-8 border-yellow-500"
+                                        variants={itemVariants}
                                     >
                                         <div className="mr-8">
-                                            <span className="flex justify-center items-center sm:h-[70px] sm:w-[70px] h-[50px] w-[50px] bg-yellow-300  text-2xl font-bold  text-white ">
+                                            <span
+                                                style={{
+                                                    boxShadow:
+                                                        "0 20px 40px rgba(255, 193, 7, 0.2)",
+                                                }}
+                                                className="flex justify-center items-center sm:h-[70px] sm:w-[70px] h-[50px] w-[50px] bg-yellow-300 text-2xl font-bold text-white"
+                                            >
                                                 {step}
                                             </span>
                                         </div>
@@ -68,13 +128,13 @@ export default function HowItWorksSection() {
                                             <h3 className="mb-2 text-3xl sm:text-3xl font-semibold sm:font-bold text-white">
                                                 {title}
                                             </h3>
-                                            <p className="text-lg sm:text-xl text-gray-500 ">
+                                            <p className="text-lg sm:text-xl text-gray-500">
                                                 {description}
                                             </p>
                                         </div>
-                                    </li>
+                                    </motion.li>
                                 ))}
-                            </ul>
+                            </motion.ul>
                         </div>
                     </div>
                 </div>

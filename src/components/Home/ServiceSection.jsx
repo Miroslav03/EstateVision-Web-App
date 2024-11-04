@@ -1,10 +1,14 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function ServiceSection() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const sectionRef = useRef(null);
     const controls = useAnimation();
+    const isInView = useInView(sectionRef, {
+        triggerOnce: false,
+        threshold: 0.3,
+    });
 
     const hoverText = [
         "Eкстериорна фотография",
@@ -13,17 +17,13 @@ export default function ServiceSection() {
     ];
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) controls.start("visible");
-            },
-            { threshold: 0.3 }
-        );
-        if (sectionRef.current) observer.observe(sectionRef.current);
-        return () => observer.disconnect();
-    }, [controls]);
+        if (isInView) {
+            controls.start("visible");
+        } else {
+            controls.start("hidden");
+        }
+    }, [isInView, controls]);
 
-    // Variants for animations
     const containerVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: {
@@ -37,11 +37,6 @@ export default function ServiceSection() {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
         hover: { scale: 1.05 },
-    };
-
-    const overlayVariants = {
-        visible: { opacity: 0.3 },
-        hidden: { opacity: 0.8 },
     };
 
     return (
@@ -83,33 +78,23 @@ export default function ServiceSection() {
                             transition={{ duration: 0.3 }}
                         />
                         <motion.div
-                            variants={overlayVariants}
-                            initial="hidden"
-                            animate={hoveredIndex === index ? "visible" : "hidden"}
-                            className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent"
+                            className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-30"
                         ></motion.div>
 
                         <motion.div
-                            className={`absolute bottom-4 left-4 text-white mb-2 sm:mb-8 ml-2 sm:ml-5 transition-all duration-300 transform ${
-                                hoveredIndex === index || !hoveredIndex
-                                    ? "translate-x-0 opacity-100"
-                                    : "translate-x-full opacity-0 sm:translate-x-0 sm:opacity-100"
-                            }`}
+                            className="absolute bottom-4 left-4 text-white mb-2 sm:mb-8 ml-2 sm:ml-5 transition-all duration-300 transform translate-x-0 opacity-100"
                         >
                             <motion.p
                                 className="text-xl sm:text-2xl font-semibold"
-                                animate={{
-                                    opacity: hoveredIndex === index ? 1 : 0,
-                                    x: hoveredIndex === index ? 0 : 20,
-                                }}
-                                transition={{ duration: 0.3 }}
+                                initial={{ opacity: 1, x: 0 }}
+                                animate={{ opacity: 1, x: 0 }}
                             >
                                 {hoverText[index]}
                             </motion.p>
-                            <motion.div
+                            <div
                                 className="h-[0.1rem] sm:h-1 bg-yellow-500 mt-2 w-full"
                                 layout
-                            ></motion.div>
+                            ></div>
                         </motion.div>
                     </motion.div>
                 ))}
