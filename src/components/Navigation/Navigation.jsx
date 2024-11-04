@@ -20,8 +20,8 @@ export default function Navigation() {
         {/* Buttons Container */}
         <div className="grow shrink-0 hidden sm:flex justify-center items-center">
           <NavigationButton to="/" title="Начало" />
-          <NavigationButton to="/" title="Проекти" />
-          <NavigationButton to="/" title="Цени" />
+          <NavigationButton to="/" title="Услуги" />
+          <NavigationButton to="/" title="За Нас" />
         </div>
         {/* Toggle Button Container */}
         <div className="w-80 flex items-center justify-end sm:justify-center pe-4 sm:pe-0">
