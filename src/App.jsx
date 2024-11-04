@@ -5,7 +5,8 @@ import Services from "./pages/Services/Services";
 export default function App() {
     return (
         <Routes>
-            <Route path="/" Component={Services}/>
+            <Route path="/" Component={Home}/>
+            <Route path="/services" Component={Services}/>
         </Routes>
     );
 }

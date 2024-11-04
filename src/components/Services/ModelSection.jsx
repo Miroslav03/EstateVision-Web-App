@@ -29,28 +29,56 @@ export default function ModelSection() {
                         {
                             src: "/3dInsight.png",
                             title: "Печели повече клиенти",
-                            subtitle: "Завърши презентацията си",
+                            subtitle: (
+                                <>
+                                    Завърши{" "}
+                                    <span className="text-yellow-500">
+                                        презентацията си
+                                    </span>
+                                </>
+                            ),
                             description:
                                 "Впечатлете продавачите с вашите интерактивни 3D виртуални обиколки и иновативен подход към маркетинга на имоти.",
                         },
                         {
                             src: "/3dmetrix.png",
                             title: "Увеличи трафика си",
-                            subtitle: "Превърнете изследването в действие.",
+                            subtitle: (
+                                <>
+                                    Превърнете{" "}
+                                    <span className="text-yellow-500">
+                                        изследването в действие
+                                    </span>
+                                </>
+                            ),
                             description:
                                 "Нека купувачите сравняват къщи в невероятни детайли. Споделете етажни планове и размери на стаите с едно натискане на бутон.",
                         },
                         {
                             src: "/3dAi.png",
                             title: "Съдържание на по-високо ниво",
-                            subtitle: "Направете своите имоти забележителни.",
+                            subtitle: (
+                                <>
+                                    Направете своите{" "}
+                                    <span className="text-yellow-500">
+                                        имоти забележителни
+                                    </span>
+                                </>
+                            ),
                             description:
                                 "Добавете интерактивни 3D обиколки, които са готови за споделяне в социални медии или вграждане в уебсайт.",
                         },
                         {
                             src: "/3dFromTop.png",
-                            title: "Затворете по-бързо",
-                            subtitle: "Привлечете качествени купувачи.",
+                            title: "Затваряйте клиенти по-бързо",
+                            subtitle: (
+                                <>
+                                    Привлечете{" "}
+                                    <span className="text-yellow-500">
+                                        качествени купувачи
+                                    </span>
+                                </>
+                            ),
                             description:
                                 "Позволете на клиентите да се визуализират в пространството, което им дава допълнителна увереност при вземане на решения за покупка.",
                         },
@@ -60,7 +88,7 @@ export default function ModelSection() {
                             style={{
                                 boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
                             }}
-                            className="max-w-lg overflow-hidden shadow-lg border-yellow-500 border-l-8"
+                            className="max-w-xl overflow-hidden border-yellow-500 border-l-8 hover:scale-105 transition-all transform duration-500 ease-in-out"
                         >
                             <div className="h-[60%] w-full relative overflow-hidden">
                                 <img
@@ -70,7 +98,7 @@ export default function ModelSection() {
                                 />
                             </div>
                             <div className="px-6 py-4">
-                                <h1 className="text-yellow-500 font-base text-lg">
+                                <h1 className="text-white font-base text-lg border-b-2 border-yellow-500 inline-block">
                                     {item.title}
                                 </h1>
                                 <div className="font-bold text-3xl mb-2 text-white">
@@ -84,108 +112,48 @@ export default function ModelSection() {
                     ))}
                 </section>
 
-                <section className="flex flex-col md:flex-row items-center py-12 px-6 md:px-12 lg:px-24">
-                    {/* Left Image Column */}
-                    <div className="w-full md:w-1/2 flex justify-center">
-                        <table
-                            class="w-full text-xl font-semibold  text-center rtl:text-center text-yellow-300 border-l-4 border-yellow-500 "
-                            style={{
-                                boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
-                            }}
-                        >
-                            <thead class="text-xl  bg-dark-600  text-yellow-300">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        Квадратура на имота
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 text-white">
-                                        Цена за 3D модел
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="bg-dark-600 border-yellow-500 border-b-4">
-                                    <th
-                                        scope="row"
-                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
-                                    >
-                                        До 50 кв.м
-                                    </th>
-                                    <td class="px-6 py-4">150 - 250 лв.</td>
-                                </tr>
-                                <tr class="bg-dark-600 border-b-4 border-yellow-500">
-                                    <th
-                                        scope="row"
-                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
-                                    >
-                                        51 - 100 кв.м
-                                    </th>
-                                    <td class="px-6 py-4">250 - 400 лв.</td>
-                                </tr>
-                                <tr class="bg-dark-600 border-b-4 border-yellow-500 ">
-                                    <th
-                                        scope="row"
-                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
-                                    >
-                                        101 - 150 кв.м
-                                    </th>
-                                    <td class="px-6 py-4">400 - 550 лв.</td>
-                                </tr>
-                                <tr class="bg-dark-600 border-b-4 border-yellow-500">
-                                    <th
-                                        scope="row"
-                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
-                                    >
-                                        151 - 200 кв.м
-                                    </th>
-                                    <td class="px-6 py-4">550 - 700 лв.</td>
-                                </tr>
-                                <tr class="bg-dark-600 border-b-4 border-yellow-500">
-                                    <th
-                                        scope="row"
-                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
-                                    >
-                                        201 - 300 кв.м
-                                    </th>
-                                    <td class="px-6 py-4">700 - 900 лв.</td>
-                                </tr>
-                                <tr class="bg-dark-600 border-yellow-500">
-                                    <th
-                                        scope="row"
-                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
-                                    >
-                                        Над 300 кв.м
-                                    </th>
-                                    <td class="px-6 py-4">По договаряне</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    {/* Right Text Column */}
-                    <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 lg:ml-12 text-center md:text-left">
-                        <p className="text-red-600 font-semibold uppercase mb-2 text-sm">
-                            Property Intelligence is Now Available
-                        </p>
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            AI-driven insights built for RRE.
+                <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
+                    <div class="max-w-screen-md flex justify-center items-center flex-col">
+                        <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-4">
+                            Според купувачите
+                        </h1>
+                        <h2 className="text-white text-5xl text-center">
+                            <span className="text-yellow-500 font-bold">
+                                63%
+                            </span>{" "}
+                            са по-склонни да си купят жилище с виртуална
+                            разходка.*
                         </h2>
-                        <p className="text-gray-700 mb-6">
-                            With Property Intelligence, our new suite of
-                            insight-driven features, you can automatically
-                            surface detailed property information and eliminate
-                            buyers’ reliance on time-consuming site visits to
-                            radically simplify the process of buying and selling
-                            a home. Plus, our new partnership with FBS makes it
-                            easy for Flexmls® users to update the rooms section
-                            of their listings with one click—no manual entry
-                            required!
-                        </p>
-                        <button className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700">
-                            Learn More
-                        </button>
                     </div>
-                </section>
+                </div>
+
+                <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-24 lg:px-6">
+                    <div className="font-light text-gray-500">
+                        <h1 className="mb-4 text-5xl tracking-tight font-semibold border-b-8 border-yellow-500 text-white inline-block pb-5">
+                            Property Intelligence
+                        </h1>
+                        <h2 className="mb-4 text-4xl tracking-tight font-semibold text-white">
+                            <span className="text-yellow-500">АI фунцкии</span>{" "}
+                            на моделите
+                        </h2>
+                        <p className="mb-4">
+                            С новия ни пакет Property Intelligence можете
+                            автоматично да извеждате подробна информация за
+                            имота и да опростите процеса на покупка и продажба.
+                            С новото ни партньорство с FBS, потребителите на
+                            FlexmlsⓇ могат да актуализират стаите в обявите си
+                            само с едно щракване, без ръчно въвеждане!
+                        </p>
+                    </div>
+                    <img
+                        style={{
+                            boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
+                        }}
+                        className="w-full border-l-8 border-yellow-500"
+                        src="/3dAi2.png"
+                        alt="office content 1"
+                    />
+                </div>
             </section>
         </>
     );
