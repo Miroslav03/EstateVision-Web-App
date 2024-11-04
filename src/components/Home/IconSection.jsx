@@ -38,7 +38,7 @@ export default function IconSection() {
     return (
         <section
             key={animationKey} // Reset animation on revisit
-            className="pb-12 pt-12 bg-gradient-to-r from-dark-700 to-dark-500 lg:pb-[90px] lg:pt-[50px]"
+            className="pb-24 pt-12 bg-gradient-to-r from-dark-700 to-dark-500 lg:pb-[90px] lg:pt-[50px]"
         >
             <div className="container mx-auto px-6 sm:px-0">
                 <div className="-mx-4 flex flex-wrap">

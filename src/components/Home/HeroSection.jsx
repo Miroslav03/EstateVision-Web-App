@@ -85,6 +85,9 @@ export default function HeroSection({ serviceSectionRef }) {
             </motion.div>
 
             <motion.div
+                style={{
+                    boxShadow: "0 0 300px rgba(255, 193, 7, 0.2)",
+                }}
                 className="w-[50%] hidden h-full lg:flex overflow-hidden relative"
                 variants={imageVariants}
                 initial="hidden"
@@ -94,7 +97,8 @@ export default function HeroSection({ serviceSectionRef }) {
                 <img
                     src="k1-2.jpg"
                     alt=""
-                    className="h-full object-cover z-10 border-l-8 border-b-0 sm:border-b-8 border-yellow-400"
+                    className="h-full object-cover z-10 border-l-8 border-b-0 sm:border-b-8"
+                    style={{ borderColor: "rgba(255, 193, 7, 0.7)" }} // Adjust the alpha (0.5) to your liking
                 />
             </motion.div>
         </div>

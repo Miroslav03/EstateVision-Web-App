@@ -21,6 +21,9 @@ export default function Stats() {
 
     useEffect(() => {
         stats.forEach((stat, index) => {
+            const duration = 5000; // total duration for counting up
+            const incrementTime = duration / stat.endValue; // time between increments
+
             const incrementCounter = () => {
                 setCounts((prevCounts) => {
                     const newCounts = [...prevCounts];
@@ -29,14 +32,18 @@ export default function Stats() {
                     }
                     return newCounts;
                 });
-
-                if (counts[index] < stat.endValue) {
-                    setTimeout(incrementCounter, 10);
-                }
             };
-            incrementCounter();
+
+            const intervalId = setInterval(() => {
+                incrementCounter();
+            }, incrementTime);
+
+            // Clear the interval after reaching the end value
+            setTimeout(() => {
+                clearInterval(intervalId);
+            }, duration);
         });
-    }, []);
+    }, []); // Empty dependency array ensures this runs once on mount
 
     return (
         <motion.div
@@ -70,9 +77,7 @@ export default function Stats() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: index * 0.2 }}
                     >
-                        <h3
-                            className="text-7xl font-bold text-yellow-300"
-                        >
+                        <h3 className="text-7xl font-bold text-yellow-300">
                             {counts[index]}%
                         </h3>
                         <p className="mt-4 text-lg text-white">{stat.text}</p>
