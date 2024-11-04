@@ -83,6 +83,109 @@ export default function ModelSection() {
                         </div>
                     ))}
                 </section>
+
+                <section className="flex flex-col md:flex-row items-center py-12 px-6 md:px-12 lg:px-24">
+                    {/* Left Image Column */}
+                    <div className="w-full md:w-1/2 flex justify-center">
+                        <table
+                            class="w-full text-xl font-semibold  text-center rtl:text-center text-yellow-300 border-l-4 border-yellow-500 "
+                            style={{
+                                boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
+                            }}
+                        >
+                            <thead class="text-xl  bg-dark-600  text-yellow-300">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">
+                                        Квадратура на имота
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-white">
+                                        Цена за 3D модел
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-dark-600 border-yellow-500 border-b-4">
+                                    <th
+                                        scope="row"
+                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
+                                    >
+                                        До 50 кв.м
+                                    </th>
+                                    <td class="px-6 py-4">150 - 250 лв.</td>
+                                </tr>
+                                <tr class="bg-dark-600 border-b-4 border-yellow-500">
+                                    <th
+                                        scope="row"
+                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
+                                    >
+                                        51 - 100 кв.м
+                                    </th>
+                                    <td class="px-6 py-4">250 - 400 лв.</td>
+                                </tr>
+                                <tr class="bg-dark-600 border-b-4 border-yellow-500 ">
+                                    <th
+                                        scope="row"
+                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
+                                    >
+                                        101 - 150 кв.м
+                                    </th>
+                                    <td class="px-6 py-4">400 - 550 лв.</td>
+                                </tr>
+                                <tr class="bg-dark-600 border-b-4 border-yellow-500">
+                                    <th
+                                        scope="row"
+                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
+                                    >
+                                        151 - 200 кв.м
+                                    </th>
+                                    <td class="px-6 py-4">550 - 700 лв.</td>
+                                </tr>
+                                <tr class="bg-dark-600 border-b-4 border-yellow-500">
+                                    <th
+                                        scope="row"
+                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
+                                    >
+                                        201 - 300 кв.м
+                                    </th>
+                                    <td class="px-6 py-4">700 - 900 лв.</td>
+                                </tr>
+                                <tr class="bg-dark-600 border-yellow-500">
+                                    <th
+                                        scope="row"
+                                        class="px-6 py-4 font-medium text-white whitespace-nowrap "
+                                    >
+                                        Над 300 кв.м
+                                    </th>
+                                    <td class="px-6 py-4">По договаряне</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {/* Right Text Column */}
+                    <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-8 lg:ml-12 text-center md:text-left">
+                        <p className="text-red-600 font-semibold uppercase mb-2 text-sm">
+                            Property Intelligence is Now Available
+                        </p>
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                            AI-driven insights built for RRE.
+                        </h2>
+                        <p className="text-gray-700 mb-6">
+                            With Property Intelligence, our new suite of
+                            insight-driven features, you can automatically
+                            surface detailed property information and eliminate
+                            buyers’ reliance on time-consuming site visits to
+                            radically simplify the process of buying and selling
+                            a home. Plus, our new partnership with FBS makes it
+                            easy for Flexmls® users to update the rooms section
+                            of their listings with one click—no manual entry
+                            required!
+                        </p>
+                        <button className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700">
+                            Learn More
+                        </button>
+                    </div>
+                </section>
             </section>
         </>
     );
