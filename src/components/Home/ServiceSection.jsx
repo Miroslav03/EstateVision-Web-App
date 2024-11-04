@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
 
 export default function ServiceSection() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
-    const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
+    const controls = useAnimation();
 
     const hoverText = [
         "Eкстериорна фотография",
@@ -15,38 +15,49 @@ export default function ServiceSection() {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) setIsVisible(true);
+                if (entry.isIntersecting) controls.start("visible");
             },
             { threshold: 0.3 }
         );
         if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
-    }, []);
+    }, [controls]);
+
+    // Variants for animations
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, staggerChildren: 0.2 },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        hover: { scale: 1.05 },
+    };
+
+    const overlayVariants = {
+        visible: { opacity: 0.3 },
+        hidden: { opacity: 0.8 },
+    };
 
     return (
-        <div
+        <motion.div
             ref={sectionRef}
-            className={`h-[110vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 ${
-                isVisible ? "animate-fade-in-up" : "opacity-0"
-            }`}
+            variants={containerVariants}
+            initial="hidden"
+            animate={controls}
+            className="h-[93vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500"
         >
-            <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-center sm:items-end gap-4 mb-10 mt-16 sm:mt-28">
-                <div className="border-b-8 border-yellow-500">
-                    <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
-                        Услуги
-                    </h2>
-                </div>
-                <div className="flex flex-col sm:gap-0 gap-6 items-center sm:items-end w-full">
-                    <p className="text-gray-500 text-md sm:text-xl">
-                        Разгледай и избери услугата за теб
-                    </p>
-                </div>
-            </div>
-
-            <div className="flex sm:flex-row flex-col gap-6 w-full max-w-[90%] lg:max-w-[90%] transition-all duration-300 mt-8">
+            <motion.div className="flex sm:flex-row flex-col gap-6 w-full max-w-[90%] lg:max-w-[90%] mt-28">
                 {["k.png", "3dmodel.jpg", "drone1.jpg"].map((img, index) => (
-                    <div
+                    <motion.div
                         key={index}
+                        variants={itemVariants}
+                        whileHover="hover"
                         className={`relative bg-white h-[75vh] shadow-lg overflow-hidden transform transition-all duration-300 ${
                             hoveredIndex === index
                                 ? "sm:border-l-8 border-yellow-500"
@@ -59,40 +70,50 @@ export default function ServiceSection() {
                                 : hoveredIndex === 1 && index !== 1
                                 ? "flex-[0.9]"
                                 : "flex-1"
-                        } ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
+                        }`}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
-                        <img
+                        <motion.img
                             src={img}
                             alt={`Card Image ${index + 1}`}
-                            className={`w-full h-full object-cover transition-transform duration-300 ${
-                                hoveredIndex === index ? "scale-105" : ""
-                            }`}
+                            className="w-full h-full object-cover"
+                            initial={{ scale: 1 }}
+                            animate={{ scale: hoveredIndex === index ? 1.05 : 1 }}
+                            transition={{ duration: 0.3 }}
                         />
-                        <div
-                            className={`absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent transition-opacity duration-300 ${
-                                hoveredIndex === index
-                                    ? "opacity-30"
-                                    : "opacity-80"
-                            }`}
-                        ></div>
+                        <motion.div
+                            variants={overlayVariants}
+                            initial="hidden"
+                            animate={hoveredIndex === index ? "visible" : "hidden"}
+                            className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent"
+                        ></motion.div>
 
-                        <div
-                            className={`absolute bottom-4 left-4 text-white mb-2 sm:mb-8 ml:2 sm:ml-5 transition-all duration-300 transform ${
+                        <motion.div
+                            className={`absolute bottom-4 left-4 text-white mb-2 sm:mb-8 ml-2 sm:ml-5 transition-all duration-300 transform ${
                                 hoveredIndex === index || !hoveredIndex
                                     ? "translate-x-0 opacity-100"
                                     : "translate-x-full opacity-0 sm:translate-x-0 sm:opacity-100"
                             }`}
                         >
-                            <p className="text-xl sm:text-2xl font-semibold">
+                            <motion.p
+                                className="text-xl sm:text-2xl font-semibold"
+                                animate={{
+                                    opacity: hoveredIndex === index ? 1 : 0,
+                                    x: hoveredIndex === index ? 0 : 20,
+                                }}
+                                transition={{ duration: 0.3 }}
+                            >
                                 {hoverText[index]}
-                            </p>
-                            <div className="h-[0.1rem] sm:h-1 bg-yellow-500 mt-2 w-[100%] sm:w-full "></div>
-                        </div>
-                    </div>
+                            </motion.p>
+                            <motion.div
+                                className="h-[0.1rem] sm:h-1 bg-yellow-500 mt-2 w-full"
+                                layout
+                            ></motion.div>
+                        </motion.div>
+                    </motion.div>
                 ))}
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }

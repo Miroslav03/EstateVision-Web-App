@@ -2,8 +2,6 @@
 import HeroSection from "../../components/Home/HeroSection";
 import ServiceSection from "../../components/Home/ServiceSection";
 import Navigation from "../../components/Navigation/Navigation";
-import LiveDemoSection from "../../components/Home/LiveDemoSection";
-import StaticPhotography from "../../components/Home/StaticPhotography";
 import Stats from "../../components/Home/Stats";
 import AboutSection from "../../components/Home/AboutSection";
 import HowItWorksSection from "../../components/Home/HowItWorksSection";
@@ -16,15 +14,15 @@ export default function Home() {
         <main className="w-full overflow-x-hidden font-main min-h-screen bg-dark-500">
             <Navigation />
             <HeroSection />
-            <ServiceSection />
+            <div id="serivce-section">
+                <ServiceSection />
+            </div>
             <Stats />
             <AboutSection />
             <IconSection />
             <HowItWorksSection />
             <CallToActionSection />
             <Footer />
-            {/*  <LiveDemoSection />
-            <StaticPhotography /> */}
         </main>
     );
 }
