@@ -16,7 +16,7 @@ export default function ModelSection() {
                     style={{
                         boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
                     }}
-                    className="w-full mt-16 sm:mt-16 h-[70vh] sm:h-[57vw] sm:max-h-[57w] border-b-8 border-yellow-500 "
+                    className="w-full mt-16 sm:mt-16 h-[60vh] sm:h-[57vw] sm:max-h-[57w] border-b-8 border-yellow-500 "
                     src="https://my.matterport.com/show/?m=rKEjqUjdNKe&log=0&help=0&nt=0&play=0&qs=0&brand=1&dh=1&tour=1&gt=1&hr=1&mls=0&mt=1&tagNav=1&pin=1&portal=1&f=1&fp=1&nozoom=0&search=1&wh=0&kb=1&lp=0&title=1&tourcta=1&vr=1&title=0"
                     frameBorder="0"
                     allowfullscreen
@@ -24,7 +24,7 @@ export default function ModelSection() {
                 ></iframe>
 
                 {/* Cards */}
-                <section className="grid grid-cols-2 grid-rows-2 py-24 gap-y-16 gap-x-16">
+                <section className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2  py-24 gap-y-16 gap-x-16 ">
                     {[
                         {
                             src: "/3dInsight.png",
@@ -52,7 +52,7 @@ export default function ModelSection() {
                                 </>
                             ),
                             description:
-                                "Нека купувачите сравняват къщи в невероятни детайли. Споделете етажни планове и размери на стаите с едно натискане на бутон.",
+                                "Нека купувачите сравняват къщи в невероятни детайли. Споделете размери на стаите с едно натискане на бутон.",
                         },
                         {
                             src: "/3dAi.png",
@@ -88,9 +88,9 @@ export default function ModelSection() {
                             style={{
                                 boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
                             }}
-                            className="max-w-xl overflow-hidden border-yellow-500 border-l-8 hover:scale-105 transition-all transform duration-500 ease-in-out"
+                            className="max-w-sm sm:max-w-xl overflow-hidden border-yellow-500 border-l-8 hover:scale-105 transition-all transform duration-500 ease-in-out"
                         >
-                            <div className="h-[60%] w-full relative overflow-hidden">
+                            <div className="h-[50%] sm:h-[60%] w-full relative overflow-hidden">
                                 <img
                                     className="w-full h-full scale-110"
                                     src={item.src}
@@ -98,13 +98,13 @@ export default function ModelSection() {
                                 />
                             </div>
                             <div className="px-6 py-4">
-                                <h1 className="text-white font-base text-lg border-b-2 border-yellow-500 inline-block">
+                                <h1 className="text-white font-base text-sm sm:text-lg border-b-2 border-yellow-500 inline-block">
                                     {item.title}
                                 </h1>
-                                <div className="font-bold text-3xl mb-2 text-white">
+                                <div className="font-bold text-2xl sm:text-3xl mb-2 text-white">
                                     {item.subtitle}
                                 </div>
-                                <p className="text-gray-500 text-lg">
+                                <p className="text-gray-500 text-md sm:text-lg">
                                     {item.description}
                                 </p>
                             </div>
@@ -112,12 +112,12 @@ export default function ModelSection() {
                     ))}
                 </section>
 
-                <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
+                <div class="py-8 px-4 mx-auto max-w-screen-xl  sm:py-24 lg:px-6">
                     <div class="max-w-screen-md flex justify-center items-center flex-col">
                         <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-4">
                             Според купувачите
                         </h1>
-                        <h2 className="text-white text-5xl text-center">
+                        <h2 className="text-white text-4xl sm:text-5xl text-center">
                             <span className="text-yellow-500 font-bold">
                                 63%
                             </span>{" "}
@@ -127,16 +127,17 @@ export default function ModelSection() {
                     </div>
                 </div>
 
-                <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-24 lg:px-6">
+                <div className="gap-16 items-center py-20  sm:py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-24 lg:px-6">
                     <div className="font-light text-gray-500">
-                        <h1 className="mb-4 text-5xl tracking-tight font-semibold border-b-8 border-yellow-500 text-white inline-block pb-5">
+                        <h1 className="mb-8 sm:mb-4  text-4xl sm:text-5xl tracking-tight font-semibold border-b-8 border-yellow-500 text-white inline-block pb-5 max-w-[13rem] sm:max-w-full">
                             Property Intelligence
                         </h1>
+
                         <h2 className="mb-4 text-4xl tracking-tight font-semibold text-white">
                             <span className="text-yellow-500">АI фунцкии</span>{" "}
                             на моделите
                         </h2>
-                        <p className="mb-4">
+                        <p className="mb-4 text-lg sm:text-xl">
                             С новия ни пакет Property Intelligence можете
                             автоматично да извеждате подробна информация за
                             имота и да опростите процеса на покупка и продажба.
