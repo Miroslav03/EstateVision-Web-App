@@ -1,41 +1,69 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion, useInView } from "framer-motion";
 
 export default function DroneSection() {
+    const ref1 = React.useRef(null);
+    const ref2 = React.useRef(null);
+    const ref3 = React.useRef(null);
+    const isInView1 = useInView(ref1, { triggerOnce: false });
+    const isInView2 = useInView(ref2, { triggerOnce: false });
+    const isInView3 = useInView(ref3, { triggerOnce: false });
+
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+    };
+
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-16 border-t-0 sm:border-t-8 border-yellow-500">
-            <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end sm:items-center gap-4">
+            {/* Heading Section */}
+            <motion.div
+                ref={ref1}
+                variants={containerVariants}
+                initial="hidden"
+                animate={isInView1 ? "visible" : "hidden"}
+                className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end sm:items-center gap-4"
+            >
                 <div className="border-b-8 border-yellow-500">
-                    <h2 className="text-4xl sm:text-6xl font-semibold  text-white mb-4">
+                    <h2 className="text-4xl sm:text-6xl font-semibold text-white mb-4">
                         Заснемане с дрон
                     </h2>
                 </div>
-                <div className="flex flex-col sm:gap-0 gap-6 items-end sm:items-center w-full mt-2">
-                    <p className="text-gray-500 text-md sm:text-xl">
-                        Разгледай и избери услугата за теб
-                    </p>
-                </div>
-            </div>
+                <p className="text-gray-500 text-md sm:text-xl">
+                    Разгледай и избери услугата за теб
+                </p>
+            </motion.div>
+
+            {/* Image and Text Sections */}
             <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col lg:flex-row items-center gap-16 mb-6">
-                <div
+                <motion.div
+                    ref={ref2}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={isInView2 ? "visible" : "hidden"}
                     className="flex relative w-full lg:w-1/3 justify-center"
-                    style={{
-                        boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
-                    }}
+                    style={{ boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)" }}
                 >
-                    <img
+                    <motion.img
                         src="/dronesection3.jpg"
                         alt="First"
                         className="w-[100%] h-auto border-l-8 border-yellow-500"
                     />
-                    <img
+                    <motion.img
                         src="/dronesection4.jpg"
                         alt="Second"
                         className="w-[50%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-8 border-yellow-500"
                     />
-                </div>
+                </motion.div>
 
-                <div className="flex flex-col items-center w-full lg:w-1/3 text-center">
+                <motion.div
+                    ref={ref3}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={isInView3 ? "visible" : "hidden"}
+                    className="flex flex-col items-center w-full lg:w-1/3 text-center"
+                >
                     <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4 mt-8 sm:mt-0">
                         Поглед отвисоко{" "}
                         <span className="text-yellow-500">
@@ -61,25 +89,26 @@ export default function DroneSection() {
                         </span>
                         <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></div>
                     </Link>
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={isInView3 ? "visible" : "hidden"}
                     className="flex relative w-full lg:w-1/3 justify-center sm:mb-0 mb-8"
-                    style={{
-                        boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
-                    }}
+                    style={{ boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)" }}
                 >
-                    <img
+                    <motion.img
                         src="/dronesection1.jpg"
                         alt="First"
                         className="w-[100%] h-auto border-l-8 border-yellow-500 transform scale-x-[-1]"
                     />
-                    <img
+                    <motion.img
                         src="/dronesection2.jpg"
                         alt="Second"
                         className="w-[50%] h-auto absolute -bottom-6 -left-2 sm:-left-12 border-l-8 border-yellow-500 transform scale-x-[-1]"
                     />
-                </div>
+                </motion.div>
             </div>
         </div>
     );
