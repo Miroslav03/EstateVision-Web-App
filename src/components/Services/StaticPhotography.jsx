@@ -6,12 +6,12 @@ export default function StaticPhotography() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const images = [
-        "/grid1.jpg",
-        "/grid2.jpg",
-        "/grid3.jpg",
-        "/k.jpg",
-        "/k1-2.jpg",
-        "/k2.png",
+        "/grid1-min.jpg",
+        "/grid2-min.jpg",
+        "/grid3-min.jpg",
+        "/k-min.jpg",
+        "/k1-2-min.jpg",
+        "/k2-min.png",
     ];
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 border-t-0 sm:border-t-8 border-yellow-500">
