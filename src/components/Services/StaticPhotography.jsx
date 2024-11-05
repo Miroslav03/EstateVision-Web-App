@@ -14,20 +14,20 @@ export default function StaticPhotography() {
         "/k2.png",
     ];
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-32 border-t-8 border-yellow-500">
-            <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end gap-4  mt-12">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-20 sm:gap-32 border-t-0 sm:border-t-8 border-yellow-500">
+            <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end gap-4 mt-4 sm:mt-12">
                 <div className="border-b-8 border-yellow-500">
                     <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
                         Потопи се в света на фотографията
                     </h2>
                 </div>
-                <div className="flex flex-col sm:gap-0 gap-6 items-end sm:items-end w-full mt-2">
+                <div className="flex flex-col sm:gap-0 gap-6 items-start sm:items-end w-full mt-2">
                     <p className="text-gray-500 text-md sm:text-xl">
                         Разгледай и избери услугата за теб
                     </p>
                 </div>
             </div>
-            <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col lg:flex-row items-center gap-32 mb-20">
+            <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col lg:flex-row items-center gap-16 sm:gap-32 sm:mb-20">
                 <div
                     className="flex relative lg:w-1/2 w-full justify-center"
                     style={{
@@ -42,7 +42,7 @@ export default function StaticPhotography() {
                     <img
                         src="/k1.png"
                         alt="Second"
-                        className="w-[40%] h-auto absolute -bottom-12 -right-12 border-l-8 border-yellow-500"
+                        className="w-[40%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-8 border-yellow-500"
                     />
                 </div>
 
@@ -51,7 +51,7 @@ export default function StaticPhotography() {
                         Присъствие чрез{" "}
                         <span className="text-yellow-500">фотография </span>
                     </h2>
-                    <p className="text-gray-500 text-md sm:text-xl mb-6 max-w-lg">
+                    <p className="text-gray-500 text-lg sm:text-xl mb-6 max-w-lg">
                         Улавяме атмосферата и детайлите на вашите проекти чрез
                         статична фотография. Нашият опит и внимание към детайла
                         осигуряват визуални материали, които разказват история и
@@ -73,12 +73,12 @@ export default function StaticPhotography() {
                 </div>
             </div>
 
-            <div class="px-4 mx-auto max-w-screen-xl  lg:px-6" >
+            <div class="px-4 mx-auto max-w-screen-xl  lg:px-6 py-16 sm:py-0" >
                 <div class="max-w-screen-md flex justify-center items-center flex-col">
                     <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-4">
                         Нашата галерия
                     </h1>
-                    <h2 className="text-white text-5xl text-center">
+                    <h2 className="text-white text-4xl sm:text-5xl text-center">
                         <span className="text-yellow-500 font-bold">72%</span>{" "}
                         от клиентите са по-склонни да изберат имот, когато
                         виждат професионални снимки.*
@@ -87,7 +87,7 @@ export default function StaticPhotography() {
             </div>
 
             <motion.div
-                className="w-full overflow-x-scroll flex gap-4 cursor-grab px-6 pb-4"
+                className="w-[90%] sm:w-full overflow-x-scroll flex gap-4 cursor-grab px-6 pb-4"
                 style={{ scrollSnapType: "x mandatory" }}
                 whileTap={{ cursor: "grabbing" }}
             >
