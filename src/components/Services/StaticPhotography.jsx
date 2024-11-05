@@ -46,7 +46,7 @@ export default function StaticPhotography() {
                     />
                 </div>
 
-                <div className="flex flex-col items-start lg:w-1/2 w-full" >
+                <div className="flex flex-col items-start lg:w-1/2 w-full">
                     <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
                         Присъствие чрез{" "}
                         <span className="text-yellow-500">фотография </span>
@@ -63,7 +63,7 @@ export default function StaticPhotography() {
                         to="/services"
                     >
                         <span className="z-20 group-hover:text-dark-500">
-                           Цени
+                            Цени
                         </span>
                         <span className="ms-2 z-20 group-hover:text-dark-500">
                             &rarr;
@@ -73,7 +73,7 @@ export default function StaticPhotography() {
                 </div>
             </div>
 
-            <div class="px-4 mx-auto max-w-screen-xl  lg:px-6 py-16 sm:py-0" >
+            <div class="px-4 mx-auto max-w-screen-xl  lg:px-6 py-16 sm:py-0">
                 <div class="max-w-screen-md flex justify-center items-center flex-col">
                     <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-4">
                         Нашата галерия
@@ -87,7 +87,7 @@ export default function StaticPhotography() {
             </div>
 
             <motion.div
-                className="w-[90%] sm:w-full overflow-x-scroll flex gap-4 cursor-grab px-6 pb-4"
+                className="w-[90%] sm:w-full flex gap-4 cursor-grab px-6 pb-4 overflow-hidden"
                 style={{ scrollSnapType: "x mandatory" }}
                 whileTap={{ cursor: "grabbing" }}
             >
