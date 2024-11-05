@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function DroneSection() {
     return (
-        <div className="h-[95vh] flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-16 border-t-8 border-yellow-500">
-            <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-center gap-4">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-16 border-t-0 sm:border-t-8 border-yellow-500">
+            <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end sm:items-center gap-4">
                 <div className="border-b-8 border-yellow-500">
                     <h2 className="text-4xl sm:text-6xl font-semibold  text-white mb-4">
                         Заснемане с дрон
@@ -31,18 +31,18 @@ export default function DroneSection() {
                     <img
                         src="/dronesection4.jpg"
                         alt="Second"
-                        className="w-[50%] h-auto absolute -bottom-12 -right-12 border-l-8 border-yellow-500"
+                        className="w-[50%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-8 border-yellow-500"
                     />
                 </div>
 
                 <div className="flex flex-col items-center w-full lg:w-1/3 text-center">
-                    <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
+                    <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4 mt-8 sm:mt-0">
                         Поглед отвисоко{" "}
                         <span className="text-yellow-500">
                             Визуализация с дрон
                         </span>
                     </h2>
-                    <p className="text-gray-500 text-md sm:text-xl mb-6 max-w-lg">
+                    <p className="text-gray-500 text-lg sm:text-xl mb-6 max-w-lg">
                         Открийте нови перспективи с нашето професионално
                         заснемане с дрон. Бързо, ефективно и с високо качество,
                         нашата услуга ще улови мащаба и детайлите на вашия
@@ -64,7 +64,7 @@ export default function DroneSection() {
                 </div>
 
                 <div
-                    className="flex relative w-full lg:w-1/3 justify-center"
+                    className="flex relative w-full lg:w-1/3 justify-center sm:mb-0 mb-8"
                     style={{
                         boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
                     }}
@@ -77,7 +77,7 @@ export default function DroneSection() {
                     <img
                         src="/dronesection2.jpg"
                         alt="Second"
-                        className="w-[50%] h-auto absolute -bottom-6 -left-12 border-l-8 border-yellow-500 transform scale-x-[-1]"
+                        className="w-[50%] h-auto absolute -bottom-6 -left-2 sm:-left-12 border-l-8 border-yellow-500 transform scale-x-[-1]"
                     />
                 </div>
             </div>

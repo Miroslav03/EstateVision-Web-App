@@ -14,7 +14,7 @@ export default function StaticPhotography() {
         "/k2.png",
     ];
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-20 sm:gap-32 border-t-0 sm:border-t-8 border-yellow-500">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 border-t-0 sm:border-t-8 border-yellow-500">
             <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end gap-4 mt-4 sm:mt-12">
                 <div className="border-b-8 border-yellow-500">
                     <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
