@@ -48,7 +48,7 @@ export default function ServiceSection() {
             className="h-[93vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 sm:to-dark-500"
         >
             <motion.div className="flex sm:flex-row flex-col gap-6 w-full max-w-[90%] lg:max-w-[90%] mt-8 sm:mt-28">
-                {["k.png", "3dmodel.jpg", "drone1.jpg"].map((img, index) => (
+                {["k-min.jpg", "3dmodel.jpg", "drone1.jpg"].map((img, index) => (
                     <motion.div
                         key={index}
                         variants={itemVariants}

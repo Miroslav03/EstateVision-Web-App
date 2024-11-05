@@ -95,10 +95,10 @@ export default function HeroSection({ serviceSectionRef }) {
             >
                 <div className="w-full h-full z-20 absolute bg-black opacity-30"></div>
                 <img
-                    src="k1-2.jpg"
+                    src="k1-2-min.jpg"
                     alt=""
                     className="h-full object-cover z-10 border-l-8 border-b-0 sm:border-b-8"
-                    style={{ borderColor: "rgba(255, 193, 7, 0.7)" }} // Adjust the alpha (0.5) to your liking
+                    style={{ borderColor: "rgba(255, 193, 7, 0.7)" }} 
                 />
             </motion.div>
         </div>
