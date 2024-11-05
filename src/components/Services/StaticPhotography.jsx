@@ -63,7 +63,7 @@ export default function StaticPhotography() {
                         to="/services"
                     >
                         <span className="z-20 group-hover:text-dark-500">
-                            Разгледай услугите
+                           Цени
                         </span>
                         <span className="ms-2 z-20 group-hover:text-dark-500">
                             &rarr;
