@@ -28,20 +28,25 @@ export default function StaticPhotography() {
                 </div>
             </div>
             <div className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col lg:flex-row items-center gap-32 mb-20">
-                <div className="flex relative lg:w-1/2 w-full justify-end">
+                <div
+                    className="flex relative lg:w-1/2 w-full justify-center"
+                    style={{
+                        boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
+                    }}
+                >
                     <img
                         src="/k2.png"
                         alt="First"
-                        className="w-[90%] h-auto shadow-lg border-l-8 border-yellow-500"
+                        className="w-[100%] h-auto  border-l-8 border-yellow-500"
                     />
                     <img
                         src="/k1.png"
                         alt="Second"
-                        className="w-[40%] h-auto shadow-lg absolute -bottom-12 -right-12 border-l-8 border-yellow-500"
+                        className="w-[40%] h-auto absolute -bottom-12 -right-12 border-l-8 border-yellow-500"
                     />
                 </div>
 
-                <div className="flex flex-col items-start lg:w-1/2 w-full">
+                <div className="flex flex-col items-start lg:w-1/2 w-full" >
                     <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
                         Присъствие чрез{" "}
                         <span className="text-yellow-500">фотография </span>
@@ -67,6 +72,20 @@ export default function StaticPhotography() {
                     </Link>
                 </div>
             </div>
+
+            <div class="px-4 mx-auto max-w-screen-xl  lg:px-6" >
+                <div class="max-w-screen-md flex justify-center items-center flex-col">
+                    <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-4">
+                        Нашата галерия
+                    </h1>
+                    <h2 className="text-white text-5xl text-center">
+                        <span className="text-yellow-500 font-bold">72%</span>{" "}
+                        от клиентите са по-склонни да изберат имот, когато
+                        виждат професионални снимки.*
+                    </h2>
+                </div>
+            </div>
+
             <motion.div
                 className="w-full overflow-x-scroll flex gap-4 cursor-grab px-6 pb-4"
                 style={{ scrollSnapType: "x mandatory" }}
