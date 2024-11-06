@@ -4,8 +4,24 @@ import Services from "./pages/Services/Services";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Pricing from "./pages/Pricing/Pricing";
+import Loader from "./components/Loader/Loader";
+import { useEffect, useState } from "react";
 
 export default function App() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
+
+        return () => clearTimeout(timeout);
+    })
+
+    if (isLoading) {
+        return <Loader />
+    }
+
     return (
         <Routes>
             <Route path="/" Component={Home}/>
