@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { smtpexpressClient } from "../../smtp";
 
 export default function AboutUsSection() {
     const [name, setName] = useState("");
@@ -8,8 +9,37 @@ export default function AboutUsSection() {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
+
+        try {
+            await smtpexpressClient.sendApi.sendMail({
+                subject: "EstateVision: You got a new message!",
+                message: `
+                    <h1>You've got new message from ${name}</h1> \n
+                    <p>${content}</p> \n \n
+                    <h3>Sender's email: ${email}</h1>
+                `,
+                sender: {
+                    name: "EstateVision Contact Form",
+                    email: "estatevision-203feb@projects.smtpexpress.com"
+                },
+                recipients: {
+                    email: "gamingbymario@gmail.com"
+                }
+            })
+
+            // Clear Error and form
+            setError("");
+            setName("");
+            setEmail("");
+            setContent("");
+        } catch {
+            setError("Възникна грешка. Съобщението не се изпрати");
+        } finally {
+            setIsLoading(false);
+        }
     }
 
     const fadeInUp = {
