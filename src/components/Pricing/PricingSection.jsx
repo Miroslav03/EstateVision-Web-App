@@ -195,7 +195,7 @@ export default function PricingSection() {
                                     class="flex items-center just space-x-4"
                                 >
                                     <svg
-                                        class="flex-shrink-0 w-6 h-6 text-yellow-300"
+                                        className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -203,9 +203,9 @@ export default function PricingSection() {
                                         <path
                                             d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
                                             stroke="currentColor"
-                                            stroke-width="1.6"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth="1.6"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                         />
                                     </svg>
                                     <span className="text-xl text-white">
@@ -215,9 +215,9 @@ export default function PricingSection() {
                                         </span>
                                     </span>
                                 </motion.li>
-                                <li class="flex items-center space-x-4">
+                                <li className="flex items-center space-x-4">
                                     <svg
-                                        class="flex-shrink-0 w-6 h-6 text-yellow-300"
+                                        className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -225,9 +225,9 @@ export default function PricingSection() {
                                         <path
                                             d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
                                             stroke="currentColor"
-                                            stroke-width="1.6"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth="1.6"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                         />
                                     </svg>
                                     <span className="text-xl text-white">
@@ -237,9 +237,9 @@ export default function PricingSection() {
                                         </span>
                                     </span>
                                 </li>
-                                <li class="flex items-center space-x-4">
+                                <li className="flex items-center space-x-4">
                                     <svg
-                                        class="flex-shrink-0 w-6 h-6 text-yellow-300"
+                                        className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -247,9 +247,9 @@ export default function PricingSection() {
                                         <path
                                             d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
                                             stroke="currentColor"
-                                            stroke-width="1.6"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth="1.6"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                         />
                                     </svg>
                                     <span className="text-xl text-white">
@@ -259,9 +259,9 @@ export default function PricingSection() {
                                         </span>
                                     </span>
                                 </li>
-                                <li class="flex items-center space-x-4">
+                                <li className="flex items-center space-x-4">
                                     <svg
-                                        class="flex-shrink-0 w-6 h-6 text-yellow-300"
+                                        className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -269,9 +269,9 @@ export default function PricingSection() {
                                         <path
                                             d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
                                             stroke="currentColor"
-                                            stroke-width="1.6"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth="1.6"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                         />
                                     </svg>
                                     <span className="text-xl text-white">
@@ -281,9 +281,9 @@ export default function PricingSection() {
                                         </span>
                                     </span>
                                 </li>
-                                <li class="flex items-center space-x-4">
+                                <li className="flex items-center space-x-4">
                                     <svg
-                                        class="flex-shrink-0 w-6 h-6 text-yellow-300"
+                                        className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -291,9 +291,9 @@ export default function PricingSection() {
                                         <path
                                             d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
                                             stroke="currentColor"
-                                            stroke-width="1.6"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth="1.6"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                         />
                                     </svg>
                                     <span className="text-xl text-white">
@@ -303,9 +303,9 @@ export default function PricingSection() {
                                         </span>
                                     </span>
                                 </li>
-                                <li class="flex items-center space-x-4">
+                                <li className="flex items-center space-x-4">
                                     <svg
-                                        class="flex-shrink-0 w-6 h-6 text-yellow-300"
+                                        className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -313,9 +313,9 @@ export default function PricingSection() {
                                         <path
                                             d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
                                             stroke="currentColor"
-                                            stroke-width="1.6"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                            strokeWidth="1.6"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
                                         />
                                     </svg>
                                     <span className="text-xl text-white">
