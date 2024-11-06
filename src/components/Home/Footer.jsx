@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -11,25 +12,33 @@ export default function Footer() {
                     />
                     <ul className="flex flex-wrap items-center  text-sm font-medium text-gray-500 sm:mb-0 ">
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                to="/about"
                                 className="hover:underline me-4 md:me-6"
                             >
-                                About
-                            </a>
+                                За нас
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                to="/services"
                                 className="hover:underline me-4 md:me-6"
                             >
-                                Privacy Policy
-                            </a>
+                                Услуги
+                            </Link>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">
-                                Contact
-                            </a>
+                            <Link
+                                to="/prices"
+                                className="hover:underline me-4 md:me-6"
+                            >
+                                Цени
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/contact" className="hover:underline">
+                                Контакти
+                            </Link>
                         </li>
                     </ul>
                 </div>
