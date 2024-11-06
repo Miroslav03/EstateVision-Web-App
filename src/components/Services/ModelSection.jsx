@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function ModelSection() {
+    const [hasPlayed, setHasPlayed] = useState();
+
+    const handlePlayOnce = () => {
+        if (!hasPlayed) {
+            setHasPlayed(true);
+        }
+    };
+
     return (
         <>
             <section className="w-full h-max overflow-hidden flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 pt-20">
@@ -29,10 +38,11 @@ export default function ModelSection() {
                 </motion.p>
 
                 <motion.iframe
+                onViewportEnter={handlePlayOnce}
                     whileInView={{ opacity: 1, scale: 1 }}
                     initial={{ opacity: 0, scale: 0.9 }}
                     transition={{ delay: 0.6, duration: 0.3 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     style={{ boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)" }}
                     className="w-full mt-16 sm:mt-16 h-[60vh] sm:h-[57vw] sm:max-h-[57w] border-b-8 border-yellow-500"
                     src="https://my.matterport.com/show/?m=rKEjqUjdNKe&log=0&help=0&nt=0&play=0&qs=0&brand=1&dh=1&tour=1&gt=1&hr=1&mls=0&mt=1&tagNav=1&pin=1&portal=1&f=1&fp=1&nozoom=0&search=1&wh=0&kb=1&lp=0&title=1&tourcta=1&vr=1&title=0"
