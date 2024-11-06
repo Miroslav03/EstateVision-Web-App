@@ -21,6 +21,7 @@ export default function Navigation() {
         <div className="grow shrink-0 hidden sm:flex justify-center items-center">
           <NavigationButton to="/" title="Начало" />
           <NavigationButton to="/services" title="Услуги" />
+          <NavigationButton to="/prices" title="Цени" />
           <NavigationButton to="/about" title="За Нас" />
           <NavigationButton to="/contact" title="Свържете се" />
         </div>
