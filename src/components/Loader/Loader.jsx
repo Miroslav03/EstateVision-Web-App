@@ -30,7 +30,7 @@ const BarLoader = () => {
     return (
         <motion.div
             transition={{
-                staggerChildren: 0.25,
+                duration: .4
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
