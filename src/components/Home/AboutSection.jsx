@@ -141,7 +141,7 @@ export default function AboutSection() {
                             >
                                 <Link
                                     className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
-                                    to=""
+                                    to="/about"
                                 >
                                     <p className="z-20 group-hover:text-dark-500">
                                         За нас

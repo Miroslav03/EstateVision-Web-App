@@ -79,9 +79,9 @@ export default function CallToActionSection() {
                         си поръчка!
                     </motion.p>
                     <div className="w-40">
-                        <Link
+                        <a
                             className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
-                            to=""
+                            href="tel:+359885172833"
                             style={{
                                 boxShadow: "0px 0px 0px rgba(255, 193, 7, 0)",
                                 transition: "box-shadow 0.3s ease",
@@ -100,7 +100,7 @@ export default function CallToActionSection() {
                             </p>
                             <span className="ms-2 z-20 group-hover:text-dark-500"></span>
                             <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></div>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </motion.div>

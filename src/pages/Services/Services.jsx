@@ -11,7 +11,7 @@ export default function Services() {
             <ModelSection />
             <StaticPhotography />
             <DroneSection />
-            <Footer/>
+            <Footer />
         </main>
     );
 }
