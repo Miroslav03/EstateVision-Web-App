@@ -38,6 +38,9 @@ export default function AboutUsSection() {
                     </p>
                 </motion.div>
                 <motion.img
+                    style={{
+                        boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
+                    }}
                     className="h-full w-full sm:w-auto max-w-5xl object-cover border-r-0 sm:border-l-8 border-yellow-500"
                     src="/about1.jpg"
                     alt="About Us"
@@ -50,6 +53,9 @@ export default function AboutUsSection() {
 
             <div className="w-full flex sm:flex-row flex-col justify-center items-center gap-12 sm:gap-28">
                 <motion.img
+                    style={{
+                        boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
+                    }}
                     className="h-full w-full max-w-4xl object-cover border-r-0 sm:border-r-8 border-yellow-500"
                     src="/about2.jpg"
                     alt="About Us"
