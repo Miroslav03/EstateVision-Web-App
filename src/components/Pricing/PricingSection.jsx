@@ -188,7 +188,7 @@ export default function PricingSection() {
                         >
                             <motion.ul
                                 variants={itemVariants}
-                                class="mb-12 space-y-6 text-left text-lg "
+                                class="mb-12 space-y-6 text-center text-lg flex justify-center items-center flex-col "
                             >
                                 <motion.li
                                     variants={itemVariants}
