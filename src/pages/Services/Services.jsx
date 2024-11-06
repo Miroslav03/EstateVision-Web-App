@@ -36,9 +36,9 @@ export default function Services() {
     return (
         <main className="w-full overflow-x-hidden font-main min-h-screen bg-dark-500">
             <Navigation />
-            <ModelSection id="model-section" modelSectionRef={modelSectionRef} />
-            <StaticPhotography id="static-photography" staticPhotographyRef={staticPhotographyRef} />
-            <DroneSection id="drone-section" droneSectionRef={droneSectionRef}/>
+            <ModelSection modelSectionRef={modelSectionRef} />
+            <StaticPhotography staticPhotographyRef={staticPhotographyRef} />
+            <DroneSection droneSectionRef={droneSectionRef}/>
             <Footer />
         </main>
     );
