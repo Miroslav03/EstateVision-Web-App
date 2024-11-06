@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 
 const Loader = () => {
@@ -31,8 +32,8 @@ const BarLoader = () => {
             transition={{
                 staggerChildren: 0.25,
             }}
-            initial="initial"
-            animate="animate"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className="flex gap-1"
         >
             <div className="flex gap-3">
