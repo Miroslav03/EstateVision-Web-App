@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function StaticPhotography() {
+// eslint-disable-next-line react/prop-types
+export default function StaticPhotography({ staticPhotographyRef }) {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const images = [
@@ -39,7 +40,7 @@ export default function StaticPhotography() {
     };
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 border-t-0 sm:border-t-8 border-yellow-500">
+        <div ref={staticPhotographyRef} className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 border-t-0 sm:border-t-8 border-yellow-500">
             {/* Title Section */}
             <motion.div
                 className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end gap-4 mt-4 sm:mt-12"
@@ -102,7 +103,7 @@ export default function StaticPhotography() {
 
                     <Link
                         className="text-white font-main px-5 py-2 text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
-                        to="/services"
+                        to="/prices"
                     >
                         <span className="z-20 group-hover:text-dark-500">
                             Цени

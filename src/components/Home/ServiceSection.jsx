@@ -44,13 +44,13 @@ export default function ServiceSection() {
     const handleClick = (index) => {
         switch (index) {
             case 0:
-                navigate("/services#static-photography");
+                navigate("/services?section=staticPhotography");
                 break;
             case 1:
-                navigate("/services#model-section");
+                navigate("/services?section=modelSection");
                 break;
             case 2:
-                navigate("/services#drone-section");
+                navigate("/services?section=droneSection");
                 break;
             default:
                 break;
@@ -111,6 +111,7 @@ export default function ServiceSection() {
                                 </motion.p>
                                 <div
                                     className="h-[0.1rem] sm:h-1 bg-yellow-500 mt-2 w-full"
+                                    // eslint-disable-next-line react/no-unknown-property
                                     layout
                                 ></div>
                             </motion.div>
