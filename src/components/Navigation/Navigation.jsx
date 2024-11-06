@@ -22,6 +22,7 @@ export default function Navigation() {
           <NavigationButton to="/" title="Начало" />
           <NavigationButton to="/services" title="Услуги" />
           <NavigationButton to="/about" title="За Нас" />
+          <NavigationButton to="/contact" title="Свържете се" />
         </div>
         {/* Toggle Button Container */}
         <div className="w-80 flex items-center justify-end sm:justify-center pe-4 sm:pe-0">
