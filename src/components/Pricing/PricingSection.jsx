@@ -16,7 +16,7 @@ export default function PricingSection() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     };
     return (
-        <section className="bg-gradient-to-r from-dark-700 to-dark-500 pt-40 sm:pt-56 pb-16 sm:pb-32">
+        <section className="bg-gradient-to-r from-dark-700 to-dark-500 pt-40 sm:pt-56 pb-16 sm:pb-20">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col sm:grid sm:grid-cols-3 gap-8  sm:gap-6 ">
                     <motion.div
