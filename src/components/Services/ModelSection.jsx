@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function ModelSection() {
+// eslint-disable-next-line react/prop-types
+export default function ModelSection({ modelSectionRef }) {
     const [hasPlayed, setHasPlayed] = useState();
 
     const handlePlayOnce = () => {
@@ -12,7 +13,10 @@ export default function ModelSection() {
 
     return (
         <>
-            <section className="w-full h-max overflow-hidden flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 pt-20">
+            <section 
+                ref={modelSectionRef}
+                className="w-full h-max overflow-hidden flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 pt-20"
+            >
                 <motion.h1
                     whileInView={{ opacity: 1, y: 0 }}
                     initial={{ opacity: 0, y: 50 }}
