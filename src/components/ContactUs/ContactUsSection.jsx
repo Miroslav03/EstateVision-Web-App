@@ -1,6 +1,17 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function AboutUsSection() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [content, setContent] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     const fadeInUp = {
         hidden: { opacity: 0, y: 50 },
         visible: {
@@ -70,18 +81,24 @@ export default function AboutUsSection() {
                                         съобщение
                                     </span>
                                 </motion.h2>
-                                <form action="">
+                                <form onSubmit={handleSubmit}>
                                     <motion.input
                                         type="text"
                                         variants={fadeInUp}
                                         className="w-full h-14 shadow-sm text-dark-600 placeholder-text-400 text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
                                         placeholder="Име"
+                                        required
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                     />
                                     <motion.input
                                         type="email"
                                         variants={fadeInUp}
                                         className="w-full h-14 shadow-sm text-dark-600 placeholder-text-400 text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
                                         placeholder="Email"
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                     />
                                     <motion.textarea
                                         name=""
@@ -89,10 +106,14 @@ export default function AboutUsSection() {
                                         variants={fadeInUp}
                                         className="w-full h-48 shadow-sm resize-none text-dark-600 placeholder-text-400 text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none px-4 py-4 mb-8"
                                         placeholder="Напиши ни съобщение"
+                                        required
+                                        value={content}
+                                        onChange={(e) => setContent(e.target.value)}
                                     />
-                                    <motion.div
+                                    <motion.button
                                         whileHover={{ scale: 1.05 }}
-                                        className="text-white font-main px-5 py-[0.5rem] mt-8 text-lg transition duration-300 mx-[1.5rem] sm:mx-0 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500 cursor-pointer"
+                                        className="text-white w-full font-main px-5 py-[0.5rem] mt-8 text-lg transition duration-300 mx-[1.5rem] sm:mx-0 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500 cursor-pointer disabled:bg-gray-100"
+                                        disabled={isLoading}
                                     >
                                         <p className="z-20 group-hover:text-dark-500">
                                             Изпрати
@@ -101,10 +122,11 @@ export default function AboutUsSection() {
                                             &rarr;
                                         </span>
                                         <motion.div
-                                            className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"
+                                            className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0 group-hover:disabled:left-full"
                                             layout
                                         ></motion.div>
-                                    </motion.div>
+                                    </motion.button>
+                                    {error !== "" && <p className="text-red-500 mt-1">{error}</p>}
                                 </form>
                             </div>
                         </motion.div>
