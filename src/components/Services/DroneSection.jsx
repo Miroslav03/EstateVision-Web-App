@@ -80,7 +80,7 @@ export default function DroneSection({ droneSectionRef }) {
                     </p>
                     <Link
                         className="text-white font-main px-5 py-2 text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
-                        to="/services"
+                        to="/prices"
                     >
                         <span className="z-20 group-hover:text-dark-500">
                             Цени
