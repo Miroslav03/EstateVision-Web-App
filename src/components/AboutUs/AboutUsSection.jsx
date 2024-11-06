@@ -12,7 +12,7 @@ export default function AboutUsSection() {
     };
 
     return (
-        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-24 justify-center py-52">
+        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-24 justify-center py-32">
             <div className="w-full justify-center items-center gap-16 sm:gap-36 grid lg:grid-cols-2 grid-cols-1">
                 <motion.div
                     className="w-full flex flex-col justify-start px-4 sm:px-24 lg:items-start items-center gap-4"
