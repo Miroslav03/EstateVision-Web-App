@@ -80,12 +80,12 @@ function BigMenu({ isOpen, setIsOpen }) {
                 <div className="lg:mt-20 mt-4 flex flex-wrap sm:px-24 px-4 gap-x-20 gap-y-7">
                     <div className="lg:w-96 w-full flex flex-col gap-y-7">
                         <BigNavigationButton title="Начало" to="/" />
-                        <BigNavigationButton title="Проекти" to="/" />
-                        <BigNavigationButton title="Цени" to="/" />
+                        <BigNavigationButton title="Услуги" to="/services" />
+                        <BigNavigationButton title="Цени" to="/prices" />
                     </div>
                     <div className="lg:w-96 w-full flex flex-col gap-y-7">
-                        <BigNavigationButton title="За нас" to="/" />
-                        <BigNavigationButton title="Свържете се" to="/" />
+                        <BigNavigationButton title="За нас" to="/about" />
+                        <BigNavigationButton title="Свържете се" to="/contact" />
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@ function BigMenu({ isOpen, setIsOpen }) {
                 <div className="lg:mt-32 mt-8 lg:flex flex-wrap hidden">
                     <div className="flex items-center ms-24 me-8">
                         <MdOutlinePhone className="text-2xl" />
-                        <p className="text-xl ms-2">+359 88 888 888</p>
+                        <p className="text-xl ms-2">+359885172833</p>
                     </div>
                     <div className="flex items-center ms-24 me-8">
                         <MdOutlineEmail className="text-2xl" />
