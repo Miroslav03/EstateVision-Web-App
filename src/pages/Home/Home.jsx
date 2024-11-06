@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import HeroSection from "../../components/Home/HeroSection";
 import ServiceSection from "../../components/Home/ServiceSection";
 import Navigation from "../../components/Navigation/Navigation";
