@@ -32,7 +32,7 @@ export default function AboutUsSection() {
         <motion.section
             initial="hidden"
             animate="visible"
-            className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-24 justify-center pt-44 sm:pt-52 pb-32"
+            className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-24 justify-center pt-32 sm:pt-52 pb-16 sm:pb-32"
         >
             <motion.div variants={fadeInUp} className="py-12">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -57,7 +57,7 @@ export default function AboutUsSection() {
                             <div>
                                 <motion.h4
                                     variants={fadeInUp}
-                                    className="text-white border-b-4 border-yellow-500 text-base font-medium leading-6 mb-4 lg:text-left text-center inline-block"
+                                    className="text-white border-b-4 border-yellow-500 text-base font-medium leading-6 mb-4 lg:text-left text-center sm:inline-block hidden"
                                 >
                                     Свържи се с нас
                                 </motion.h4>
@@ -95,7 +95,7 @@ export default function AboutUsSection() {
                                         className="text-white font-main px-5 py-[0.5rem] mt-8 text-lg transition duration-300 mx-[1.5rem] sm:mx-0 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500 cursor-pointer"
                                     >
                                         <p className="z-20 group-hover:text-dark-500">
-                                            Разгледай
+                                            Изпрати
                                         </p>
                                         <span className="ms-2 z-20 group-hover:text-dark-500">
                                             &rarr;
@@ -109,8 +109,11 @@ export default function AboutUsSection() {
                             </div>
                         </motion.div>
                         <motion.div
+                            style={{
+                                boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
+                            }}
                             variants={fadeInRight}
-                            className="lg:max-w-xl w-full h-[600px] flex items-center justify-center bg-cover bg-no-repeat bg-[url('/contact1.jpg')] border-l-8 border-yellow-500"
+                            className="sm:max-w-xl w-full h-[600px] flex items-center justify-center bg-cover bg-no-repeat bg-[url('/contact1.jpg')] border-l-8 border-yellow-500"
                         >
                             <motion.div
                                 variants={fadeInUp}
