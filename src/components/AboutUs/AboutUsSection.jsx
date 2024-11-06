@@ -12,7 +12,7 @@ export default function AboutUsSection() {
     };
 
     return (
-        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-24 justify-center py-32">
+        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-24 justify-center pt-44 sm:pt-52 pb-32">
             <div className="w-full justify-center items-center gap-16 sm:gap-36 grid lg:grid-cols-2 grid-cols-1">
                 <motion.div
                     className="w-full flex flex-col justify-start px-4 sm:px-24 lg:items-start items-center gap-4"
@@ -70,7 +70,7 @@ export default function AboutUsSection() {
                             Нашата мисия
                         </h2>
                     </div>
-                    <p className="text-gray-500 text-xl font-normal lg:text-start text-end sm:pr-44 pr-0">
+                    <p className="text-gray-500 text:lg sm:text-xl font-normal lg:text-start text-end sm:pr-44 pr-0">
                         В EstateVision преобразяваме представянето на имоти чрез
                         иновации и фотореалистични 3D турове. Ние създаваме
                         потапящи изживявания, които позволяват на клиентите да
