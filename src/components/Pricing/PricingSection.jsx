@@ -1,18 +1,57 @@
+import { motion } from "framer-motion";
+
 export default function PricingSection() {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    };
     return (
-        <section class="bg-gradient-to-r from-dark-700 to-dark-500 pt-32 sm:pt-56 pb-16 sm:pb-32">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class=" lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8  lg:items-center">
-                    <div className="flex flex-col mx-auto w-full max-w-3xl bg-dark-600 border-l-8 border-yellow-500">
-                        <div className="flex justify-center items-center mt-8">
-                            <h1 className="text-3xl text-white border-b-4 border-yellow-500">
+        <section className="bg-gradient-to-r from-dark-700 to-dark-500 pt-40 sm:pt-56 pb-16 sm:pb-32">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col sm:grid sm:grid-cols-3 gap-8  sm:gap-6 ">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="flex flex-col mx-auto w-full max-w-3xl bg-dark-600 border-b-8 sm:border-l-8 sm:border-b-0 border-yellow-500 z-10"
+                    >
+                        <motion.div
+                            variants={itemVariants}
+                            className="flex justify-center items-center mt-8"
+                        >
+                            <motion.h1
+                                variants={itemVariants}
+                                className="text-3xl text-white border-b-4 border-yellow-500"
+                            >
                                 Заснемане с дрон
-                            </h1>
-                        </div>
-                        <div className="p-6 sm:py-9 sm:px-18">
-                            <ul className="mb-12 space-y-6 text-left text-lg">
-                                <div className="flex flex-col justify-center items-center gap-4">
-                                    <li className="flex items-center space-x-4">
+                            </motion.h1>
+                        </motion.div>
+                        <motion.div
+                            variants={itemVariants}
+                            className="p-6 sm:py-9 sm:px-18"
+                        >
+                            <motion.ul
+                                variants={itemVariants}
+                                className="mb-12 space-y-6 text-left text-lg"
+                            >
+                                <motion.div
+                                    variants={itemVariants}
+                                    className="flex flex-col justify-center items-center gap-4"
+                                >
+                                    <motion.li
+                                        variants={itemVariants}
+                                        className="flex items-center space-x-4"
+                                    >
                                         <svg
                                             className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                             viewBox="0 0 30 30"
@@ -30,8 +69,11 @@ export default function PricingSection() {
                                         <span className="text-xl text-white">
                                             1 час на локация
                                         </span>
-                                    </li>
-                                    <li className="flex items-center space-x-4">
+                                    </motion.li>
+                                    <motion.li
+                                        variants={itemVariants}
+                                        className="flex items-center space-x-4"
+                                    >
                                         <svg
                                             className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                             viewBox="0 0 30 30"
@@ -49,15 +91,24 @@ export default function PricingSection() {
                                         <span className="text-xl text-white">
                                             1 полет по 30мин.
                                         </span>
-                                    </li>
-                                    <li className="flex items-center space-x-4">
+                                    </motion.li>
+                                    <motion.li
+                                        variants={itemVariants}
+                                        className="flex items-center space-x-4"
+                                    >
                                         <span className="text-yellow-500 font-semibold text-3xl">
                                             249 лв.
                                         </span>
-                                    </li>
-                                </div>
-                                <div className="flex flex-col justify-center items-center gap-4">
-                                    <li className="flex items-center space-x-4">
+                                    </motion.li>
+                                </motion.div>
+                                <motion.div
+                                    variants={itemVariants}
+                                    className="flex flex-col justify-center items-center gap-4"
+                                >
+                                    <motion.li
+                                        variants={itemVariants}
+                                        className="flex items-center space-x-4"
+                                    >
                                         <svg
                                             className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                             viewBox="0 0 30 30"
@@ -75,8 +126,11 @@ export default function PricingSection() {
                                         <span className="text-xl text-white">
                                             4 час на локация
                                         </span>
-                                    </li>
-                                    <li className="flex items-center space-x-4">
+                                    </motion.li>
+                                    <motion.li
+                                        variants={itemVariants}
+                                        className="flex items-center space-x-4"
+                                    >
                                         <svg
                                             className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                             viewBox="0 0 30 30"
@@ -94,30 +148,52 @@ export default function PricingSection() {
                                         <span className="text-xl text-white">
                                             3 полетa по 30мин.
                                         </span>
-                                    </li>
-                                    <li className="flex items-center space-x-4">
+                                    </motion.li>
+                                    <motion.li
+                                        variants={itemVariants}
+                                        className="flex items-center space-x-4"
+                                    >
                                         <span className="text-yellow-500 font-semibold text-3xl">
                                             549 лв.
                                         </span>
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div
+                                    </motion.li>
+                                </motion.div>
+                            </motion.ul>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div
                         style={{
                             boxShadow: "0 0 100px rgba(255, 193, 7, 0.08)",
+                            zIndex: 1,
                         }}
-                        class="flex flex-col mx-auto max-w-xl  bg-dark-600 border-l-8 border-yellow-500 "
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        class="flex flex-col mx-auto w-full max-w-2xl bg-dark-600 border-b-8 sm:border-l-8 sm:border-b-0 border-yellow-500"
                     >
-                        <div className="flex justify-center   items-center mt-8">
-                            <h1 className="text-3xl text-white border-b-4 border-yellow-500">
+                        <motion.div
+                            className="flex justify-center   items-center mt-8"
+                            variants={containerVariants}
+                        >
+                            <motion.h1
+                                variants={itemVariants}
+                                className="text-3xl text-white border-b-4 border-yellow-500"
+                            >
                                 3D Модели
-                            </h1>
-                        </div>
-                        <div class="p-6 sm:py-9 sm:px-18">
-                            <ul class="mb-12 space-y-6 text-left text-lg ">
-                                <li class="flex items-center just space-x-4">
+                            </motion.h1>
+                        </motion.div>
+                        <motion.div
+                            variants={itemVariants}
+                            class="p-6 sm:py-9 sm:px-18"
+                        >
+                            <motion.ul
+                                variants={itemVariants}
+                                class="mb-12 space-y-6 text-left text-lg "
+                            >
+                                <motion.li
+                                    variants={itemVariants}
+                                    class="flex items-center just space-x-4"
+                                >
                                     <svg
                                         class="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
@@ -138,7 +214,7 @@ export default function PricingSection() {
                                             150 - 200лв.
                                         </span>
                                     </span>
-                                </li>
+                                </motion.li>
                                 <li class="flex items-center space-x-4">
                                     <svg
                                         class="flex-shrink-0 w-6 h-6 text-yellow-300"
@@ -249,23 +325,41 @@ export default function PricingSection() {
                                         </span>
                                     </span>
                                 </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div
+                            </motion.ul>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div
                         style={{
                             boxShadow: "0 0 100px rgba(255, 193, 7, 0.02)",
                         }}
-                        className="flex flex-col mx-auto w-full max-w-2xl bg-dark-600 border-l-8 border-yellow-500"
+                        className="flex flex-col mx-auto w-full max-w-2xl bg-dark-600 border-b-8 sm:border-b-0 sm:border-l-8 border-yellow-500"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
                     >
-                        <div className="flex justify-center items-center mt-8">
-                            <h1 className="text-3xl text-white border-b-4 border-yellow-500">
+                        <motion.div
+                            className="flex justify-center items-center mt-8"
+                            variants={containerVariants}
+                        >
+                            <motion.h1
+                                className="text-3xl text-white border-b-4 border-yellow-500"
+                                variants={itemVariants}
+                            >
                                 Статична фотография
-                            </h1>
-                        </div>
-                        <div className="p-6 sm:py-9 sm:px-18">
-                            <ul className="mb-12 space-y-6 text-left text-lg">
-                                <li className="flex items-center space-x-4">
+                            </motion.h1>
+                        </motion.div>
+                        <motion.div
+                            className="p-6 sm:py-9 sm:px-18 justify-center items-center flex"
+                            variants={containerVariants}
+                        >
+                            <motion.ul
+                                className="mb-12 space-y-6 text-center text-lg"
+                                variants={containerVariants}
+                            >
+                                <motion.li
+                                    className="flex items-center  space-x-4"
+                                    variants={itemVariants}
+                                >
                                     <svg
                                         className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
@@ -286,8 +380,11 @@ export default function PricingSection() {
                                             150лв.
                                         </span>
                                     </span>
-                                </li>
-                                <li className="flex items-center space-x-4">
+                                </motion.li>
+                                <motion.li
+                                    className="flex items-center space-x-4"
+                                    variants={itemVariants}
+                                >
                                     <svg
                                         className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
@@ -308,8 +405,11 @@ export default function PricingSection() {
                                             250лв.
                                         </span>
                                     </span>
-                                </li>
-                                <li className="flex items-center space-x-4">
+                                </motion.li>
+                                <motion.li
+                                    className="flex items-center space-x-4"
+                                    variants={itemVariants}
+                                >
                                     <svg
                                         className="flex-shrink-0 w-6 h-6 text-yellow-300"
                                         viewBox="0 0 30 30"
@@ -330,10 +430,10 @@ export default function PricingSection() {
                                             500лв.
                                         </span>
                                     </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                                </motion.li>
+                            </motion.ul>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </div>
         </section>
