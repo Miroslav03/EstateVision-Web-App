@@ -50,7 +50,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                 viewport={{ amount: 0.5 }} // Replay animation on scroll
             >
                 <div className="border-b-8 border-yellow-500">
-                    <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
+                    <h2 className="text-3xl sm:text-6xl font-semibold mt-2 text-white mb-4">
                         Потопи се в света на фотографията
                     </h2>
                 </div>
@@ -90,11 +90,11 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                     className="flex flex-col items-start lg:w-1/2 w-full"
                     variants={slideInRight}
                 >
-                    <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
+                    <h2 className="text-2xl sm:text-5xl font-semibold text-white mb-4">
                         Присъствие чрез{" "}
                         <span className="text-yellow-500">фотография </span>
                     </h2>
-                    <p className="text-gray-500 text-lg sm:text-xl mb-6 max-w-lg">
+                    <p className="text-gray-500 text:md sm:text-xl mb-6 max-w-lg">
                         Улавяме атмосферата и детайлите на вашите проекти чрез
                         статична фотография. Нашият опит и внимание към детайла
                         осигуряват визуални материали, които разказват история и
@@ -102,7 +102,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                     </p>
 
                     <Link
-                        className="text-white font-main px-5 py-2 text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
+                        className="text-white font-main px-5 py-2 text-sm sm: transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                         to="/prices"
                     >
                         <span className="z-20 group-hover:text-dark-500">
@@ -125,10 +125,10 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                 variants={fadeIn}
             >
                 <div className="max-w-screen-md flex justify-center items-center flex-col">
-                    <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-4">
+                    <h1 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-4">
                         Нашата галерия
                     </h1>
-                    <h2 className="text-white text-4xl sm:text-5xl text-center">
+                    <h2 className="text-white text-2xl sm:text-5xl text-center">
                         <span className="text-yellow-500 font-bold">72%</span>{" "}
                         от клиентите са по-склонни да изберат имот, когато
                         виждат професионални снимки.*

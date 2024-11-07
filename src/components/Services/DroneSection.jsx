@@ -27,7 +27,7 @@ export default function DroneSection({ droneSectionRef }) {
                 className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end sm:items-center gap-4"
             >
                 <div className="border-b-8 border-yellow-500">
-                    <h2 className="text-4xl sm:text-6xl font-semibold text-white mb-4">
+                    <h2 className="text-3xl sm:text-6xl font-semibold text-white mb-4">
                         Заснемане с дрон
                     </h2>
                 </div>
@@ -65,13 +65,13 @@ export default function DroneSection({ droneSectionRef }) {
                     animate={isInView3 ? "visible" : "hidden"}
                     className="flex flex-col items-center w-full lg:w-1/3 text-center"
                 >
-                    <h2 className="text-4xl sm:text-5xl font-semibold text-white mb-4 mt-8 sm:mt-0">
+                    <h2 className="text-2xl sm:text-5xl font-semibold text-white mb-4 mt-8 sm:mt-0 px-6 sm:px-0">
                         Поглед отвисоко{" "}
                         <span className="text-yellow-500">
                             Визуализация с дрон
                         </span>
                     </h2>
-                    <p className="text-gray-500 text-lg sm:text-xl mb-6 max-w-lg">
+                    <p className="text-gray-500 text-md sm:text-xl mb-6 max-w-lg">
                         Открийте нови перспективи с нашето професионално
                         заснемане с дрон. Бързо, ефективно и с високо качество,
                         нашата услуга ще улови мащаба и детайлите на вашия
@@ -79,7 +79,7 @@ export default function DroneSection({ droneSectionRef }) {
                         динамика.
                     </p>
                     <Link
-                        className="text-white font-main px-5 py-2 text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
+                        className="text-white font-main px-5 py-2 text-sm sm:text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                         to="/prices"
                     >
                         <span className="z-20 group-hover:text-dark-500">
