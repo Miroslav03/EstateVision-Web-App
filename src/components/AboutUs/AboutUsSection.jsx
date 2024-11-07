@@ -21,13 +21,13 @@ export default function AboutUsSection() {
                     viewport={{ once: true }}
                     variants={fadeInUp}
                 >
-                    <h2 className="text-white text-4xl sm:text-5xl font-semibold sm:text-start text-start">
+                    <h2 className="text-white text-2xl sm:text-5xl font-semibold sm:text-start text-start">
                         Оживяване на имотите чрез{" "}
                         <span className="text-yellow-500">
                             иновация и визуализация
                         </span>
                     </h2>
-                    <p className="text-gray-500 text-lg sm:text-xl font-normal leading-relaxed sm:text-start text-start">
+                    <p className="text-gray-500 text-md sm:text-xl font-normal leading-relaxed sm:text-start text-start">
                         EstateVision е водеща компания в създаването на
                         висококачествени 3D турове и фотореалистични
                         визуализации за различни имоти – от жилищни сгради и
@@ -72,11 +72,11 @@ export default function AboutUsSection() {
                     variants={fadeInUp}
                 >
                     <div className="border-b-8 border-yellow-500 pb-4">
-                        <h2 className="text-white text-4xl sm:text-5xl font-semibold sm:text-end text-end">
+                        <h2 className="text-white text-3xl sm:text-5xl font-semibold sm:text-end text-end">
                             Нашата мисия
                         </h2>
                     </div>
-                    <p className="text-gray-500 text:lg sm:text-xl font-normal lg:text-start text-end sm:pr-44 pr-0">
+                    <p className="text-gray-500 text:md sm:text-xl font-normal lg:text-start text-end sm:pr-44 pr-0">
                         В EstateVision преобразяваме представянето на имоти чрез
                         иновации и фотореалистични 3D турове. Ние създаваме
                         потапящи изживявания, които позволяват на клиентите да

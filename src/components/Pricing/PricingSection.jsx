@@ -66,7 +66,7 @@ export default function PricingSection() {
                                                 strokeLinejoin="round"
                                             />
                                         </svg>
-                                        <span className="text-xl text-white">
+                                        <span className=" text-lg sm:text-xl text-white">
                                             1 час на локация
                                         </span>
                                     </motion.li>
@@ -88,7 +88,7 @@ export default function PricingSection() {
                                                 strokeLinejoin="round"
                                             />
                                         </svg>
-                                        <span className="text-xl text-white">
+                                        <span className="text-lg sm:text-xl text-white">
                                             1 полет по 30мин.
                                         </span>
                                     </motion.li>
@@ -96,7 +96,7 @@ export default function PricingSection() {
                                         variants={itemVariants}
                                         className="flex items-center space-x-4"
                                     >
-                                        <span className="text-yellow-500 font-semibold text-3xl">
+                                        <span className="text-yellow-500 font-semibold text-2xl sm:text-3xl">
                                             249 лв.
                                         </span>
                                     </motion.li>
@@ -123,7 +123,7 @@ export default function PricingSection() {
                                                 strokeLinejoin="round"
                                             />
                                         </svg>
-                                        <span className="text-xl text-white">
+                                        <span className="text-lg sm:text-xl text-white">
                                             4 час на локация
                                         </span>
                                     </motion.li>
@@ -145,7 +145,7 @@ export default function PricingSection() {
                                                 strokeLinejoin="round"
                                             />
                                         </svg>
-                                        <span className="text-xl text-white">
+                                        <span className="text-lg sm:text-xl text-white">
                                             3 полетa по 30мин.
                                         </span>
                                     </motion.li>
@@ -153,7 +153,7 @@ export default function PricingSection() {
                                         variants={itemVariants}
                                         className="flex items-center space-x-4"
                                     >
-                                        <span className="text-yellow-500 font-semibold text-3xl">
+                                        <span className="text-yellow-500 font-semibold text-2xl sm:text-3xl">
                                             549 лв.
                                         </span>
                                     </motion.li>
@@ -208,7 +208,7 @@ export default function PricingSection() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <span className="text-xl text-white">
+                                    <span className="text-lg sm:text-xl text-white">
                                         До 50кв.м{" "}
                                         <span className="text-yellow-500 font-semibold">
                                             150 - 200лв.
@@ -230,7 +230,7 @@ export default function PricingSection() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <span className="text-xl text-white">
+                                    <span className="text-lg sm:text-xl text-white">
                                         51 - 100кв.м{" "}
                                         <span className="text-yellow-500 font-semibold">
                                             250 - 400 лв.
@@ -252,7 +252,7 @@ export default function PricingSection() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <span className="text-xl text-white">
+                                    <span className="text-lg sm:text-xl text-white">
                                         101 - 150кв.м{" "}
                                         <span className="text-yellow-500 font-semibold">
                                             400 - 550 лв.
@@ -274,7 +274,7 @@ export default function PricingSection() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <span className="text-xl text-white">
+                                    <span className="text-lg sm:text-xl text-white">
                                         151 - 200кв.м{" "}
                                         <span className="text-yellow-500 font-semibold">
                                             550 - 700 лв.
@@ -296,7 +296,7 @@ export default function PricingSection() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <span className="text-xl text-white">
+                                    <span className="text-lg sm:text-xl text-white">
                                         201 - 300кв.м{" "}
                                         <span className="text-yellow-500 font-semibold">
                                             700 - 900 лв.
@@ -318,7 +318,7 @@ export default function PricingSection() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <span className="text-xl text-white">
+                                    <span className="text-lg sm:text-xl text-white">
                                         Над 300кв.м{" "}
                                         <span className="text-yellow-500 font-semibold">
                                             По Договаряне
@@ -374,7 +374,7 @@ export default function PricingSection() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <span className="text-xl text-white">
+                                    <span className="text-lg sm:text-xl text-white">
                                         До 10 снимки{" "}
                                         <span className="text-yellow-500 font-semibold">
                                             150лв.
@@ -399,7 +399,7 @@ export default function PricingSection() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <span className="text-xl text-white">
+                                    <span className="text-lg sm:text-xl text-white">
                                         До 30 снимки{" "}
                                         <span className="text-yellow-500 font-semibold">
                                             250лв.
@@ -424,7 +424,7 @@ export default function PricingSection() {
                                             strokeLinejoin="round"
                                         />
                                     </svg>
-                                    <span className="text-xl text-white">
+                                    <span className="text-lg sm:text-xl text-white">
                                         До 60 снимки{" "}
                                         <span className="text-yellow-500 font-semibold">
                                             500лв.

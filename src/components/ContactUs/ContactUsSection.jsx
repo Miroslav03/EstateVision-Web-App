@@ -104,7 +104,7 @@ export default function AboutUsSection() {
                 </motion.h4>
                 <motion.h2
                   variants={fadeInRight}
-                  className="text-white font-manrope text-4xl font-semibold leading-10 mb-9 lg:text-left text-center"
+                  className="text-white font-manrope text-2xl sm:text-4xl font-semibold leading-10 mb-9 lg:text-left text-center"
                 >
                   Напиши ни <span className="text-yellow-500">съобщение</span>
                 </motion.h2>
@@ -112,7 +112,7 @@ export default function AboutUsSection() {
                   <motion.input
                     type="text"
                     variants={fadeInUp}
-                    className="w-full h-14 shadow-sm text-dark-600 placeholder-text-400 text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
+                    className="w-full h-14 shadow-sm text-dark-600 placeholder-text-400 text-md sm:text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
                     placeholder="Име"
                     required
                     value={name}
@@ -121,7 +121,7 @@ export default function AboutUsSection() {
                   <motion.input
                     type="email"
                     variants={fadeInUp}
-                    className="w-full h-14 shadow-sm text-dark-600 placeholder-text-400 text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
+                    className="w-full h-14 shadow-sm text-dark-600 placeholder-text-400 text-md sm:text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
                     placeholder="Email"
                     required
                     value={email}
@@ -131,7 +131,7 @@ export default function AboutUsSection() {
                     name=""
                     id="text"
                     variants={fadeInUp}
-                    className="w-full h-48 shadow-sm resize-none text-dark-600 placeholder-text-400 text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none px-4 py-4 mb-8"
+                    className="w-full h-48 shadow-sm resize-none text-dark-600 placeholder-text-400 text-md sm:text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none px-4 py-4 mb-8"
                     placeholder="Напиши ни съобщение"
                     required
                     value={content}
@@ -139,7 +139,7 @@ export default function AboutUsSection() {
                   />
                   <motion.button
                     whileHover={!isLoading ? { scale: 1.05 } : {}}
-                    className={`text-white w-full font-main px-5 py-[0.5rem] mt-8 text-lg transition duration-300 mx-[1.5rem] sm:mx-0 relative overflow-hidden flex items-center justify-center group ${
+                    className={`text-white w-full sm:w-[30%] font-main px-5 py-[0.5rem] mt-8 text-lg transition duration-300 mx-[1.5rem] sm:mx-0 relative overflow-hidden flex items-center justify-center group ${
                       isLoading
                         ? "bg-gray-100 cursor-not-allowed"
                         : "bg-yellow-500 hover:ring-2 hover:ring-yellow-500 cursor-pointer"
