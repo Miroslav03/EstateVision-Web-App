@@ -15,6 +15,7 @@ export default function Services() {
 
     useEffect(() => {
         const section = searchParams.get("section");
+        console.log(section)
 
         if (!section) return;
 
@@ -27,6 +28,7 @@ export default function Services() {
             targetRef = droneSectionRef;
         }
 
+        console.log(targetRef)
         if (targetRef && targetRef.current) {
             targetRef.current.scrollIntoView();
         }
