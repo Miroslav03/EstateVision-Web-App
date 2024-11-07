@@ -15,7 +15,7 @@ export default function Navigation() {
                     <Link to={'/'}>
                         <img
                             src="/images/estatevision-logo.png"
-                            className="max-w-48 max-h-16"
+                            className="sm:max-w-48 sm:max-h-16 max-h-12"
                         />
                     </Link>
                 </div>
