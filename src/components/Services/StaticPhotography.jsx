@@ -1,10 +1,24 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 export default function StaticPhotography({ staticPhotographyRef }) {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
+    const containerRef = useRef(null);
+    const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
+
+    useEffect(() => {
+        const updateDragConstraints = () => {
+            const containerWidth = containerRef.current?.scrollWidth || 0;
+            const viewportWidth = window.innerWidth;
+            setDragConstraints({ left: -(containerWidth - viewportWidth), right: 0 });
+        };
+
+        updateDragConstraints();
+        window.addEventListener("resize", updateDragConstraints);
+
+        return () => window.removeEventListener("resize", updateDragConstraints);
+    }, []);
 
     const images = [
         "/grid1-min.jpg",
@@ -144,50 +158,25 @@ export default function StaticPhotography({ staticPhotographyRef }) {
             >
                 <motion.div
                     className="flex gap-4"
+                    ref={containerRef}
                     drag="x"
-                    dragConstraints={{ left: -1200, right: 0 }}
+                    dragConstraints={dragConstraints}
                 >
                     {images.map((src, index) => (
                         <motion.div
                             key={index}
                             className="relative h-[400px] w-[400px] flex-shrink-0 overflow-hidden pb-4 transition-all duration-200"
-                            onMouseEnter={() => setHoveredIndex(index)}
-                            onMouseLeave={() => setHoveredIndex(null)}
-                            animate={{
-                                flex:
-                                    hoveredIndex === index
-                                        ? 1.5
-                                        : hoveredIndex === index - 1 ||
-                                          hoveredIndex === index + 1
-                                        ? 0.8
-                                        : 1,
-                            }}
-                            transition={{ duration: 0.2 }}
                         >
                             <div
-                                className={`relative h-full w-full transition-all duration-200 ${
-                                    hoveredIndex === index
-                                        ? "border-l-8 border-yellow-500"
-                                        : ""
-                                }`}
+                                className={`relative h-full w-full transition-all duration-200`}
                             >
                                 <motion.img
                                     src={src}
                                     alt={`Image ${index + 1}`}
                                     className="w-full h-full object-cover"
-                                    style={{
-                                        filter:
-                                            hoveredIndex === index
-                                                ? "brightness(100%)"
-                                                : "brightness(80%)",
-                                    }}
                                 />
                                 <motion.div
-                                    className="absolute inset-0 bg-black transition-opacity duration-200"
-                                    style={{
-                                        opacity:
-                                            hoveredIndex === index ? 0 : 0.4,
-                                    }}
+                                    className="absolute inset-0 bg-black transition-opacity duration-200 opacity-0"
                                 />
                             </div>
                         </motion.div>
