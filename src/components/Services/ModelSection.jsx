@@ -22,7 +22,7 @@ export default function ModelSection({ modelSectionRef }) {
                     initial={{ opacity: 0, y: 50 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: false }}
-                    className="text-white text-2xl sm:text-4xl lg:text-6xl mt-10 sm:mt-24 border-b-4 border-b-yellow-400 pb-4"
+                    className="text-white text-2xl sm:text-4xl lg:text-6xl mt-10 sm:mt-24 border-b-4 border-b-yellow-400 pb-4  text-center"
                 >
                     Спестете време,{" "}
                     <span className="text-yellow-400 text-2xl sm:text-4xl lg:text-6xl">
@@ -69,7 +69,7 @@ export default function ModelSection({ modelSectionRef }) {
                         },
                     }}
                     viewport={{ once: false }}
-                    className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 py-24 gap-y-16 gap-x-16"
+                    className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 py-24 gap-y-16 gap-x-16 place-items-center"
                 >
                     {[
                         {
@@ -138,7 +138,7 @@ export default function ModelSection({ modelSectionRef }) {
                             style={{
                                 boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
                             }}
-                            className="max-w-sm sm:max-w-xl overflow-hidden border-yellow-500 border-l-8"
+                            className="w-[90%]  sm:max-w-xl overflow-hidden border-yellow-500 border-l-8"
                         >
                             <div className="h-[50%] sm:h-[60%] w-full relative overflow-hidden">
                                 <img
@@ -148,7 +148,7 @@ export default function ModelSection({ modelSectionRef }) {
                                 />
                             </div>
                             <div className="px-6 py-4">
-                                <h1 className="text-white font-base text-sm sm:text-lg border-b-2 border-yellow-500 inline-block">
+                                <h1 className="text-white font-base text-md sm:text-lg border-b-2 border-yellow-500 inline-block">
                                     {item.title}
                                 </h1>
                                 <div className="font-bold text-2xl sm:text-3xl mb-2 text-white">
@@ -170,10 +170,10 @@ export default function ModelSection({ modelSectionRef }) {
                     className="py-8 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6"
                 >
                     <div className="max-w-screen-md flex justify-center items-center flex-col">
-                        <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-4">
+                        <h1 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-4">
                             Според купувачите
                         </h1>
-                        <h2 className="text-white text-4xl sm:text-5xl text-center">
+                        <h2 className="text-white text-2xl sm:text-5xl text-center">
                             <span className="text-yellow-500 font-bold">
                                 63%
                             </span>{" "}
@@ -191,14 +191,14 @@ export default function ModelSection({ modelSectionRef }) {
                     className="gap-16 items-center py-20 sm:py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-24 lg:px-6"
                 >
                     <div className="font-light text-gray-500">
-                        <h1 className="mb-8 sm:mb-4 text-4xl sm:text-5xl tracking-tight font-semibold border-b-8 border-yellow-500 text-white inline-block pb-5 max-w-[13rem] sm:max-w-full">
+                        <h1 className="mb-8 sm:mb-4 text-3xl sm:text-5xl tracking-tight font-semibold border-b-8 border-yellow-500 text-white inline-block pb-5 max-w-[13rem] sm:max-w-full">
                             Property Intelligence
                         </h1>
-                        <h2 className="mb-4 text-4xl tracking-tight font-semibold text-white">
+                        <h2 className="mb-4 text-2xl sm:text-4xl tracking-tight font-semibold text-white">
                             <span className="text-yellow-500">АI фунцкии</span>{" "}
                             на моделите
                         </h2>
-                        <p className="mb-4 text-lg sm:text-xl">
+                        <p className="mb-4 text-md sm:text-xl">
                             С новия ни пакет Property Intelligence можете
                             автоматично да извеждате подробна информация за
                             имота и да опростите процеса на покупка и продажба.
@@ -211,7 +211,7 @@ export default function ModelSection({ modelSectionRef }) {
                         style={{
                             boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
                         }}
-                        className="w-full border-l-8 border-yellow-500"
+                        className="w-full border-l-8 border-yellow-500 sm:mt-0 mt-12"
                         src="/3dAi2.png"
                         alt="office content 1"
                     />

@@ -13,7 +13,6 @@ export default function Services() {
 
     const [searchParams] = useSearchParams();
 
-    // Initial load scroll to section
     useEffect(() => {
         const section = searchParams.get("section");
 
