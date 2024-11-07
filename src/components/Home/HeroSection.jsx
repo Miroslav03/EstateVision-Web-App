@@ -44,9 +44,9 @@ export default function HeroSection({ serviceSectionRef }) {
                 animate="visible"
                 variants={containerVariants}
             >
-                <div className="flex flex-col items-start sm:px-[4.5rem] px-4 mt-4 sm:mt-8 lg:mt-0 pb-24 py-20">
+                <div className="flex flex-col items-start sm:px-[4.5rem] px-4 mt-4 sm:mt-8 lg:mt-0 pb-8 py-20">
                     <motion.h1
-                        className="text-white font-main lg:text-6xl xl:text-6xl 2xl:text-[5rem] sm:leading-tight text-[3rem] leading-[1] px-[1.5rem] sm:px-0 pt-24 lg:pt-8"
+                        className="text-white font-main lg:text-6xl xl:text-6xl 2xl:text-[5rem] sm:leading-tight text-[2.9rem] leading-[1] px-[1.5rem] sm:px-0 pt-12 lg:pt-8"
                         variants={textVariants}
                     >
                         <span className="text-yellow-400">
@@ -56,12 +56,12 @@ export default function HeroSection({ serviceSectionRef }) {
                     </motion.h1>
 
                     <motion.p
-                        className="text-gray-500 font-main mt-4 text-lg xl:text-lg lg:pr-[9rem] px-[1.5rem] sm:px-0"
+                        className="text-gray-500 font-main mt-4 text-md sm:text-lg lg:pr-[9rem] px-[1.5rem] sm:px-0"
                         variants={textVariants}
                     >
                         Интериорна и екстериорна статична фотография, 3D
-                        моделиране и обиколки. Фото и видео заснемане с дрон,
-                        коeто подчертава уникалността на вашата сграда.
+                        моделиране и обиколки, които подчертава уникалността на
+                        вашата сграда.
                     </motion.p>
 
                     <motion.div
@@ -98,7 +98,7 @@ export default function HeroSection({ serviceSectionRef }) {
                     src="k1-2-min.jpg"
                     alt=""
                     className="h-full object-cover z-10 border-l-8 border-b-0 sm:border-b-8"
-                    style={{ borderColor: "rgba(255, 193, 7, 0.7)" }} 
+                    style={{ borderColor: "rgba(255, 193, 7, 0.7)" }}
                 />
             </motion.div>
         </div>
