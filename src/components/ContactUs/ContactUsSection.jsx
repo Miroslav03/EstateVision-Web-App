@@ -79,7 +79,7 @@ export default function AboutUsSection() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
-            whileInView="visible"
+            animate="visible"
             viewport={{ once: true, amount: 0.5 }}
             variants={{
               hidden: { opacity: 0, y: 100 },
@@ -139,7 +139,7 @@ export default function AboutUsSection() {
                   />
                   <motion.button
                     whileHover={!isLoading ? { scale: 1.05 } : {}}
-                    className={`text-white w-full sm:w-[30%] font-main px-5 py-[0.5rem] mt-8 text-lg transition duration-300 mx-[1.5rem] sm:mx-0 relative overflow-hidden flex items-center justify-center group ${
+                    className={`text-white w-full sm:w-[30%] font-main px-5 py-[0.5rem] mt-8 text-lg transition duration-300 sm:mx-0 relative overflow-hidden flex items-center justify-center group ${
                       isLoading
                         ? "bg-gray-100 cursor-not-allowed"
                         : "bg-yellow-500 hover:ring-2 hover:ring-yellow-500 cursor-pointer"
@@ -197,7 +197,7 @@ export default function AboutUsSection() {
                   </span>
                   <motion.h5
                     variants={fadeInLeft}
-                    className="text-white text-lg ml-5"
+                    className="text-white text-base sm:text-lg ml-5"
                   >
                     0885172833
                   </motion.h5>
@@ -208,7 +208,7 @@ export default function AboutUsSection() {
                   </span>
                   <motion.h5
                     variants={fadeInLeft}
-                    className="text-white text-lg ml-5"
+                    className="text-white text-base sm:text-lg ml-5"
                   >
                     estatevisionbulgaria@gmail.com
                   </motion.h5>
@@ -219,7 +219,7 @@ export default function AboutUsSection() {
                   </span>
                   <motion.h5
                     variants={fadeInLeft}
-                    className="text-white text-lg ml-5"
+                    className="text-white text-base sm:text-lg ml-5"
                   >
                     Plovdiv, Bulgaria
                   </motion.h5>
