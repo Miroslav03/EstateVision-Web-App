@@ -37,7 +37,7 @@ const BarLoader = () => {
             className="flex gap-1"
         >
             <div className="flex gap-3">
-                <img src="/images/estatevision-logo.png" alt="" />
+                <img src="/images/estatevision-logo.png" alt="" className="sm:w-auto w-36" />
             </div>
         </motion.div>
     );
