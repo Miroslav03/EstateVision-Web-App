@@ -63,7 +63,7 @@ export default function ServiceSection() {
             variants={containerVariants}
             initial="hidden"
             animate={controls}
-            className="h-[93vh] flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 sm:to-dark-500"
+            className="h-full flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 sm:to-dark-500"
         >
             <motion.div className="flex sm:flex-row flex-col gap-6 w-full max-w-[90%] lg:max-w-[90%] mt-8 sm:mt-28">
                 {["k-min.jpg", "3dmodel.jpg", "drone1.jpg"].map(
@@ -72,7 +72,7 @@ export default function ServiceSection() {
                             key={index}
                             variants={itemVariants}
                             whileHover="hover"
-                            className={`flex flex-col justify-between bg-white h-[75vh] shadow-lg overflow-hidden transform transition-all duration-300 ${
+                            className={`flex flex-col justify-between bg-white shadow-lg overflow-hidden transform transition-all duration-300 h-[75vh] bg-cover bg-center ${
                                 hoveredIndex === index
                                     ? "sm:border-l-8 border-yellow-500"
                                     : "border-l-4 sm:border-l-0 border-yellow-500"
@@ -85,32 +85,23 @@ export default function ServiceSection() {
                                     ? "flex-[0.9]"
                                     : "flex-1"
                             }`}
+                            style={{
+                                backgroundImage: `url(${img})`, 
+                            }}
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                             onClick={() => handleClick(index)}
                         >
-                            <div className="flex-grow h-full w-full">
-                                <motion.img
-                                    src={img}
-                                    alt={`Card Image ${index + 1}`}
-                                    className="w-full h-full object-cover"
-                                    initial={{ scale: 1 }}
-                                    animate={{
-                                        scale:
-                                            hoveredIndex === index ? 1.05 : 1,
-                                    }}
-                                    transition={{ duration: 0.3 }}
-                                />
-                            </div>
+                            <div className="flex-grow w-full h-full"></div>
 
-                            <motion.div className="flex flex-col gap-2 px-4 py-2 sm:px-5 w-full bg-gradient-to-t from-dark-900 to-transparent opacity-30">
+                            <motion.div className="px-4 py-4 sm:px-5 w-full bg-gradient-to-t from-dark-900 to-transparent">
                                 <motion.span
-                                    className="inline-flex flex-col text-xl sm:text-2xl font-semibold text-white"
+                                    className="text-xl sm:text-2xl font-semibold text-white"
                                     initial={{ opacity: 1, x: 0 }}
                                     animate={{ opacity: 1, x: 0 }}
                                 >
                                     {hoverText[index]}
-                                    <span className="h-[0.1rem] sm:h-1 bg-yellow-500 mt-2 w-full"></span>
+                                    <span className="block h-[0.1rem] sm:h-1 bg-yellow-500 mt-2 w-full"></span>
                                 </motion.span>
                             </motion.div>
                         </motion.div>
