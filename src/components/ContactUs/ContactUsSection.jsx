@@ -79,7 +79,7 @@ export default function AboutUsSection() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
-            whileInView="visible"
+            animate="visible"
             viewport={{ once: true, amount: 0.5 }}
             variants={{
               hidden: { opacity: 0, y: 100 },
