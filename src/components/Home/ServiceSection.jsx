@@ -65,7 +65,7 @@ export default function ServiceSection() {
             animate={controls}
             className="h-full flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 sm:to-dark-500"
         >
-            <motion.div className="flex sm:flex-row flex-col gap-6 w-full max-w-[90%] lg:max-w-[90%] mt-8 sm:mt-28">
+            <motion.div className="flex sm:flex-row flex-col gap-6 w-full max-w-[85%] sm:max-w-[90%] mt-8 sm:mt-28 cursor-pointer">
                 {["k-min.jpg", "3dmodel.jpg", "drone1.jpg"].map(
                     (img, index) => (
                         <motion.div
@@ -94,14 +94,13 @@ export default function ServiceSection() {
                         >
                             <div className="flex-grow w-full h-full"></div>
 
-                            <motion.div className="px-4 py-4 sm:px-5 w-full bg-gradient-to-t from-dark-900 to-transparent">
+                            <motion.div className="px-4 pt-44 pb-8 sm:pb-8 sm:py-12 sm:px-5 w-full bg-gradient-to-t from-dark-900 to-transparent  ">
                                 <motion.span
-                                    className="text-xl sm:text-2xl font-semibold text-white"
+                                    className="text-xl sm:text-2xl font-semibold text-white border-b-4 border-yellow-500"
                                     initial={{ opacity: 1, x: 0 }}
                                     animate={{ opacity: 1, x: 0 }}
                                 >
                                     {hoverText[index]}
-                                    <span className="block h-[0.1rem] sm:h-1 bg-yellow-500 mt-2 w-full"></span>
                                 </motion.span>
                             </motion.div>
                         </motion.div>
