@@ -30,7 +30,9 @@ export default function Services() {
 
         console.log(targetRef)
         if (targetRef && targetRef.current) {
-            targetRef.current.scrollIntoView();
+            setTimeout(() => {
+                targetRef.current.scrollIntoView();
+            }, 200);
         }
     }, [searchParams, modelSectionRef, staticPhotographyRef, droneSectionRef])
 
