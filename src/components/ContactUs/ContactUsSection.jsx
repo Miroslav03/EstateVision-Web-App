@@ -197,7 +197,7 @@ export default function AboutUsSection() {
                   </span>
                   <motion.h5
                     variants={fadeInLeft}
-                    className="text-white text-lg ml-5"
+                    className="text-white text-base sm:text-lg ml-5"
                   >
                     0885172833
                   </motion.h5>
@@ -208,7 +208,7 @@ export default function AboutUsSection() {
                   </span>
                   <motion.h5
                     variants={fadeInLeft}
-                    className="text-white text-lg ml-5"
+                    className="text-white text-base sm:text-lg ml-5"
                   >
                     estatevisionbulgaria@gmail.com
                   </motion.h5>
@@ -219,7 +219,7 @@ export default function AboutUsSection() {
                   </span>
                   <motion.h5
                     variants={fadeInLeft}
-                    className="text-white text-lg ml-5"
+                    className="text-white text-base sm:text-lg ml-5"
                   >
                     Plovdiv, Bulgaria
                   </motion.h5>
