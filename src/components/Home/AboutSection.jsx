@@ -103,13 +103,13 @@ export default function AboutSection() {
                                         className="border-b-8 border-yellow-500"
                                         variants={textVariants}
                                     >
-                                        <h2 className="text-4xl sm:text-6xl font-semibold mt-2 text-white mb-4">
+                                        <h2 className="text-3xl sm:text-6xl font-semibold mt-2 text-white mb-4">
                                             Защо нас
                                         </h2>
                                     </motion.div>
                                 </div>
                                 <motion.h2
-                                    className="mb-5 text-5xl font-semibold text-white sm:text-[40px]/[48px]"
+                                    className="mb-5 text-2xl font-semibold text-white sm:text-[40px]/[48px]"
                                     variants={textVariants}
                                 >
                                     Направи клиентите си щастливи с{" "}
@@ -118,7 +118,7 @@ export default function AboutSection() {
                                     </span>
                                 </motion.h2>
                                 <motion.p
-                                    className="mb-5 text-lg text-gray-500"
+                                    className="mb-5 text-md sm:text-lg text-gray-500"
                                     variants={textVariants}
                                 >
                                     В EstateVision вярваме, че всеки имот има
@@ -126,7 +126,7 @@ export default function AboutSection() {
                                     разказана по уникален и въздействащ начин.
                                 </motion.p>
                                 <motion.p
-                                    className="mb-8 text-lg text-gray-500"
+                                    className="mb-8 text-md sm:text-lg text-gray-500"
                                     variants={textVariants}
                                 >
                                     С помощта на нашия екип от експерти в
@@ -140,7 +140,7 @@ export default function AboutSection() {
                                 variants={textVariants}
                             >
                                 <Link
-                                    className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
+                                    className="text-white font-main px-5 py-[0.5rem] text-sm transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                                     to="/about"
                                 >
                                     <p className="z-20 group-hover:text-dark-500">

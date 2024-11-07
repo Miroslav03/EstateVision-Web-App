@@ -94,7 +94,7 @@ export default function ServiceSection() {
                         >
                             <div className="flex-grow w-full h-full"></div>
 
-                            <motion.div className="px-4 pt-44 pb-8 sm:pb-8 sm:py-12 sm:px-5 w-full bg-gradient-to-t from-dark-900 to-transparent  ">
+                            <motion.div className="px-4 pt-44 pb-6 sm:pb-8 sm:py-12 sm:px-5 w-full bg-gradient-to-t from-dark-900 to-transparent  ">
                                 <motion.span
                                     className="text-lg sm:text-2xl font-semibold text-white border-b-4 border-yellow-500"
                                     initial={{ opacity: 1, x: 0 }}

@@ -59,7 +59,7 @@ export default function Stats() {
                     transition={{ duration: 0.8, delay: 0.5 }}
                     className="border-b-8 border-yellow-500 mb-4"
                 >
-                    <h2 className="text-4xl sm:text-6xl font-semibold mt-6 text-white mb-4">
+                    <h2 className="text-3xl sm:text-6xl font-semibold mt-6 text-white mb-4">
                         Ние гарантираме
                     </h2>
                 </motion.div>
@@ -68,7 +68,7 @@ export default function Stats() {
                 </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-24 sm:gap-44 text-center max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row justify-center gap-20 sm:gap-44 text-center max-w-4xl mx-auto">
                 {stats.map((stat, index) => (
                     <motion.div
                         key={stat.id}
@@ -77,10 +77,10 @@ export default function Stats() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: index * 0.2 }}
                     >
-                        <h3 className="text-7xl font-bold text-yellow-300">
+                        <h3 className="text-6xl  sm:text-7xl font-bold text-yellow-300">
                             {counts[index]}%
                         </h3>
-                        <p className="mt-4 text-lg text-white">{stat.text}</p>
+                        <p className="mt-4 text-md  sm:text-lg text-white">{stat.text}</p>
                         <motion.div
                             className="absolute sm:left-[-6px] top-0 h-full sm:w-[0.3rem] bg-yellow-500"
                             initial={{ scaleY: 0 }}

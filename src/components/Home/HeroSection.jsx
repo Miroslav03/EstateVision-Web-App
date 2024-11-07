@@ -65,7 +65,7 @@ export default function HeroSection({ serviceSectionRef }) {
                     </motion.p>
 
                     <motion.div
-                        className="text-white font-main px-5 py-[0.5rem] mt-8 text-lg transition duration-300 mx-[1.5rem] sm:mx-0 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500 cursor-pointer"
+                        className="text-white font-main px-5 py-[0.5rem] mt-8 text-sm sm:text-lg transition duration-300 mx-[1.5rem] sm:mx-0 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500 cursor-pointer"
                         onClick={() => handleScroll("serivce-section")}
                         whileHover="hover"
                         variants={buttonVariants}
