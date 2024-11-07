@@ -44,7 +44,7 @@ export default function HowItWorksSection() {
         >
             <div className="container px-4 mx-auto">
                 <div className="max-w-5xl mx-auto">
-                    <div className="flex sm:flex-row flex-col items-center gap-24">
+                    <div className="flex sm:flex-row flex-col items-center gap-20 sm:gap-24">
                         <div className="w-full lg:w-1/2 px-5 mb-4 sm:mb-20 lg:mb-0">
                             <div className="max-w-md">
                                 <motion.div
@@ -53,7 +53,7 @@ export default function HowItWorksSection() {
                                     animate={isInView ? "visible" : "hidden"}
                                     variants={headingVariants}
                                 >
-                                    <h2 className="mb-4 text-4xl sm:text-5xl font-extrabold leading-tight text-white">
+                                    <h2 className="mb-4 text-3xl sm:text-5xl font-extrabold leading-tight text-white">
                                         Започни бизнеса си с лекота
                                     </h2>
                                 </motion.div>
@@ -68,7 +68,7 @@ export default function HowItWorksSection() {
                                 </motion.p>
                                 <div className="w-56">
                                     <Link
-                                        className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
+                                        className="text-white font-main px-5 py-[0.5rem] text-sm sm:text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                                         to="/services"
                                     >
                                         <p className="z-20 group-hover:text-dark-500">
@@ -119,16 +119,16 @@ export default function HowItWorksSection() {
                                                     boxShadow:
                                                         "0 20px 40px rgba(255, 193, 7, 0.2)",
                                                 }}
-                                                className="flex justify-center items-center sm:h-[70px] sm:w-[70px] h-[50px] w-[50px] bg-yellow-300 text-2xl font-bold text-white"
+                                                className="flex justify-center items-center sm:h-[70px] sm:w-[70px] h-[40px] w-[40px] bg-yellow-300 sm:text-2xl text-lg font-bold text-white"
                                             >
                                                 {step}
                                             </span>
                                         </div>
                                         <div className="max-w-xs">
-                                            <h3 className="mb-2 text-3xl sm:text-3xl font-semibold sm:font-bold text-white">
+                                            <h3 className="mb-2 text-2xl sm:text-3xl font-semibold sm:font-bold text-white">
                                                 {title}
                                             </h3>
-                                            <p className="text-lg sm:text-xl text-gray-500">
+                                            <p className="text-md sm:text-xl text-gray-500">
                                                 {description}
                                             </p>
                                         </div>

@@ -73,7 +73,7 @@ export default function IconSection() {
                                         {item.icon}
                                     </span>
                                 </div>
-                                <h4 className="mb-[14px] text-3xl font-semibold text-white">
+                                <h4 className="mb-[14px] text-2xl sm:text-3xl font-semibold text-white">
                                     {item.title
                                         .split(" ")
                                         .slice(0, -1)
@@ -82,7 +82,7 @@ export default function IconSection() {
                                         {item.title.split(" ").slice(-1)}
                                     </span>
                                 </h4>
-                                <p className="text-gray-500 text-lg sm:text-xl">
+                                <p className="text-gray-500 text-md sm:text-xl">
                                     {item.description}
                                 </p>
                             </div>

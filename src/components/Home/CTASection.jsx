@@ -58,7 +58,7 @@ export default function CallToActionSection() {
                 />
                 <div className="mt-4 md:mt-0">
                     <motion.h2
-                        className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+                        className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
                         variants={textVariants}
                     >
                         Вземете{" "}
@@ -68,7 +68,7 @@ export default function CallToActionSection() {
                         при първа поръчка!
                     </motion.h2>
                     <motion.p
-                        className="mb-6 text-lg sm:font-base text-gray-500 md:text-lg"
+                        className="mb-6 text-md sm:text-lg sm:font-base text-gray-500 md:text-lg"
                         variants={textVariants}
                     >
                         Направете първата стъпка към професионално онлайн
@@ -79,7 +79,7 @@ export default function CallToActionSection() {
                     </motion.p>
                     <div className="w-40">
                         <a
-                            className="text-white font-main px-5 py-[0.5rem] text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
+                            className="text-white font-main px-5 py-[0.5rem] text-sm sm:text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                             href="tel:+359885172833"
                             style={{
                                 boxShadow: "0px 0px 0px rgba(255, 193, 7, 0)",

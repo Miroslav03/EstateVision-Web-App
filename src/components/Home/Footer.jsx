@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className="flex items-center justify-center gap-20 sm:gap-12  sm:flex sm:items-center sm:justify-between">
                     <img
                         src="/images/estatevision-logo.png"
-                        className="max-w-20 sm:max-w-48 sm:max-h-16"
+                        className="max-w-16 sm:max-w-48 sm:max-h-16"
                     />
                     <ul className="flex flex-wrap items-center text-xs sm:text-sm font-medium text-gray-500 sm:mb-0 ">
                         <li>
@@ -27,14 +27,7 @@ export default function Footer() {
                                 Услуги
                             </Link>
                         </li>
-                        <li>
-                            <Link
-                                to="/prices"
-                                className="hover:underline me-4 md:me-6"
-                            >
-                                Цени
-                            </Link>
-                        </li>
+                       
                         <li>
                             <Link to="/contact" className="hover:underline">
                                 Контакти
