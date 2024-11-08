@@ -48,7 +48,7 @@ export default function ModelSection({ modelSectionRef }) {
                     transition={{ delay: 0.6, duration: 0.3 }}
                     viewport={{ once: true }}
                     style={{ boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)" }}
-                    className="w-full mt-16 sm:mt-16 h-[60vh] sm:h-[57vw] sm:max-h-[57w] border-b-8 border-yellow-500"
+                    className="w-full mt-16 sm:mt-16 h-[60vh] sm:h-[57vw] sm:max-h-[57w] border-b-4 sm:border-b-8 border-yellow-500"
                     src="https://my.matterport.com/show/?m=rKEjqUjdNKe&log=0&help=0&nt=0&play=0&qs=0&brand=1&dh=1&tour=1&gt=1&hr=1&mls=0&mt=1&tagNav=1&pin=1&portal=1&f=1&fp=1&nozoom=0&search=1&wh=0&kb=1&lp=0&title=1&tourcta=1&vr=1&title=0"
                     frameBorder="0"
                     allowFullScreen
@@ -138,7 +138,7 @@ export default function ModelSection({ modelSectionRef }) {
                             style={{
                                 boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
                             }}
-                            className="w-[90%]  sm:max-w-xl overflow-hidden border-yellow-500 border-l-8"
+                            className="w-[90%]  sm:max-w-xl overflow-hidden border-yellow-500 sm:border-l-8 border-l-4"
                         >
                             <div className="h-[50%] sm:h-[60%] w-full relative overflow-hidden">
                                 <img
@@ -211,7 +211,7 @@ export default function ModelSection({ modelSectionRef }) {
                         style={{
                             boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
                         }}
-                        className="w-full border-l-8 border-yellow-500 sm:mt-0 mt-12"
+                        className="w-full border-l-4 sm:border-l-8 border-yellow-500 sm:mt-0 mt-12"
                         src="/3dAi2.png"
                         alt="office content 1"
                     />

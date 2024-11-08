@@ -110,7 +110,7 @@ export default function HowItWorksSection() {
                                 ].map(({ step, title, description }) => (
                                     <motion.li
                                         key={step}
-                                        className="flex pb-10 mb-8 border-b-8 border-yellow-500"
+                                        className="flex pb-10 mb-8 border-b-4 sm:border-b-8 border-yellow-500"
                                         variants={itemVariants}
                                     >
                                         <div className="mr-8">

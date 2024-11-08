@@ -115,7 +115,7 @@ export default function AboutUsSection() {
                                     <motion.input
                                         type="text"
                                         variants={fadeInUp}
-                                        className="w-full h-14 shadow-sm text-dark-600 placeholder-text-400 text-md sm:text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
+                                        className="w-full h-12 sm:h-14 shadow-sm text-dark-600 placeholder-text-400 text-md sm:text-lg font-normal leading-7 border-l-4 sm:border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
                                         placeholder="Име"
                                         required
                                         value={name}
@@ -126,7 +126,7 @@ export default function AboutUsSection() {
                                     <motion.input
                                         type="email"
                                         variants={fadeInUp}
-                                        className="w-full h-14 shadow-sm text-dark-600 placeholder-text-400 text-md sm:text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
+                                        className="w-full h-12 sm:h-14 shadow-sm text-dark-600 placeholder-text-400 text-md sm:text-lg font-normal leading-7 border-l-4 sm:border-l-8 border-yellow-500 focus:outline-none py-2 px-4 mb-8"
                                         placeholder="Email"
                                         required
                                         value={email}
@@ -138,7 +138,7 @@ export default function AboutUsSection() {
                                         name=""
                                         id="text"
                                         variants={fadeInUp}
-                                        className="w-full h-48 shadow-sm resize-none text-dark-600 placeholder-text-400 text-md sm:text-lg font-normal leading-7 border-l-8 border-yellow-500 focus:outline-none px-4 py-4 mb-8"
+                                        className="w-full h-36 sm:h-48 shadow-sm resize-none text-dark-600 placeholder-text-400 text-md sm:text-lg font-normal leading-7 border-l-4 sm:border-l-8 border-yellow-500 focus:outline-none px-4 py-4 mb-0 sm:mb-8"
                                         placeholder="Напиши ни съобщение"
                                         required
                                         value={content}
@@ -197,11 +197,11 @@ export default function AboutUsSection() {
                                 boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
                             }}
                             variants={fadeInRight}
-                            className="sm:max-w-xl w-full h-[600px] flex items-center justify-center bg-cover bg-no-repeat bg-[url('/contact1.jpg')] border-b-8 sm:border-l-8 sm:border-b-0 border-yellow-500"
+                            className="sm:max-w-xl w-full h-[600px] flex items-center justify-center bg-cover bg-no-repeat bg-[url('/contact1.jpg')] border-b-4 sm:border-l-8 sm:border-b-0 border-yellow-500"
                         >
                             <motion.div
                                 variants={fadeInUp}
-                                className="lg:w-96 w-auto h-auto   border-b-8 sm:border-l-8 sm:border-b-0 border-yellow-500 bg-dark-500 shadow-xl lg:p-6 p-4"
+                                className="lg:w-96 w-auto h-auto   border-b-4 sm:border-l-8 sm:border-b-0 border-yellow-500 bg-dark-500 shadow-xl lg:p-6 p-4"
                             >
                                 <div className="flex items-center justify-center pb-10">
                                     <motion.img

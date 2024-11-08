@@ -49,12 +49,12 @@ export default function DroneSection({ droneSectionRef }) {
                     <motion.img
                         src="/dronesection3.jpg"
                         alt="First"
-                        className="w-[100%] h-auto border-l-8 border-yellow-500"
+                        className="w-[100%] h-auto border-l-4 sm:border-l-8 border-yellow-500"
                     />
                     <motion.img
                         src="/dronesection4.jpg"
                         alt="Second"
-                        className="w-[50%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-8 border-yellow-500"
+                        className="w-[50%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-4 sm:border-l-8 border-yellow-500"
                     />
                 </motion.div>
 
@@ -102,12 +102,12 @@ export default function DroneSection({ droneSectionRef }) {
                     <motion.img
                         src="/dronesection1.jpg"
                         alt="First"
-                        className="w-[100%] h-auto border-l-8 border-yellow-500 transform scale-x-[-1]"
+                        className="w-[100%] h-auto border-l-4 sm:border-l-8 border-yellow-500 transform scale-x-[-1]"
                     />
                     <motion.img
                         src="/dronesection2.jpg"
                         alt="Second"
-                        className="w-[50%] h-auto absolute -bottom-6 -left-2 sm:-left-12 border-l-8 border-yellow-500 transform scale-x-[-1]"
+                        className="w-[50%] h-auto absolute -bottom-6 -left-2 sm:-left-12 border-l-4 sm:border-l-8 border-yellow-500 transform scale-x-[-1]"
                     />
                 </motion.div>
             </div>

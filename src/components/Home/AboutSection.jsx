@@ -59,7 +59,7 @@ export default function AboutSection() {
                                         <img
                                             src="/whyUs2.jpg"
                                             alt=""
-                                            className="w-full transition-transform duration-300 border-l-8 border-yellow-500"
+                                            className="w-full transition-transform duration-300 border-l-4 sm:border-l-8 border-yellow-500"
                                         />
                                     </div>
                                     <div
@@ -72,7 +72,7 @@ export default function AboutSection() {
                                         <img
                                             src="/people1.jpg"
                                             alt=""
-                                            className="w-full transition-transform duration-300 border-l-8 border-yellow-500"
+                                            className="w-full transition-transform duration-300 border-l-4 sm:border-l-8 border-yellow-500"
                                         />
                                     </div>
                                 </motion.div>
@@ -81,13 +81,13 @@ export default function AboutSection() {
                                         boxShadow:
                                             "0 0 100px rgba(255, 193, 7, 0.05)",
                                     }}
-                                    className="w-full mx-3 sm:mx-4 xl:w-1/2 group"
+                                    className="w-full  sm:mx-4 xl:w-1/2 group"
                                     variants={imageVariants}
                                 >
                                     <img
                                         src="/whyUs.jpg"
                                         alt=""
-                                        className="w-full transition-transform duration-300 border-l-8 border-yellow-500"
+                                        className="w-full transition-transform duration-300 border-l-4 sm:border-l-8 border-yellow-500"
                                     />
                                 </motion.div>
                             </motion.div>

@@ -23,7 +23,7 @@ export default function PricingSection() {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="flex flex-col mx-auto w-full max-w-3xl bg-dark-600 border-b-8 sm:border-l-8 sm:border-b-0 border-yellow-500 z-10"
+                        className="flex flex-col mx-auto w-full max-w-3xl bg-dark-600 border-b-4 sm:border-l-8 sm:border-b-0 border-yellow-500 z-10"
                     >
                         <motion.div
                             variants={itemVariants}
@@ -169,7 +169,7 @@ export default function PricingSection() {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        class="flex flex-col mx-auto w-full max-w-2xl bg-dark-600 border-b-8 sm:border-l-8 sm:border-b-0 border-yellow-500"
+                        class="flex flex-col mx-auto w-full max-w-2xl bg-dark-600 border-b-4 sm:border-l-8 sm:border-b-0 border-yellow-500"
                     >
                         <motion.div
                             className="flex justify-center   items-center mt-8"
@@ -332,7 +332,7 @@ export default function PricingSection() {
                         style={{
                             boxShadow: "0 0 100px rgba(255, 193, 7, 0.02)",
                         }}
-                        className="flex flex-col mx-auto w-full max-w-2xl bg-dark-600 border-b-8 sm:border-b-0 sm:border-l-8 border-yellow-500"
+                        className="flex flex-col mx-auto w-full max-w-2xl bg-dark-600 border-b-4 sm:border-b-0 sm:border-l-8 border-yellow-500"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"

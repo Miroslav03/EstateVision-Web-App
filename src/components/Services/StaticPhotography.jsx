@@ -94,12 +94,12 @@ export default function StaticPhotography({ staticPhotographyRef }) {
           <img
             src="/k2-min.png"
             alt="First"
-            className="w-[100%] h-auto border-l-8 border-yellow-500"
+            className="w-[100%] h-auto border-l-4 sm:border-l-8 border-yellow-500"
           />
           <img
             src="/k1-2-min.jpg"
             alt="Second"
-            className="w-[40%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-8 border-yellow-500"
+            className="w-[40%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-4 sm:border-l-8 border-yellow-500"
           />
         </motion.div>
 

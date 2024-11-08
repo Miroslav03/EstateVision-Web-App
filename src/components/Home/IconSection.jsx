@@ -66,7 +66,7 @@ export default function IconSection() {
                                     boxShadow:
                                         "0 0 100px rgba(255, 193, 7, 0.05)",
                                 }}
-                                className="mb-9 border-yellow-500 border-l-8 bg-dark-500 p-10 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10"
+                                className="mb-9 border-yellow-500 border-l-4 sm:border-l-8 bg-dark-500 p-10 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10"
                             >
                                 <div className="mb-8 flex sm:h-[70px] sm:w-[70px] h-[50px] w-[50px] items-center justify-center bg-primary bg-yellow-300">
                                     <span className="material-symbols-outlined text-2xl sm:text-4xl text-white font-bold">

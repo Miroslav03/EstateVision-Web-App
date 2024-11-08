@@ -48,7 +48,7 @@ export default function CallToActionSection() {
                 variants={containerVariants}
             >
                 <motion.img
-                    className="w-full hidden dark:block border-l-8 border-yellow-500 shadow-lg"
+                    className="w-full hidden dark:block border-l-4 sm:border-l-8 border-yellow-500 shadow-lg"
                     src="/3dmodel.jpg"
                     alt="dashboard image"
                     variants={imageVariants}
