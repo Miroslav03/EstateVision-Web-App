@@ -57,7 +57,7 @@ export default function AboutSection() {
                                         className="my-3 sm:my-6 group "
                                     >
                                         <img
-                                            src="/person1.jpg"
+                                            src="/whyUs2.jpg"
                                             alt=""
                                             className="w-full transition-transform duration-300 border-l-8 border-yellow-500"
                                         />
@@ -85,7 +85,7 @@ export default function AboutSection() {
                                     variants={imageVariants}
                                 >
                                     <img
-                                        src="/person3.jpg"
+                                        src="/whyUs.jpg"
                                         alt=""
                                         className="w-full transition-transform duration-300 border-l-8 border-yellow-500"
                                     />
