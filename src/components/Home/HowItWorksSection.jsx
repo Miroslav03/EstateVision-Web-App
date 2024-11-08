@@ -93,7 +93,7 @@ export default function HowItWorksSection() {
                                         step: 1,
                                         title: "Избери услугата за теб",
                                         description:
-                                            "Разгелдай и избери услугата за теб и твоят бизнес.",
+                                            "Разгледай и избери услугата за теб и твоят бизнес.",
                                     },
                                     {
                                         step: 2,
