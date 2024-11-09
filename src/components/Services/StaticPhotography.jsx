@@ -23,7 +23,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
     "/grid3-min.jpg",
     "/k-min.jpg",
     "/k1-2-min.jpg",
-    "/k2-min-min.jpg",
+    "/k2-min.jpg",
   ];
 
   // Animation variants for framer-motion
