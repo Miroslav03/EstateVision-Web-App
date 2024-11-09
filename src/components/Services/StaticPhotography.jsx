@@ -26,7 +26,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
     "/grid3-min.jpg",
     "/k-min.jpg",
     "/k1-2-min.jpg",
-    "/k2-min.png",
+    "/k2-min.jpg",
   ];
 
   // Animation variants for framer-motion
@@ -92,7 +92,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
           variants={slideInLeft}
         >
           <img
-            src="/k2-min.png"
+            src="/k2-min.jpg"
             alt="First"
             className="w-[100%] h-auto border-l-4 sm:border-l-8 border-yellow-500"
           />
