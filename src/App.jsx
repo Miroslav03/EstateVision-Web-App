@@ -1,11 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Services from "./pages/Services/Services";
-import AboutUs from "./pages/AboutUs/AboutUs";
-import ContactUs from "./pages/ContactUs/ContactUs";
-import Pricing from "./pages/Pricing/Pricing";
+import { Suspense, useEffect, useState, lazy } from "react";
 import Loader from "./components/Loader/Loader";
-import { useEffect, useState } from "react";
+
+const Home = lazy(() => import("./pages/Home/Home"));
+const Services = lazy(() => import("./pages/Services/Services"));
+const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
+const ContactUs = lazy(() => import("./pages/ContactUs/ContactUs"));
+const Pricing = lazy(() => import("./pages/Pricing/Pricing"));
 
 export default function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -16,19 +17,21 @@ export default function App() {
         }, 1000);
 
         return () => clearTimeout(timeout);
-    })
+    }, []);
 
     if (isLoading) {
-        return <Loader />
+        return <Loader />;
     }
 
     return (
-        <Routes>
-            <Route path="/" Component={Home}/>
-            <Route path="/services" Component={Services}/>
-            <Route path="/prices" Component={Pricing}/>
-            <Route path="/about" Component={AboutUs}/>
-            <Route path="/contact" Component={ContactUs}/>
-        </Routes>
+        <Suspense fallback={<Loader />}>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/prices" element={<Pricing />} />
+                <Route path="/about" element={<AboutUs />} />
+                <Route path="/contact" element={<ContactUs />} />
+            </Routes>
+        </Suspense>
     );
 }
