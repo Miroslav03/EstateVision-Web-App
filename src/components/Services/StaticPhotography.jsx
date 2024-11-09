@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 // eslint-disable-next-line react/prop-types
 export default function StaticPhotography({ staticPhotographyRef }) {
   const containerRef = useRef(null);
-  const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
+  const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 })
 
   useEffect(() => {
     const updateDragConstraints = () => {
@@ -15,9 +15,6 @@ export default function StaticPhotography({ staticPhotographyRef }) {
     };
 
     updateDragConstraints();
-    window.addEventListener("resize", updateDragConstraints);
-
-    return () => window.removeEventListener("resize", updateDragConstraints);
   }, []);
 
   const images = [
@@ -26,7 +23,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
     "/grid3-min.jpg",
     "/k-min.jpg",
     "/k1-2-min.jpg",
-    "/k2-min.png",
+    "/k2-min-min.jpg",
   ];
 
   // Animation variants for framer-motion
@@ -160,21 +157,21 @@ export default function StaticPhotography({ staticPhotographyRef }) {
           dragConstraints={dragConstraints}
         >
           {images.map((src, index) => (
-            <motion.div
+            <div
               key={index}
-              className="relative h-[400px] w-[400px] flex-shrink-0 overflow-hidden pb-4 transition-all duration-200"
+              className="relative h-[400px] w-[400px] flex-shrink-0 overflow-hidden pb-4"
             >
               <div
-                className={`relative h-full w-full transition-all duration-200`}
+                className="relative h-full w-full"
               >
-                <motion.img
+                <img
                   src={src}
-                  alt={`Image ${index + 1}`}
+                  alt="Image"
                   className="w-full h-full object-cover"
                 />
-                <motion.div className="absolute inset-0 bg-black transition-opacity duration-200 opacity-0" />
+                <motion.div className="absolute inset-0" />
               </div>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
       </motion.div>
