@@ -89,7 +89,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
           variants={slideInLeft}
         >
           <img
-            src="/k2-min.png"
+            src="/k2-min-min.jpg"
             alt="First"
             className="w-[100%] h-auto border-l-4 sm:border-l-8 border-yellow-500"
           />
