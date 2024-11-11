@@ -72,7 +72,7 @@ export default function ServiceSection() {
                             key={index}
                             variants={itemVariants}
                             whileHover="hover"
-                            className={`flex flex-col justify-between bg-white shadow-lg overflow-hidden transform transition-all duration-300 h-[75vh] bg-cover bg-center ${
+                            className={`flex flex-col justify-between bg-white shadow-lg overflow-hidden transform transition-all duration-300 h-[228px] sm:h-[75vh] bg-cover bg-center ${
                                 hoveredIndex === index
                                     ? "sm:border-l-8 border-yellow-500"
                                     : "border-l-4 sm:border-l-0 border-yellow-500"
