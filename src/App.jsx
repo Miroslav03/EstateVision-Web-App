@@ -24,7 +24,7 @@ export default function App() {
     }
 
     return (
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/services" element={<Services />} />
