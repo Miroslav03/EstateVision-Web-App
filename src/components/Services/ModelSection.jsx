@@ -138,7 +138,7 @@ export default function ModelSection({ modelSectionRef }) {
                             style={{
                                 boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
                             }}
-                            className="w-[90%]  sm:max-w-xl overflow-hidden border-yellow-500 sm:border-l-8 border-l-4"
+                            className="w-[90%] sm:w-[100%] h-[480x]  sm:h-[550px]  sm:max-w-xl overflow-hidden border-yellow-500 sm:border-l-8 border-l-4"
                         >
                             <div className="h-[50%] sm:h-[60%] w-full relative overflow-hidden">
                                 <img
