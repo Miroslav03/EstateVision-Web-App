@@ -9,7 +9,7 @@ export default function Navigation() {
     return (
         <>
             <BigMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-            <div className="w-full absolute top-0 z-40 flex items-center py-5">
+            <header className="w-full absolute top-0 z-40 flex items-center py-5">
                 {/* Logo container */}
                 <div className="flex items-center justify-start sm:justify-center w-80 ps-4 sm:ps-0">
                     <Link to={'/'}>
@@ -20,18 +20,18 @@ export default function Navigation() {
                     </Link>
                 </div>
                 {/* Buttons Container */}
-                <div className="grow shrink-0 hidden sm:flex justify-center items-center">
+                <nav className="grow shrink-0 hidden sm:flex justify-center items-center">
                     <NavigationButton to="/" title="Начало" />
                     <NavigationButton to="/services" title="Услуги" />
                     <NavigationButton to="/prices" title="Цени" />
                     <NavigationButton to="/about" title="За Нас" />
                     <NavigationButton to="/contact" title="Свържете се" />
-                </div>
+                </nav>
                 {/* Toggle Button Container */}
                 <div className="w-80 flex items-center justify-end sm:justify-center pe-4 sm:pe-0">
                     <HamburgerButton setIsOpen={setIsOpen} />
                 </div>
-            </div>
+            </header>
         </>
     );
 }
@@ -39,7 +39,7 @@ export default function Navigation() {
 function BigMenu({ isOpen, setIsOpen }) {
     return (
         <>
-            <nav
+            <aside
                 className={`fixed top-0 ${
                     isOpen ? "left-0" : "left-full"
                 } w-full min-h-screen z-50 bg-white transition-all duration-1000 ease-out`}
@@ -52,7 +52,7 @@ function BigMenu({ isOpen, setIsOpen }) {
                         />
                     </div>
                     <div className="grow"></div>
-                    <div className="w-80 flex items-center lg:justify-center justify-end pe-8 lg:pe-0">
+                    <button className="w-80 flex items-center lg:justify-center justify-end pe-8 lg:pe-0">
                         <svg
                             width="25"
                             height="25"
@@ -73,24 +73,24 @@ function BigMenu({ isOpen, setIsOpen }) {
                                 strokeWidth="2"
                             />
                         </svg>
-                    </div>
+                    </button>
                 </header>
 
                 {/* Buttons */}
-                <div className="lg:mt-20 mt-4 flex flex-wrap sm:px-24 px-4 gap-x-20 gap-y-7">
-                    <div className="lg:w-96 w-full flex flex-col gap-y-7">
+                <main className="lg:mt-20 mt-4 flex flex-wrap sm:px-24 px-4 gap-x-20 gap-y-7">
+                    <section className="lg:w-96 w-full flex flex-col gap-y-7">
                         <BigNavigationButton title="Начало" to="/" />
                         <BigNavigationButton title="Услуги" to="/services" />
                         <BigNavigationButton title="Цени" to="/prices" />
-                    </div>
-                    <div className="lg:w-96 w-full flex flex-col gap-y-7">
+                    </section>
+                    <section className="lg:w-96 w-full flex flex-col gap-y-7">
                         <BigNavigationButton title="За нас" to="/about" />
                         <BigNavigationButton title="Свържете се" to="/contact" />
-                    </div>
-                </div>
+                    </section>
+                </main>
 
                 {/* Information */}
-                <div className="lg:mt-32 mt-8 lg:flex flex-wrap hidden">
+                <footer className="lg:mt-32 mt-8 lg:flex flex-wrap hidden">
                     <div className="flex items-center ms-24 me-8">
                         <MdOutlinePhone className="text-2xl" />
                         <p className="text-xl ms-2">+359885172833</p>
@@ -101,8 +101,8 @@ function BigMenu({ isOpen, setIsOpen }) {
                             estatevisionbulgaria@gmail.com
                         </p>
                     </div>
-                </div>
-            </nav>
+                </footer>
+            </aside>
         </>
     );
 }
@@ -128,7 +128,7 @@ function NavigationButton({ to, title }) {
         <>
             <Link to={to} className="text-white text-lg relative group me-10">
                 {title}
-                <div className="w-0 absolute top-full h-1 bg-yellow-500  opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:w-full"></div>
+                <span className="w-0 absolute top-full h-1 bg-yellow-500  opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:w-full"></span>
             </Link>
         </>
     );

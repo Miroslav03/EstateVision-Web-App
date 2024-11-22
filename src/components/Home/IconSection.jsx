@@ -41,13 +41,15 @@ export default function IconSection() {
             className="pb-24 pt-12 bg-gradient-to-r from-dark-700 to-dark-500 lg:pb-[90px] lg:pt-[50px]"
         >
             <div className="container mx-auto px-6 sm:px-0">
-                <div className="-mx-4 flex flex-wrap">
-                    <div className="w-full px-4"></div>
-                </div>
+                <header>
+                    <h2 id="benefit-cards" className="sr-only">
+                        Ползи
+                    </h2>
+                </header>
 
                 <div className="-mx-4 flex flex-wrap">
                     {items.map((item, index) => (
-                        <motion.div
+                        <motion.article
                             key={index}
                             className={`w-full px-4 md:w-1/2 lg:w-1/3 ${
                                 index === 0
@@ -86,7 +88,7 @@ export default function IconSection() {
                                     {item.description}
                                 </p>
                             </div>
-                        </motion.div>
+                        </motion.article>
                     ))}
                 </div>
             </div>

@@ -46,7 +46,7 @@ export default function Stats() {
     }, []); // Empty dependency array ensures this runs once on mount
 
     return (
-        <motion.div
+        <motion.section
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -70,7 +70,7 @@ export default function Stats() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-20 sm:gap-44 text-center max-w-4xl mx-auto">
                 {stats.map((stat, index) => (
-                    <motion.div
+                    <motion.article
                         key={stat.id}
                         className="flex flex-col items-center px-6 relative"
                         initial={{ opacity: 0, y: 20 }}
@@ -87,9 +87,9 @@ export default function Stats() {
                             animate={{ scaleY: 1 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         ></motion.div>
-                    </motion.div>
+                    </motion.article>
                 ))}
             </div>
-        </motion.div>
+        </motion.section>
     );
 }

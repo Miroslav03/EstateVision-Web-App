@@ -58,17 +58,20 @@ export default function ServiceSection() {
     };
 
     return (
-        <motion.div
+        <motion.section
             ref={sectionRef}
             variants={containerVariants}
             initial="hidden"
             animate={controls}
             className="h-full flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 sm:to-dark-500"
         >
+            <h2 id="interactive-cards" className="sr-only">
+                Interactive Cards Section
+            </h2>
             <motion.div className="flex sm:flex-row flex-col gap-6 w-full max-w-[85%] sm:max-w-[90%] mt-8 sm:mt-28 cursor-pointer">
                 {["k-min.jpg", "3dmodel.jpg", "drone1.jpg"].map(
                     (img, index) => (
-                        <motion.div
+                        <motion.article
                             key={index}
                             variants={itemVariants}
                             whileHover="hover"
@@ -86,7 +89,7 @@ export default function ServiceSection() {
                                     : "flex-1"
                             }`}
                             style={{
-                                backgroundImage: `url(${img})`, 
+                                backgroundImage: `url(${img})`,
                             }}
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
@@ -94,7 +97,7 @@ export default function ServiceSection() {
                         >
                             <div className="flex-grow w-full h-full"></div>
 
-                            <motion.div className="px-4 pt-44 pb-6 sm:pb-8 sm:py-12 sm:px-5 w-full bg-gradient-to-t from-dark-900 to-transparent  ">
+                            <motion.figure className="px-4 pt-44 pb-6 sm:pb-8 sm:py-12 sm:px-5 w-full bg-gradient-to-t from-dark-900 to-transparent  ">
                                 <motion.span
                                     className="text-lg sm:text-2xl font-semibold text-white border-b-2 sm:border-b-4 border-yellow-500"
                                     initial={{ opacity: 1, x: 0 }}
@@ -102,11 +105,11 @@ export default function ServiceSection() {
                                 >
                                     {hoverText[index]}
                                 </motion.span>
-                            </motion.div>
-                        </motion.div>
+                            </motion.figure>
+                        </motion.article>
                     )
                 )}
             </motion.div>
-        </motion.div>
+        </motion.section>
     );
 }

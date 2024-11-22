@@ -41,23 +41,27 @@ export default function CallToActionSection() {
             ref={sectionRef}
             className="bg-gradient-to-r from-dark-700 to-dark-500"
         >
-            <motion.div
+            <motion.article
                 className="gap-8 items-center py-16 px-6 sm:px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={containerVariants}
             >
-                <motion.img
-                    className="w-full hidden dark:block border-l-4 sm:border-l-8 border-yellow-500 shadow-lg"
-                    src="/3dmodel.jpg"
-                    alt="dashboard image"
-                    variants={imageVariants}
-                    style={{
-                        boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
-                    }}
-                />
-                <div className="mt-4 md:mt-0">
+                <figure>
+                    <motion.img
+                        className="w-full hidden dark:block border-l-4 sm:border-l-8 border-yellow-500 shadow-lg"
+                        src="/3dmodel.jpg"
+                        alt="dashboard image"
+                        variants={imageVariants}
+                        style={{
+                            boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
+                        }}
+                    />
+                </figure>
+
+                <header className="mt-4 md:mt-0">
                     <motion.h2
+                        id="discount-heading"
                         className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
                         variants={textVariants}
                     >
@@ -101,8 +105,8 @@ export default function CallToActionSection() {
                             <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></div>
                         </a>
                     </div>
-                </div>
-            </motion.div>
+                </header>
+            </motion.article>
         </section>
     );
 }

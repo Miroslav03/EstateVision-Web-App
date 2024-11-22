@@ -37,24 +37,25 @@ export default function HeroSection({ serviceSectionRef }) {
     };
 
     return (
-        <div className="h-max lg:h-screen max-h-max flex flex-col sm:flex-row">
+        <section className="h-max lg:h-screen max-h-max flex flex-col sm:flex-row">
             <motion.div
                 className="lg:w-[55%] bg-gradient-to-r from-dark-700 to-dark-600 flex justify-center items-center flex-col w-full lg:h-full pb-4 sm:pb-0"
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
             >
-                <div className="flex flex-col items-start sm:px-[4.5rem] px-4 mt-4 sm:mt-8 lg:mt-0 pb-8 py-20">
-                    <motion.h1
-                        className="text-white font-main lg:text-6xl xl:text-6xl 2xl:text-[5rem] sm:leading-tight text-[2.9rem] leading-[1] px-[1.5rem] sm:px-0 pt-12 lg:pt-8"
-                        variants={textVariants}
-                    >
-                        <span className="text-yellow-400">
-                            Откроете визията
-                        </span>{" "}
-                        и завършете презентацията си
-                    </motion.h1>
-
+                <article className="flex flex-col items-start sm:px-[4.5rem] px-4 mt-4 sm:mt-8 lg:mt-0 pb-8 py-20">
+                    <header>
+                        <motion.h1
+                            className="text-white font-main lg:text-6xl xl:text-6xl 2xl:text-[5rem] sm:leading-tight text-[2.9rem] leading-[1] px-[1.5rem] sm:px-0 pt-12 lg:pt-8"
+                            variants={textVariants}
+                        >
+                            <span className="text-yellow-400">
+                                Откроете визията
+                            </span>{" "}
+                            и завършете презентацията си
+                        </motion.h1>
+                    </header>
                     <motion.p
                         className="text-gray-500 font-main mt-4 text-md sm:text-lg lg:pr-[9rem] px-[1.5rem] sm:px-0"
                         variants={textVariants}
@@ -81,7 +82,7 @@ export default function HeroSection({ serviceSectionRef }) {
                             layout
                         ></motion.div>
                     </motion.div>
-                </div>
+                </article>
             </motion.div>
 
             <motion.div
@@ -101,6 +102,6 @@ export default function HeroSection({ serviceSectionRef }) {
                     style={{ borderColor: "rgba(255, 193, 7, 0.7)" }}
                 />
             </motion.div>
-        </div>
+        </section>
     );
 }
