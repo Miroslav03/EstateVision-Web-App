@@ -12,22 +12,23 @@ export default function AboutUsSection() {
     };
 
     return (
-        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-24 justify-center pt-44 sm:pt-52 pb-32">
-            <div className="w-full justify-center items-center gap-16 sm:gap-36 grid lg:grid-cols-2 grid-cols-1">
+        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-16 pt-20 sm:pt-40 pb-16 sm:pb-24">
+            {/* First Row */}
+            <article className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 sm:px-12 place-items-center">
                 <motion.div
-                    className="w-full flex flex-col justify-start px-4 sm:px-24 lg:items-start items-center gap-4"
+                    className="flex flex-col justify-start gap-6 lg:items-start items-center text-center lg:text-left"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={fadeInUp}
                 >
-                    <h2 className="text-white text-2xl sm:text-5xl font-semibold sm:text-start text-start">
+                    <h2 className="text-white text-2xl sm:text-4xl lg:text-5xl font-semibold">
                         Оживяване на имотите чрез{" "}
                         <span className="text-yellow-500">
                             иновация и визуализация
                         </span>
                     </h2>
-                    <p className="text-gray-500 text-md sm:text-xl font-normal leading-relaxed sm:text-start text-start">
+                    <p className="text-gray-500 text-sm sm:text-lg lg:text-xl font-normal leading-relaxed">
                         EstateVision е водеща компания в създаването на
                         висококачествени 3D турове и фотореалистични
                         визуализации за различни имоти – от жилищни сгради и
@@ -38,45 +39,42 @@ export default function AboutUsSection() {
                     </p>
                 </motion.div>
                 <motion.img
-                    style={{
-                        boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
-                    }}
-                    className="h-full w-full sm:w-auto max-w-5xl object-cover border-r-0 sm:border-l-8 border-yellow-500"
+                    style={{ boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)" }}
+                    className="w-full max-w-4xl object-cover border-yellow-500 lg:border-l-8"
                     src="/about1.jpg"
-                    alt="About Us"
+                    alt="High-quality 3D Visualization"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={fadeInLeft}
                 />
-            </div>
+            </article>
 
-            <div className="w-full flex sm:flex-row flex-col justify-center items-center gap-12 sm:gap-28">
+            {/* Second Row */}
+            <article className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 sm:px-12 items-center">
                 <motion.img
-                    style={{
-                        boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
-                    }}
-                    className="h-full w-full max-w-4xl object-cover border-r-0 sm:border-r-8 border-yellow-500"
+                    style={{ boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)" }}
+                    className="w-full max-w-4xl object-cover border-yellow-500 lg:border-r-8"
                     src="/about2.jpg"
-                    alt="About Us"
+                    alt="Real Estate Innovation"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={fadeInLeft}
                 />
                 <motion.div
-                    className="w-full max-w-7xl px-4 sm:px-12 flex flex-col justify-start lg:items-start sm:items-center items-end gap-4"
+                    className="flex flex-col justify-start gap-6 lg:items-start items-center text-center lg:text-left"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={fadeInUp}
                 >
                     <div className="border-b-8 border-yellow-500 pb-4">
-                        <h2 className="text-white text-3xl sm:text-5xl font-semibold sm:text-end text-end">
+                        <h2 className="text-white text-2xl sm:text-4xl lg:text-5xl font-semibold">
                             Нашата мисия
                         </h2>
                     </div>
-                    <p className="text-gray-500 text:md sm:text-xl font-normal lg:text-start text-end sm:pr-44 pr-0">
+                    <p className="text-gray-500 text-sm sm:text-lg lg:text-xl font-normal leading-relaxed">
                         В EstateVision преобразяваме представянето на имоти чрез
                         иновации и фотореалистични 3D турове. Ние създаваме
                         потапящи изживявания, които позволяват на клиентите да
@@ -85,7 +83,7 @@ export default function AboutUsSection() {
                         история.
                     </p>
                 </motion.div>
-            </div>
+            </article>
         </section>
     );
 }
