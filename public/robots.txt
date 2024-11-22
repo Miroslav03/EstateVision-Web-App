@@ -1,0 +1,15 @@
+# Robots.txt for EstateVision
+
+# Allow all web crawlers to access the main site
+User-agent: *
+Disallow: /scripts/        # Block access to JavaScript files
+Disallow: /private/        # Block access to private resources
+
+# Allow important pages
+Allow: /about
+Allow: /contact
+Allow: /prices
+Allow: /services
+
+# Sitemap location
+Sitemap: https://www.estatevisionbulgaria.com/sitemap.xml

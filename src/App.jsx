@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Suspense, useEffect, useState, lazy } from "react";
 import Loader from "./components/Loader/Loader";
+import { HelmetProvider } from "react-helmet-async";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const Services = lazy(() => import("./pages/Services/Services"));
@@ -24,14 +25,16 @@ export default function App() {
     }
 
     return (
-        <Suspense fallback={<Loader />}>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/prices" element={<Pricing />} />
-                <Route path="/about" element={<AboutUs />} />
-                <Route path="/contact" element={<ContactUs />} />
-            </Routes>
-        </Suspense>
+        <HelmetProvider>
+            <Suspense fallback={<Loader />}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/prices" element={<Pricing />} />
+                    <Route path="/about" element={<AboutUs />} />
+                    <Route path="/contact" element={<ContactUs />} />
+                </Routes>
+            </Suspense>
+        </HelmetProvider>
     );
 }

@@ -5,6 +5,7 @@ import DroneSection from "../../components/Services/DroneSection";
 import ModelSection from "../../components/Services/ModelSection";
 import StaticPhotography from "../../components/Services/StaticPhotography";
 import { useSearchParams } from "react-router-dom";
+import ServicesMetadata from "../../SEO/ServicesMetadata";
 
 export default function Services() {
     const modelSectionRef = useRef();
@@ -15,7 +16,7 @@ export default function Services() {
 
     useEffect(() => {
         const section = searchParams.get("section");
-        console.log(section)
+        console.log(section);
 
         if (!section) return;
 
@@ -28,20 +29,21 @@ export default function Services() {
             targetRef = droneSectionRef;
         }
 
-        console.log(targetRef)
+        console.log(targetRef);
         if (targetRef && targetRef.current) {
             setTimeout(() => {
                 targetRef.current.scrollIntoView();
             }, 200);
         }
-    }, [searchParams, modelSectionRef, staticPhotographyRef, droneSectionRef])
+    }, [searchParams, modelSectionRef, staticPhotographyRef, droneSectionRef]);
 
     return (
         <main className="w-full overflow-x-hidden font-main min-h-screen bg-dark-500">
+            <ServicesMetadata />
             <Navigation />
             <ModelSection modelSectionRef={modelSectionRef} />
             <StaticPhotography staticPhotographyRef={staticPhotographyRef} />
-            <DroneSection droneSectionRef={droneSectionRef}/>
+            <DroneSection droneSectionRef={droneSectionRef} />
             <Footer />
         </main>
     );
