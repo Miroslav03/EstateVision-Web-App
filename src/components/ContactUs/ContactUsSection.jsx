@@ -75,7 +75,7 @@ export default function AboutUsSection() {
             animate="visible"
             className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-24 justify-center pt-32 sm:pt-52 pb-16 sm:pb-32"
         >
-            <motion.div variants={fadeInUp} className="py-12">
+            <motion.article variants={fadeInUp} className="py-12">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial="hidden"
@@ -307,7 +307,7 @@ export default function AboutUsSection() {
                         </motion.div>
                     </motion.div>
                 </div>
-            </motion.div>
+            </motion.article>
         </motion.section>
     );
 }
