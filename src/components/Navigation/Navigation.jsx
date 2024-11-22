@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ export default function Navigation() {
             <header className="w-full absolute top-0 z-40 flex items-center py-5">
                 {/* Logo container */}
                 <div className="flex items-center justify-start sm:justify-center w-80 ps-4 sm:ps-0">
-                    <Link to={'/'}>
+                    <Link to={"/"}>
                         <img
                             src="/images/estatevision-logo.png"
                             className="sm:max-w-48 sm:max-h-16 max-h-12"
@@ -22,7 +22,24 @@ export default function Navigation() {
                 {/* Buttons Container */}
                 <nav className="grow shrink-0 hidden sm:flex justify-center items-center">
                     <NavigationButton to="/" title="Начало" />
-                    <NavigationButton to="/services" title="Услуги" />
+                    <NavigationButton
+                        to="/services"
+                        title="Услуги"
+                        dropdown={[
+                            {
+                                to: "/services/3dmodel",
+                                title: "Екстериорна фотография",
+                            },
+                            {
+                                to: "/services/static-photography",
+                                title: "3D Модели",
+                            },
+                            {
+                                to: "/services/drone-photography",
+                                title: "Заснемане с дрон",
+                            },
+                        ]}
+                    />
                     <NavigationButton to="/prices" title="Цени" />
                     <NavigationButton to="/about" title="За Нас" />
                     <NavigationButton to="/contact" title="Свържете се" />
@@ -85,7 +102,10 @@ function BigMenu({ isOpen, setIsOpen }) {
                     </section>
                     <section className="lg:w-96 w-full flex flex-col gap-y-7">
                         <BigNavigationButton title="За нас" to="/about" />
-                        <BigNavigationButton title="Свържете се" to="/contact" />
+                        <BigNavigationButton
+                            title="Свържете се"
+                            to="/contact"
+                        />
                     </section>
                 </main>
 
@@ -123,14 +143,58 @@ function BigNavigationButton({ to, title }) {
     );
 }
 
-function NavigationButton({ to, title }) {
+function NavigationButton({ to, title, dropdown }) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    let timeout;
+
+    const handleMouseHoverLink = () => {
+        clearTimeout(timeout);
+        setIsOpen(true);
+    };
+
+    const handleMouseUnhoverLink = () => {
+        timeout = setTimeout(() => setIsOpen(false), 400);
+    };
+
+    const handleMouseEnterDropdown = () => {
+        clearTimeout(timeout); 
+    };
+
+    const handleMouseLeaveDropdown = () => {
+        setIsOpen(false); 
+    };
+
     return (
-        <>
-            <Link to={to} className="text-white text-lg relative group me-10">
+        <div className="relative">
+            <Link
+                onMouseEnter={handleMouseHoverLink}
+                onMouseLeave={handleMouseUnhoverLink}
+                to={to}
+                className="text-white text-lg relative group me-10"
+            >
                 {title}
                 <div className="w-0 absolute top-full h-1 bg-yellow-500  opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:w-full"></div>
             </Link>
-        </>
+            {isOpen && dropdown && (
+                <div
+                    onMouseEnter={handleMouseEnterDropdown}
+                    onMouseLeave={handleMouseLeaveDropdown}
+                    id="dropdown"
+                    className="absolute top-[100%] mt-6  left-1/2 transform -translate-x-1/2  bg-transparent shadow-lg flex  gap-4"
+                >
+                    {dropdown.map((item, index) => (
+                        <Link
+                            to={item.to}
+                            className="text-white text-lg relative group me-10"
+                        >
+                            {item.title}
+                            <div className="w-0 absolute top-full h-1 bg-yellow-500  opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:w-full"></div>
+                        </Link>
+                    ))}
+                </div>
+            )}
+        </div>
     );
 }
 
