@@ -128,7 +128,7 @@ function NavigationButton({ to, title }) {
         <>
             <Link to={to} className="text-white text-lg relative group me-10">
                 {title}
-                <span className="w-0 absolute top-full h-1 bg-yellow-500  opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:w-full"></span>
+                <div className="w-0 absolute top-full h-1 bg-yellow-500  opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:w-full"></div>
             </Link>
         </>
     );

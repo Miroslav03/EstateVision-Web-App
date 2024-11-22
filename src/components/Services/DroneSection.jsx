@@ -17,9 +17,9 @@ export default function DroneSection({ droneSectionRef }) {
     };
 
     return (
-        <div ref={droneSectionRef} className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-16 border-t-0 sm:border-t-8 border-yellow-500">
+        <section ref={droneSectionRef} className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-16 border-t-0 sm:border-t-8 border-yellow-500">
             {/* Heading Section */}
-            <motion.div
+            <motion.header
                 ref={ref1}
                 variants={containerVariants}
                 initial="hidden"
@@ -27,18 +27,18 @@ export default function DroneSection({ droneSectionRef }) {
                 className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end sm:items-center gap-4"
             >
                 <div className="border-b-8 border-yellow-500">
-                    <h2 className="text-3xl sm:text-6xl font-semibold text-white mb-4">
+                    <h1 className="text-3xl sm:text-6xl font-semibold text-white mb-4">
                         Заснемане с дрон
-                    </h2>
+                    </h1>
                 </div>
                 <p className="text-gray-500 text-md sm:text-xl">
                     Разгледай и избери услугата за теб
                 </p>
-            </motion.div>
+            </motion.header>
 
             {/* Image and Text Sections */}
-            <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col lg:flex-row items-center gap-16 mb-6">
-                <motion.div
+            <section className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col lg:flex-row items-center gap-16 mb-6">
+                <motion.article
                     ref={ref2}
                     variants={containerVariants}
                     initial="hidden"
@@ -56,9 +56,9 @@ export default function DroneSection({ droneSectionRef }) {
                         alt="Second"
                         className="w-[50%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-4 sm:border-l-8 border-yellow-500"
                     />
-                </motion.div>
+                </motion.article>
 
-                <motion.div
+                <motion.article
                     ref={ref3}
                     variants={containerVariants}
                     initial="hidden"
@@ -90,9 +90,9 @@ export default function DroneSection({ droneSectionRef }) {
                         </span>
                         <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></div>
                     </Link>
-                </motion.div>
+                </motion.article>
 
-                <motion.div
+                <motion.article
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView3 ? "visible" : "hidden"}
@@ -109,8 +109,8 @@ export default function DroneSection({ droneSectionRef }) {
                         alt="Second"
                         className="w-[50%] h-auto absolute -bottom-6 -left-2 sm:-left-12 border-l-4 sm:border-l-8 border-yellow-500 transform scale-x-[-1]"
                     />
-                </motion.div>
-            </div>
-        </div>
+                </motion.article>
+            </section>
+        </section>
     );
 }
