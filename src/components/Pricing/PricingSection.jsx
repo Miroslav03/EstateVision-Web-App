@@ -16,16 +16,16 @@ export default function PricingSection() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     };
     return (
-        <section className="bg-gradient-to-r from-dark-700 to-dark-500 pt-40 sm:pt-56 pb-16 sm:pb-20">
+        <section aria-labelledby="pricing-heading" className="bg-gradient-to-r from-dark-700 to-dark-500 pt-40 sm:pt-56 pb-16 sm:pb-20">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col sm:grid sm:grid-cols-3 gap-8  sm:gap-6 ">
-                    <motion.div
+                    <motion.article
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
                         className="flex flex-col mx-auto w-full max-w-3xl bg-dark-600 border-b-4 sm:border-l-8 sm:border-b-0 border-yellow-500 z-10"
                     >
-                        <motion.div
+                        <motion.header
                             variants={itemVariants}
                             className="flex justify-center items-center mt-8"
                         >
@@ -35,7 +35,7 @@ export default function PricingSection() {
                             >
                                 Заснемане с дрон
                             </motion.h1>
-                        </motion.div>
+                        </motion.header>
                         <motion.div
                             variants={itemVariants}
                             className="p-6 sm:py-9 sm:px-18"
@@ -160,8 +160,8 @@ export default function PricingSection() {
                                 </motion.div>
                             </motion.ul>
                         </motion.div>
-                    </motion.div>
-                    <motion.div
+                    </motion.article>
+                    <motion.article
                         style={{
                             boxShadow: "0 0 100px rgba(255, 193, 7, 0.08)",
                             zIndex: 1,
@@ -171,7 +171,7 @@ export default function PricingSection() {
                         animate="visible"
                         class="flex flex-col mx-auto w-full max-w-2xl bg-dark-600 border-b-4 sm:border-l-8 sm:border-b-0 border-yellow-500"
                     >
-                        <motion.div
+                        <motion.header
                             className="flex justify-center   items-center mt-8"
                             variants={containerVariants}
                         >
@@ -181,7 +181,7 @@ export default function PricingSection() {
                             >
                                 3D Модели
                             </motion.h1>
-                        </motion.div>
+                        </motion.header>
                         <motion.div
                             variants={itemVariants}
                             class="p-6 sm:py-9 sm:px-18"
@@ -327,8 +327,8 @@ export default function PricingSection() {
                                 </li>
                             </motion.ul>
                         </motion.div>
-                    </motion.div>
-                    <motion.div
+                    </motion.article>
+                    <motion.article
                         style={{
                             boxShadow: "0 0 100px rgba(255, 193, 7, 0.02)",
                         }}
@@ -337,7 +337,7 @@ export default function PricingSection() {
                         initial="hidden"
                         animate="visible"
                     >
-                        <motion.div
+                        <motion.header
                             className="flex justify-center items-center mt-8"
                             variants={containerVariants}
                         >
@@ -347,7 +347,7 @@ export default function PricingSection() {
                             >
                                 Статична фотография
                             </motion.h1>
-                        </motion.div>
+                        </motion.header>
                         <motion.div
                             className="p-6 sm:py-9 sm:px-18 justify-center items-center flex"
                             variants={containerVariants}
@@ -433,7 +433,7 @@ export default function PricingSection() {
                                 </motion.li>
                             </motion.ul>
                         </motion.div>
-                    </motion.div>
+                    </motion.article>
                 </div>
             </div>
         </section>
