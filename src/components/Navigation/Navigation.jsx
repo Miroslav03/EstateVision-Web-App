@@ -98,14 +98,38 @@ function BigMenu({ isOpen, setIsOpen }) {
                 {/* Buttons */}
                 <main className="lg:mt-20 mt-4 flex flex-wrap sm:px-24 px-4 gap-x-20 gap-y-7">
                     <section className="lg:w-96 w-full flex flex-col gap-y-8">
-                        <BigNavigationButton title="Начало" to="/" />
-                        <BigNavigationButton title="3D Модели" to="/services/3dmodel" />
-                        <BigNavigationButton title="Статична фотография" to="/services/static-photography" />
-                        <BigNavigationButton title="Заснемане с дрон" to="/services/drone-photography" />
+                        <BigNavigationButton
+                            title="Начало"
+                            to="/"
+                            setIsOpen={setIsOpen}
+                        />
+                        <BigNavigationButton
+                            title="3D Модели"
+                            to="/services/3dmodel"
+                            setIsOpen={setIsOpen}
+                        />
+                        <BigNavigationButton
+                            title="Статична фотография"
+                            to="/services/static-photography"
+                            setIsOpen={setIsOpen}
+                        />
+                        <BigNavigationButton
+                            title="Заснемане с дрон"
+                            to="/services/drone-photography"
+                            setIsOpen={setIsOpen}
+                        />
                     </section>
                     <section className="lg:w-96 w-full flex flex-col gap-y-7">
-                        <BigNavigationButton title="За нас" to="/about" />
-                        <BigNavigationButton title="Цени" to="/prices" />
+                        <BigNavigationButton
+                            title="За нас"
+                            to="/about"
+                            setIsOpen={setIsOpen}
+                        />
+                        <BigNavigationButton
+                            title="Цени"
+                            to="/prices"
+                            setIsOpen={setIsOpen}
+                        />
                         <BigNavigationButton
                             title="Свържете се"
                             to="/contact"
@@ -131,12 +155,13 @@ function BigMenu({ isOpen, setIsOpen }) {
     );
 }
 
-function BigNavigationButton({ to, title }) {
+function BigNavigationButton({ to, title, setIsOpen }) {
     return (
         <>
             <Link
                 className="text-2xl lg:text-6xl sm:text-4xl text-dark-500 hover:text-yellow-700 relative transition-all duration-300"
                 to={to}
+                onClick={() => setIsOpen(false)}
             >
                 {title}
                 <span className="absolute right-0 inline-block lg:hidden text-2xl sm:text-4xl">
