@@ -12,7 +12,7 @@ export default function AboutUsSection() {
     };
 
     return (
-        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-16 pt-20 sm:pt-40 pb-16 sm:pb-24">
+        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-16 pt-20 sm:pt-56 pb-16 sm:pb-24">
             {/* First Row */}
             <article className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 sm:px-12 place-items-center">
                 <motion.div

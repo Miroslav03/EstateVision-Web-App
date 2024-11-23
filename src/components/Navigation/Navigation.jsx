@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
 import { useEffect, useState } from "react";
 
@@ -23,15 +23,17 @@ export default function Navigation() {
                 <nav className="grow shrink-0 hidden sm:flex justify-center items-center">
                     <NavigationButton to="/" title="Начало" />
                     <NavigationButton
-                        to="/services"
+                        scrollSection={"services"}
+                        to="/"
                         title="Услуги"
+                        state={"services"}
                         dropdown={[
                             {
-                                to: "/services/3dmodel",
-                                title: "Екстериорна фотография",
+                                to: "/services/static-photography",
+                                title: "Статична фотография",
                             },
                             {
-                                to: "/services/static-photography",
+                                to: "/services/3dmodel",
                                 title: "3D Модели",
                             },
                             {
@@ -95,13 +97,15 @@ function BigMenu({ isOpen, setIsOpen }) {
 
                 {/* Buttons */}
                 <main className="lg:mt-20 mt-4 flex flex-wrap sm:px-24 px-4 gap-x-20 gap-y-7">
-                    <section className="lg:w-96 w-full flex flex-col gap-y-7">
+                    <section className="lg:w-96 w-full flex flex-col gap-y-8">
                         <BigNavigationButton title="Начало" to="/" />
-                        <BigNavigationButton title="Услуги" to="/services" />
-                        <BigNavigationButton title="Цени" to="/prices" />
+                        <BigNavigationButton title="3D Модели" to="/services/3dmodel" />
+                        <BigNavigationButton title="Статична фотография" to="/services/static-photography" />
+                        <BigNavigationButton title="Заснемане с дрон" to="/services/drone-photography" />
                     </section>
                     <section className="lg:w-96 w-full flex flex-col gap-y-7">
                         <BigNavigationButton title="За нас" to="/about" />
+                        <BigNavigationButton title="Цени" to="/prices" />
                         <BigNavigationButton
                             title="Свържете се"
                             to="/contact"
@@ -143,7 +147,7 @@ function BigNavigationButton({ to, title }) {
     );
 }
 
-function NavigationButton({ to, title, dropdown }) {
+function NavigationButton({ to, title, dropdown, state, scrollSection }) {
     const [isOpen, setIsOpen] = useState(false);
 
     let timeout;
@@ -158,19 +162,28 @@ function NavigationButton({ to, title, dropdown }) {
     };
 
     const handleMouseEnterDropdown = () => {
-        clearTimeout(timeout); 
+        clearTimeout(timeout);
     };
 
     const handleMouseLeaveDropdown = () => {
-        setIsOpen(false); 
+        setIsOpen(false);
     };
 
     return (
         <div className="relative">
             <Link
+                onClick={(e) => {
+                    if (location.pathname === to) {
+                        e.preventDefault();
+                        document.getElementById(scrollSection)?.scrollIntoView({
+                            behavior: "smooth",
+                        });
+                    }
+                }}
                 onMouseEnter={handleMouseHoverLink}
                 onMouseLeave={handleMouseUnhoverLink}
                 to={to}
+                state={{ scrollTo: state }}
                 className="text-white text-lg relative group me-10"
             >
                 {title}

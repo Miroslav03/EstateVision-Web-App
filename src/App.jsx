@@ -2,6 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import { Suspense, useEffect, useState, lazy } from "react";
 import Loader from "./components/Loader/Loader";
 import { HelmetProvider } from "react-helmet-async";
+import ModelSection from "./components/Services/ModelSection";
+import StaticPhotography from "./components/Services/StaticPhotography";
+import DroneSection from "./components/Services/DroneSection";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const Services = lazy(() => import("./pages/Services/Services"));
@@ -29,7 +32,20 @@ export default function App() {
             <Suspense fallback={<Loader />}>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/services" element={<Services />} />
+                    <Route path="/services" element={<Services />}>
+                        <Route
+                            path="3dmodel"
+                            element={<ModelSection />}
+                        />
+                        <Route
+                            path="static-photography"
+                            element={<StaticPhotography />}
+                        />
+                        <Route
+                            path="drone-photography"
+                            element={<DroneSection />}
+                        />
+                    </Route>
                     <Route path="/prices" element={<Pricing />} />
                     <Route path="/about" element={<AboutUs />} />
                     <Route path="/contact" element={<ContactUs />} />

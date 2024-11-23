@@ -97,8 +97,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
 
     return (
         <section
-            ref={staticPhotographyRef}
-            className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 border-t-0 sm:border-t-8 border-yellow-500"
+            className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 pt-24 sm:pt-28"
         >
             {/* Title Section */}
             <motion.header

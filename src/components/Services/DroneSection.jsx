@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 
 // eslint-disable-next-line react/prop-types
-export default function DroneSection({ droneSectionRef }) {
+export default function DroneSection() {
     const ref1 = React.useRef(null);
     const ref2 = React.useRef(null);
     const ref3 = React.useRef(null);
@@ -17,8 +17,7 @@ export default function DroneSection({ droneSectionRef }) {
     };
 
     return (
-        <section ref={droneSectionRef} className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-16 border-t-0 sm:border-t-8 border-yellow-500">
-            {/* Heading Section */}
+        <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-16 pt-10">
             <motion.header
                 ref={ref1}
                 variants={containerVariants}

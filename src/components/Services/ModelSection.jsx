@@ -14,7 +14,7 @@ export default function ModelSection({ modelSectionRef }) {
     return (
         <section
             ref={modelSectionRef}
-            className="w-full h-max overflow-hidden flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 pt-20"
+            className="w-full h-max overflow-hidden flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 pt-20"
         >
             <header className="flex flex-col justify-center items-center">
                 <motion.h1
