@@ -133,6 +133,7 @@ function BigMenu({ isOpen, setIsOpen }) {
                         <BigNavigationButton
                             title="Свържете се"
                             to="/contact"
+                            setIsOpen={setIsOpen}
                         />
                     </section>
                 </main>

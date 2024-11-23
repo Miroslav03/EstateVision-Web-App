@@ -12,7 +12,7 @@ export default function AboutUsSection() {
     };
 
     return (
-        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-16 pt-20 sm:pt-56 pb-16 sm:pb-24">
+        <section className="w-full min-h-screen bg-gradient-to-r from-dark-700 to-dark-500 flex flex-col items-center gap-16 pt-28 sm:pt-56 pb-16 sm:pb-24">
             {/* First Row */}
             <article className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 sm:px-12 place-items-center">
                 <motion.div
@@ -28,7 +28,7 @@ export default function AboutUsSection() {
                             иновация и визуализация
                         </span>
                     </h2>
-                    <p className="text-gray-500 text-sm sm:text-lg lg:text-xl font-normal leading-relaxed">
+                    <p className="text-gray-500 text-md sm:text-lg lg:text-xl font-normal leading-relaxed">
                         EstateVision е водеща компания в създаването на
                         висококачествени 3D турове и фотореалистични
                         визуализации за различни имоти – от жилищни сгради и
@@ -74,7 +74,7 @@ export default function AboutUsSection() {
                             Нашата мисия
                         </h2>
                     </div>
-                    <p className="text-gray-500 text-sm sm:text-lg lg:text-xl font-normal leading-relaxed">
+                    <p className="text-gray-500 text-md sm:text-lg lg:text-xl font-normal leading-relaxed">
                         В EstateVision преобразяваме представянето на имоти чрез
                         иновации и фотореалистични 3D турове. Ние създаваме
                         потапящи изживявания, които позволяват на клиентите да
