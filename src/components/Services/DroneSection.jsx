@@ -31,7 +31,7 @@ export default function DroneSection() {
                     </h1>
                 </div>
                 <p className="text-gray-500 text-md sm:text-xl">
-                    Разгледай и избери услугата за теб
+                    Перфектният ъгъл за всяко пространство!
                 </p>
             </motion.header>
 
@@ -42,7 +42,7 @@ export default function DroneSection() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView2 ? "visible" : "hidden"}
-                    className="flex relative w-full lg:w-1/3 justify-center"
+                    className="flex relative w-full lg:w-1/3 justify-center sm:mb-32"
                     style={{ boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)" }}
                 >
                     <motion.img
@@ -64,18 +64,29 @@ export default function DroneSection() {
                     animate={isInView3 ? "visible" : "hidden"}
                     className="flex flex-col items-center w-full lg:w-1/3 text-center"
                 >
-                    <h2 className="text-2xl sm:text-5xl font-semibold text-white mb-4 mt-8 sm:mt-0 px-6 sm:px-0">
-                        Поглед отвисоко{" "}
-                        <span className="text-yellow-500">
-                            Визуализация с дрон
-                        </span>
-                    </h2>
                     <p className="text-gray-500 text-md sm:text-xl mb-6 max-w-lg">
-                        Открийте нови перспективи с нашето професионално
-                        заснемане с дрон. Бързо, ефективно и с високо качество,
-                        нашата услуга ще улови мащаба и детайлите на вашия
-                        проект от високо, подчертавайки неговата уникалност и
-                        динамика.
+                        С услугата за заснемане с дрон от EstateVision ще видите
+                        света от нова височина! Нашите професионални дронови
+                        кадри ще ви помогнат да уловите впечатляващи въздушни
+                        снимки и видеа с високо качество, които ще придадат
+                        уникален и динамичен изглед на всяко пространство – било
+                        то природни ландшафти, събития, строителни проекти или
+                        други специални моменти.
+                    </p>
+                    <p className="text-gray-500 text-md sm:text-xl mb-6 max-w-lg">
+                        Дроновите технологии предоставят възможност за заснемане
+                        на места и перспективи, които не могат да бъдат
+                        достигнати по друг начин. Със стабилни и детайлни кадри,
+                        нашите услуги ще преобразят вашето визуално съдържание,
+                        като добавят дълбочина и мащаб, които обикновената
+                        камера не може да улови.
+                    </p>
+                    <p className="text-gray-500 text-md sm:text-xl mb-6 max-w-lg">
+                        Независимо от целта – било за документиране, презентация
+                        или просто за споделяне на красотата около вас –
+                        EstateVision е вашият партньор за професионално
+                        заснемане с дрон. Свържете се с нас и се уверете, че
+                        вашето съдържание ще бъде наистина изключително!
                     </p>
                     <Link
                         className="text-white font-main px-5 py-2 text-sm sm:text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
@@ -95,7 +106,7 @@ export default function DroneSection() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView3 ? "visible" : "hidden"}
-                    className="flex relative w-full lg:w-1/3 justify-center sm:mb-0 mb-8"
+                    className="flex relative w-full lg:w-1/3 justify-center  mb-8 sm:mb-32"
                     style={{ boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)" }}
                 >
                     <motion.img

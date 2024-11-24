@@ -179,7 +179,7 @@ export default function PricingSection() {
                                 variants={itemVariants}
                                 className="text-3xl text-white border-b-4 border-yellow-500"
                             >
-                                3D Модели
+                                3D Разходки
                             </motion.h1>
                         </motion.header>
                         <motion.div

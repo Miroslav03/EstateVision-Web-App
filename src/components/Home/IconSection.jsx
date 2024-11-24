@@ -17,21 +17,22 @@ export default function IconSection() {
     const items = [
         {
             icon: "arrow_upward",
-            title: "Повишаване на интереса",
-            description:
-                "Привличане на вниманието на клиентите и стимулиране на тяхната ангажираност към бизнеса.",
+            title: "Мобилност",
+            description: `Ние работим из цялата страна.
+Където и да сте, може да разчитате на нас
+`,
         },
         {
             icon: "import_contacts",
-            title: "Улесняване на записване и посещение",
+            title: "Обработка",
             description:
-                "Създаване на удобства за лесно и бързо вземане на решение за записване и участие.",
+                "След заснемане на ваш обект от нас, предлагаме безплатна обработка на статичните изображения и виртуалните разходки",
         },
         {
             icon: "public",
-            title: "Открояване с иновативен и модерен подход",
+            title: "Хостинг",
             description:
-                "Подчертаване на уникалността на бизнеса чрез модерни и креативни решения, които го отличават от конкуренцията.",
+                "Поддръжката на виртуалната разходка,за да бъде достъпна онлайн  е безплатна за период от 12 месеца. ",
         },
     ];
 
@@ -41,12 +42,6 @@ export default function IconSection() {
             className="pb-24 pt-12 bg-gradient-to-r from-dark-700 to-dark-500 lg:pb-[90px] lg:pt-[50px]"
         >
             <div className="container mx-auto px-6 sm:px-0">
-                <header>
-                    <h2 id="benefit-cards" className="sr-only">
-                        Ползи
-                    </h2>
-                </header>
-
                 <div className="-mx-4 flex flex-wrap">
                     {items.map((item, index) => (
                         <motion.article
@@ -76,13 +71,7 @@ export default function IconSection() {
                                     </span>
                                 </div>
                                 <h4 className="mb-[14px] text-2xl sm:text-3xl font-semibold text-white">
-                                    {item.title
-                                        .split(" ")
-                                        .slice(0, -1)
-                                        .join(" ")}{" "}
-                                    <span className="text-yellow-500">
-                                        {item.title.split(" ").slice(-1)}
-                                    </span>
+                                    {item.title}
                                 </h4>
                                 <p className="text-gray-500 text-md sm:text-xl">
                                     {item.description}

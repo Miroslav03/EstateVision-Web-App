@@ -62,24 +62,20 @@ export default function CallToActionSection() {
                 <header className="mt-4 md:mt-0">
                     <motion.h2
                         id="discount-heading"
-                        className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+                        className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-white"
                         variants={textVariants}
                     >
-                        Вземете{" "}
                         <span className="text-yellow-300 font-bold">
-                            10% отстъпка
+                            Свържете се
                         </span>{" "}
-                        при първа поръчка!
+                        с нас!
                     </motion.h2>
                     <motion.p
                         className="mb-6 text-md sm:text-lg sm:font-base text-gray-500 md:text-lg"
                         variants={textVariants}
                     >
-                        Направете първата стъпка към професионално онлайн
-                        присъствие! С нашите услуги ще получите визуална
-                        привлекателност и функционалност, която ще ви отличи.
-                        Възползвайте се от специална отстъпка от 10% за първата
-                        си поръчка!
+                        Направете първата стъпка към професионалното визуално
+                        присъствие. Възползвайте се от нашите услуги сега!
                     </motion.p>
                     <div className="w-40">
                         <a

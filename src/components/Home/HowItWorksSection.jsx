@@ -48,23 +48,23 @@ export default function HowItWorksSection() {
                         <article className="w-full lg:w-1/2 px-5 mb-4 sm:mb-20 lg:mb-0">
                             <header className="max-w-md">
                                 <motion.div
-                                    className="border-b-8 border-yellow-500 mb-4 sm:mb-10"
+                                    className="border-b-8 border-yellow-500 mb-4 sm:mb-4"
                                     initial="hidden"
                                     animate={isInView ? "visible" : "hidden"}
                                     variants={headingVariants}
                                 >
                                     <h2 id="start-business-heading" className="mb-4 text-3xl sm:text-5xl font-extrabold leading-tight text-white">
-                                        Започни бизнеса си с лекота
+                                    Представи пространството си по нов начин
+
                                     </h2>
                                 </motion.div>
                                 <motion.p
-                                    className="mb-10 sm:mb-16 text-md sm:text-lg text-gray-600 dark:text-gray-400"
+                                    className="mb-10 sm:mb-8 text-md sm:text-lg text-gray-600 dark:text-gray-400"
                                     initial="hidden"
                                     animate={isInView ? "visible" : "hidden"}
                                     variants={headingVariants}
                                 >
-                                    Открои се от конкуренцията и започни бързо и
-                                    лесно!
+                                    Откроявай се от конкуренцията!
                                 </motion.p>
                                 <div className="w-56">
                                     <Link

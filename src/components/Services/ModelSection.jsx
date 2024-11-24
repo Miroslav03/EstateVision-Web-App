@@ -25,10 +25,10 @@ export default function ModelSection({ modelSectionRef }) {
                     className="text-white text-2xl sm:text-4xl lg:text-6xl mt-10 sm:mt-24 border-b-4 border-b-yellow-400 pb-4  text-center"
                     id="save-time-heading"
                 >
-                    Спестете време,{" "}
                     <span className="text-yellow-400 text-2xl sm:text-4xl lg:text-6xl">
-                        печелете повече
+                        3D{" "}
                     </span>
+                    виртуални разходки.
                 </motion.h1>
 
                 <motion.p
@@ -38,8 +38,8 @@ export default function ModelSection({ modelSectionRef }) {
                     viewport={{ once: true }}
                     className="text-gray-500 text-sm sm:text-lg lg:text-xl mt-4 max-w-full sm:max-w-2xl text-center px-2 sm:px-0"
                 >
-                    Без повече посещения, спечелете доверието на хората.
-                    Откроете се от останалите.
+                    Разкрийте пълния потенциал на вашия имот чрез 3D виртуална
+                    обиколка
                 </motion.p>
             </header>
 
@@ -80,56 +80,56 @@ export default function ModelSection({ modelSectionRef }) {
                         title: "Печели повече клиенти",
                         subtitle: (
                             <>
-                                Завърши{" "}
+                                Разгледай{" "}
                                 <span className="text-yellow-500">
-                                    презентацията си
+                                    сякаш си там.
                                 </span>
                             </>
                         ),
                         description:
-                            "Впечатлете продавачите с вашите интерактивни 3D виртуални обиколки и иновативен подход към маркетинга на имоти.",
+                            "3D разходката дава свободата да бъдат разгледани всяка стая и ъгъл от имота, сякаш сте физически там. Движете се свободно из пространството, разглеждайте детайлите отблизо и получете пълна представа за имота от удобството на вашия дом.",
                     },
                     {
                         src: "/3dmetrix.png",
                         title: "Увеличи трафика си",
                         subtitle: (
                             <>
-                                Превърнете{" "}
+                                Размери{" "}
                                 <span className="text-yellow-500">
-                                    изследването в действие
+                                    в реално време
                                 </span>
                             </>
                         ),
                         description:
-                            "Нека купувачите сравняват къщи в невероятни детайли. Споделете размери на стаите с едно натискане на бутон.",
+                            "Получете моментален достъп до точните размери на всяко пространство с един клик чрез интегрираната измервателна система. Планирайте предварително със сигурност и прецизност!",
                     },
                     {
                         src: "/3dAi.png",
                         title: "Съдържание на по-високо ниво",
                         subtitle: (
                             <>
-                                Направете своите{" "}
+                                Виж пространството,{" "}
                                 <span className="text-yellow-500">
-                                    имоти забележителни
+                                    както никога досега
                                 </span>
                             </>
                         ),
                         description:
-                            "Добавете интерактивни 3D обиколки, които са готови за споделяне в социални медии или вграждане в уебсайт.",
+                            "Dollhouse изгледът е като миниатюрна версия на имота, която ви позволява да видите цялото пространство от птичи поглед. Това ви дава бърза и лесна ориентация в разположението на стаите и обзавеждането.",
                     },
                     {
                         src: "/3dFromTop.png",
                         title: "Затваряйте клиенти по-бързо",
                         subtitle: (
                             <>
-                                Привлечете{" "}
+                                Премахни мебелите{" "}
                                 <span className="text-yellow-500">
-                                    качествени купувачи
+                                    с AI
                                 </span>
                             </>
                         ),
                         description:
-                            "Позволете на клиентите да се визуализират в пространството, което им дава допълнителна увереност при вземане на решения за покупка.",
+                            "С опцията defurnishing  може лесно да премахнете мебелите от 3D обиколката и да създадеш празно пространство, готово за нови идеи.",
                     },
                 ].map((item, index) => (
                     <motion.div
@@ -151,9 +151,6 @@ export default function ModelSection({ modelSectionRef }) {
                             />
                         </figure>
                         <div className="px-6 py-4">
-                            <h3 className="text-white font-base text-md sm:text-lg border-b-2 border-yellow-500 inline-block">
-                                {item.title}
-                            </h3>
                             <div className="font-bold text-2xl sm:text-3xl mb-2 text-white">
                                 {item.subtitle}
                             </div>
@@ -165,7 +162,7 @@ export default function ModelSection({ modelSectionRef }) {
                 ))}
             </motion.article>
 
-            <motion.article
+     {/*        <motion.article
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 50 }}
                 transition={{ delay: 0.5, duration: 1 }}
@@ -184,9 +181,9 @@ export default function ModelSection({ modelSectionRef }) {
                         са по-склонни да си купят жилище с виртуална разходка.*
                     </p>
                 </div>
-            </motion.article>
+            </motion.article> */}
 
-            <motion.section
+       {/*      <motion.section
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -50 }}
                 transition={{ duration: 1 }}
@@ -223,7 +220,7 @@ export default function ModelSection({ modelSectionRef }) {
                         alt="office content 1"
                     />
                 </figure>
-            </motion.section>
+            </motion.section> */}
         </section>
     );
 }

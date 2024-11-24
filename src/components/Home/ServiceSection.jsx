@@ -13,7 +13,7 @@ export default function ServiceSection() {
     const navigate = useNavigate(); 
 
     const hoverText = [
-        "Eкстериорна фотография",
+        "Интериорна и екстериорна фотография",
         "Изграждане на 3D разходка",
         "Фото и видео заснемане с дрон",
     ];

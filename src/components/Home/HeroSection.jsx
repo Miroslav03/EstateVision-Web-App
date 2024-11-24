@@ -50,19 +50,19 @@ export default function HeroSection({ serviceSectionRef }) {
                             className="text-white font-main lg:text-6xl xl:text-6xl 2xl:text-[5rem] sm:leading-tight text-[2.9rem] leading-[1] px-[1.5rem] sm:px-0 pt-12 lg:pt-8"
                             variants={textVariants}
                         >
+                            Превърнете всеки вид пространство в{" "}
                             <span className="text-yellow-400">
-                                Откроете визията
-                            </span>{" "}
-                            и завършете презентацията си
+                                завладяващо 3D преживяване!
+                            </span>
                         </motion.h1>
                     </header>
                     <motion.p
                         className="text-gray-500 font-main mt-4 text-md sm:text-lg lg:pr-[9rem] px-[1.5rem] sm:px-0"
                         variants={textVariants}
                     >
-                        Интериорна и екстериорна статична фотография, 3D
-                        моделиране и обиколки, които подчертават уникалността на
-                        вашата сграда.
+                        Професионалните ни виртуални обиколки, съчетаващи
+                        интериорно и екстериорно фото заснемане с дрон кадри,
+                        представят вашата собственост в най-добрата ѝ светлина.
                     </motion.p>
 
                     <motion.div

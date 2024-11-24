@@ -65,9 +65,6 @@ export default function StaticPhotography({ staticPhotographyRef }) {
             whileTap={{ cursor: "grabbing" }}
             aria-labelledby="carousel-heading"
         >
-            <h3 id="carousel-heading" className="sr-only">
-                Browse our gallery carousel
-            </h3>
             <motion.article
                 className="flex gap-4"
                 ref={containerRef}
@@ -96,9 +93,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
     ));
 
     return (
-        <section
-            className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 pt-24 sm:pt-28"
-        >
+        <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 pt-24 sm:pt-28">
             {/* Title Section */}
             <motion.header
                 className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end gap-4 mt-4 sm:mt-12"
@@ -112,7 +107,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                         id="photography-title"
                         className="text-3xl sm:text-6xl font-semibold mt-2 text-white mb-4"
                     >
-                        Потопи се в света на фотографията
+                        Интериорна и екстериорна фотография
                     </h1>
                 </div>
                 <div className="flex flex-col sm:gap-0 gap-6 items-start sm:items-end w-full mt-2">
@@ -152,14 +147,16 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                     variants={slideInRight}
                 >
                     <h2 className="text-2xl sm:text-5xl font-semibold text-white mb-4">
-                        Присъствие чрез{" "}
-                        <span className="text-yellow-500">фотография </span>
+                        Внимание върху{" "}
+                        <span className="text-yellow-500">детайла </span>
                     </h2>
                     <p className="text-gray-500 text:md sm:text-xl mb-6 max-w-lg">
-                        Улавяме атмосферата и детайлите на вашите проекти чрез
-                        статична фотография. Нашият опит и внимание към детайла
-                        осигуряват визуални материали, които разказват история и
-                        подчертават вашата уникалност и професионализъм.
+                        Превръщаме вашите пространства в запомнящи се визуални
+                        истории чрез майсторска фотография, която улавя всеки
+                        значим детайл и специфична атмосфера. С професионален
+                        поглед и внимание към финеса създаваме въздействащи
+                        кадри, които подчертават уникалността на вашите имоти и
+                        оставят трайно впечатление.
                     </p>
 
                     <Link
@@ -195,7 +192,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                     <p className="text-white text-2xl sm:text-5xl text-center">
                         <span className="text-yellow-500 font-bold">72%</span>{" "}
                         от клиентите са по-склонни да изберат имот, когато
-                        виждат професионални снимки.*
+                        виждат професионални снимки.
                     </p>
                 </header>
             </motion.section>
@@ -203,6 +200,9 @@ export default function StaticPhotography({ staticPhotographyRef }) {
             {/* Image Carousel */}
 
             <ImageCarousel />
+
+        
+
         </section>
     );
 }

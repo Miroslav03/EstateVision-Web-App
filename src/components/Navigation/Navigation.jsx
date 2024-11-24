@@ -220,7 +220,7 @@ function NavigationButton({ to, title, dropdown, state, scrollSection }) {
                     onMouseEnter={handleMouseEnterDropdown}
                     onMouseLeave={handleMouseLeaveDropdown}
                     id="dropdown"
-                    className="absolute top-[100%] mt-6  left-1/2 transform -translate-x-1/2  bg-transparent shadow-lg flex  gap-4"
+                    className="absolute top-[100%] mt-6  left-1/2 transform -translate-x-1/2  bg-transparent  flex  gap-4"
                 >
                     {dropdown.map((item, index) => (
                         <Link

@@ -37,7 +37,7 @@ export default function Home() {
             <div ref={serviceRef} id="services">
                 <ServiceSection />
             </div>
-            <Stats />
+          {/*   <Stats /> */}
             <AboutSection />
             <IconSection />
             <HowItWorksSection />
