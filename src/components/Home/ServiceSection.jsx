@@ -63,7 +63,7 @@ export default function ServiceSection() {
             variants={containerVariants}
             initial="hidden"
             animate={controls}
-            className="h-full flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 sm:to-dark-500"
+            className="h-full flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-600 sm:to-dark-500 pb-16"
         >
             <h2 id="interactive-cards" className="sr-only">
                 Interactive Cards Section

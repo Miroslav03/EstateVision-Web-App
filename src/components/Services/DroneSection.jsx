@@ -17,7 +17,7 @@ export default function DroneSection() {
     };
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-16 pt-28 sm:pt-10">
+        <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-16 pt-28 sm:pt-44">
             <motion.header
                 ref={ref1}
                 variants={containerVariants}

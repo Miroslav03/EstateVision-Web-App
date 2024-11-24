@@ -44,7 +44,7 @@ export default function Navigation() {
                     />
                     <NavigationButton to="/prices" title="Цени" />
                     <NavigationButton to="/about" title="За Нас" />
-                    <NavigationButton to="/contact" title="Свържете се" />
+                    <NavigationButton to="/contact" title="Контакти" />
                 </nav>
                 {/* Toggle Button Container */}
                 <div className="w-80 flex items-center justify-end sm:justify-center pe-4 sm:pe-0">
@@ -131,7 +131,7 @@ function BigMenu({ isOpen, setIsOpen }) {
                             setIsOpen={setIsOpen}
                         />
                         <BigNavigationButton
-                            title="Свържете се"
+                            title="Контакти"
                             to="/contact"
                             setIsOpen={setIsOpen}
                         />
