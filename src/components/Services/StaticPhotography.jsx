@@ -135,7 +135,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
         return (
             <>
                 <div
-                    className="w-full max-w-5xl mb-16 mt-[-5rem]"
+                    className="w-[80%] sm:w-full max-w-2xl sm:max-w-5xl mb-16 mt-[-0.5rem] sm:mt-[-5rem]"
                     style={{
                         boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
                     }}
@@ -146,7 +146,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                             className="accordion-item border-yellow-500 border-b-4"
                         >
                             <button
-                                className={`accordion-button flex justify-between items-center w-full p-4 text-left text-3xl bg-gradient-to-r from-dark-700 to-dark-500 focus:outline-none `}
+                                className={`accordion-button flex justify-between items-center w-full p-4 text-left text-xl sm:text-3xl bg-gradient-to-r from-dark-700 to-dark-500 focus:outline-none `}
                                 onClick={() => toggleAccordion(index)}
                             >
                                 <span
@@ -187,7 +187,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                                     transition: "max-height 0.3s ease",
                                 }}
                             >
-                                <div className="p-4 bg-gradient-to-r from-dark-700 to-dark-500 text-gray-500 flex flex-col gap-8 text-xl">
+                                <div className="p-4 bg-gradient-to-r from-dark-700 to-dark-500 text-gray-500 flex flex-col gap-8 text-md sm:text-xl">
                                     <p>{item.contentFirst}</p>
                                     <p>{item.contentSecond}</p>
                                 </div>
