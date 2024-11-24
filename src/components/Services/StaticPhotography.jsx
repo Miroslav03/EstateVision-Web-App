@@ -92,6 +92,100 @@ export default function StaticPhotography({ staticPhotographyRef }) {
         </motion.section>
     ));
 
+    const Accordion = React.memo(() => {
+        const [activeIndex, setActiveIndex] = useState(null);
+
+        // Data for the accordion items
+        const accordionData = [
+            {
+                title: "Изкуството на професионалната фотография",
+                contentFirst:
+                    "Професионалната интериорна и екстериорна фотография е изкуство, което изисква специфични умения, техническо познание и внимание към детайла. В EstateVision разбираме, че всяко пространство разказва своя уникална история, която заслужава да бъде представена по най-добрия възможен начин.",
+                contentSecond:
+                    "Интериорната фотография е специализирана област, която изисква задълбочено разбиране на светлината, композицията и пространството. Използваме техниката flambient shot - иновативен метод, съчетаващ естествена (ambient) и изкуствена (flash) светлина, за да постигнем балансирано и реалистично представяне на интериора. Този подход позволява да запазим естествената атмосфера на помещението, докато същевременно подчертаваме важните детайли и текстури.",
+            },
+            {
+                title: "Техники за интериорна фотография",
+                contentFirst:
+                    "Процесът на създаване на flambient shot включва заснемане на няколко експозиции - една с естествена светлина, втора с насочена светлина от професионални чадъри с осветление, и допълнителни кадри за специфични зони. Тези отделни експозиции след това се комбинират майсторски в пост-обработката, за да създадат финалното изображение с перфектен баланс на светлини и сенки.",
+                contentSecond:
+                    "Екстериорната фотография изисква различен подход, съобразен с променливите условия на естествената светлина и заобикалящата среда. Внимателно подбираме най-подходящото време от деня, за да представим фасадата и околното пространство в най-добрата им светлина.",
+            },
+            {
+                title: "Персонализирана обработка на изображения",
+                contentFirst:
+                    "Това, което отличава нашата услуга, е персонализираният подход към обработката на изображенията. Всяка снимка преминава през прецизна ръчна обработка, съобразена с индивидуалните предпочитания на клиента. Независимо дали целите топла и уютна атмосфера за жилищен имот или професионално и изчистено усещане за офис пространство, ние адаптираме обработката, за да постигнем желания резултат.",
+                contentSecond:
+                    "Разбираме, че всеки клиент има специфична визия за представянето на своя имот. Затова работим в тясно сътрудничество с вас, за да разберем точно каква атмосфера искате да създадете чрез фотографиите. Това може да варира от светли и въздушни пространства до по-драматични и контрастни композиции.",
+            },
+            {
+                title: "Създаване на въздействащи визуални истории",
+                contentFirst:
+                    "С внимание към всеки детайл и отдаденост към качеството, ние превръщаме обикновените пространства в завладяващи визуални истории. Нашата цел е не просто да документираме имота, а да създадем впечатляващо визуално преживяване, което привлича вниманието и предизвиква емоция у потенциалните купувачи или наематели.",
+                contentSecond:
+                    "Крайният резултат от нашата работа не са просто снимки, а професионално обработени фотографски произведения, които представят вашия имот в най-добрата му светлина и значително повишават шансовете за успешна сделка.",
+            },
+        ];
+
+        // Function to toggle the active accordion item
+        const toggleAccordion = (index) => {
+            setActiveIndex(activeIndex === index ? null : index);
+        };
+
+        return (
+            <div
+                className="w-full max-w-5xl mx-auto"
+                style={{
+                    boxShadow: "0 0 100px rgba(255, 193, 7, 0.1)",
+                }}
+            >
+                {accordionData.map((item, index) => (
+                    <div
+                        key={index}
+                        className="accordion-item border-yellow-500 border-b-4"
+                    >
+                        <button
+                            className={`accordion-button flex justify-between items-center w-full p-4 text-left text-3xl bg-gradient-to-r from-dark-700 to-dark-500 focus:outline-none `}
+                            onClick={() => toggleAccordion(index)}
+                        >
+                            <span className="font-semibold text-white ">
+                                {item.title}
+                            </span>
+                            <svg
+                                className={`w-7 h-7 transform transition-transform ${
+                                    activeIndex === index ? "rotate-180" : ""
+                                }`}
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="#ffffff"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M19 9l-7 7-7-7"
+                                />
+                            </svg>
+                        </button>
+                        <div
+                            className={`accordion-content overflow-hidden`}
+                            style={{
+                                maxHeight:
+                                    activeIndex === index ? "1000px" : "0px",
+                                transition: "max-height 0.3s ease",
+                            }}
+                        >
+                            <div className="p-4 bg-gradient-to-r from-dark-700 to-dark-500 text-gray-500 flex flex-col gap-8 text-xl">
+                                <p>{item.contentFirst}</p>
+                                <p>{item.contentSecond}</p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        );
+    });
     return (
         <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 pt-24 sm:pt-28">
             {/* Title Section */}
@@ -201,8 +295,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
 
             <ImageCarousel />
 
-        
-
+            <Accordion />
         </section>
     );
 }
