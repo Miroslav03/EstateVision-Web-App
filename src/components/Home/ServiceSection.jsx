@@ -10,11 +10,11 @@ export default function ServiceSection() {
         triggerOnce: false,
         threshold: 0.3,
     });
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate(); 
 
     const hoverText = [
         "Eкстериорна фотография",
-        "Изграждане на 3D модел",
+        "Изграждане на 3D разходка",
         "Фото и видео заснемане с дрон",
     ];
 
@@ -44,13 +44,13 @@ export default function ServiceSection() {
     const handleClick = (index) => {
         switch (index) {
             case 0:
-                navigate("/services?section=staticPhotography");
+                navigate("/services/static-photography");
                 break;
             case 1:
-                navigate("/services?section=modelSection");
+                navigate("/services/3dmodel");
                 break;
             case 2:
-                navigate("/services?section=droneSection");
+                navigate("/services/drone-photography");
                 break;
             default:
                 break;

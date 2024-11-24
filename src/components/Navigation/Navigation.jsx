@@ -34,7 +34,7 @@ export default function Navigation() {
                             },
                             {
                                 to: "/services/3dmodel",
-                                title: "3D Модели",
+                                title: "3D Разходка",
                             },
                             {
                                 to: "/services/drone-photography",
@@ -104,7 +104,7 @@ function BigMenu({ isOpen, setIsOpen }) {
                             setIsOpen={setIsOpen}
                         />
                         <BigNavigationButton
-                            title="3D Модели"
+                            title="3D Разходка"
                             to="/services/3dmodel"
                             setIsOpen={setIsOpen}
                         />
@@ -121,13 +121,13 @@ function BigMenu({ isOpen, setIsOpen }) {
                     </section>
                     <section className="lg:w-96 w-full flex flex-col gap-y-7">
                         <BigNavigationButton
-                            title="За нас"
-                            to="/about"
+                            title="Цени"
+                            to="/prices"
                             setIsOpen={setIsOpen}
                         />
                         <BigNavigationButton
-                            title="Цени"
-                            to="/prices"
+                            title="За нас"
+                            to="/about"
                             setIsOpen={setIsOpen}
                         />
                         <BigNavigationButton
