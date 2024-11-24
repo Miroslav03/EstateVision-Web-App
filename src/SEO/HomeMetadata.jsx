@@ -6,7 +6,7 @@ export default function HomeMetadata() {
         <Helmet>
             {/* SEO Meta Tags */}
             <title>
-            3Д Виртуални Обиколки | Интериорна Фотография | Заснемане с Дрон
+            3D Виртуални Обиколки | Интериорна Фотография | Заснемане с Дрон
             </title>
             <meta
                 name="description"

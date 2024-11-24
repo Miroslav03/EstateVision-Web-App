@@ -5,10 +5,10 @@ export default function ContactUsMetadata() {
         <div>
             <Helmet>
                 {/* SEO Meta Tags */}
-                <title>Свържете се с нас - EstateVision</title>
+                <title>Контакти | Запитване за 3Д Виртуални Обиколки</title>
                 <meta
                     name="description"
-                    content="Свържете се с EstateVision за запитвания относно 3D модели, фотография и дрон услуги. Ние сме тук, за да отговорим на вашите въпроси и да ви предоставим подкрепа за вашите нужди за визуализация на имоти."
+                    content="Свържете се с нас за безплатна консултация и оферта за виртуални обиколки, интериорна фотография или заснемане с дрон. Отговаряме бързо на всяко запитване."
                 />
                 <meta
                     name="keywords"
@@ -18,7 +18,8 @@ export default function ContactUsMetadata() {
 
                 <meta
                     property="og:title"
-                    content="Свържете се с нас - EstateVision"
+                    content="Контакти | Запитване за 3Д Виртуални Обиколки
+"
                 />
                 <meta
                     property="og:description"
