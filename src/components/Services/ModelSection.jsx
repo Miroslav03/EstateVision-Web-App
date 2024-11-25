@@ -22,10 +22,10 @@ export default function ModelSection({ modelSectionRef }) {
                     initial={{ opacity: 0, y: 50 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: false }}
-                    className="text-white text-2xl sm:text-4xl lg:text-6xl mt-10 sm:mt-24 border-b-4 border-b-yellow-400 pb-4  text-center"
+                    className="text-white text-2xl sm:text-6xl  mt-10 sm:mt-24 border-b-4 sm:border-b-8 border-b-yellow-400 pb-4  text-center"
                     id="save-time-heading"
                 >
-                    <span className="text-yellow-400 text-2xl sm:text-4xl lg:text-6xl">
+                    <span className="text-yellow-400 text-2xl sm:text-6xl ">
                         3D{" "}
                     </span>
                     виртуални разходки.
@@ -220,12 +220,16 @@ export default function ModelSection({ modelSectionRef }) {
                 </figure>
             </motion.section> */}
 
-            <h2
+            <motion.h2
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: false }}
                 id="gallery-heading"
-                className="mb-4 text-3xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-2"
+                className="mb-4 sm:mt-8 text-2xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 pb-2"
             >
-                Какво представляват 3D виртуалните разходки?
-            </h2>
+                Какво е 3D виртуална разходка?
+            </motion.h2>
 
             <AnimatedTextSection />
             <Benefits />
@@ -245,7 +249,7 @@ const AnimatedTextSection = () => {
     };
 
     return (
-        <div className="flex flex-col gap-12 justify-center items-center w-[50%] text-gray-500 text-lg mt-8">
+        <div className="flex flex-col gap-6 sm:gap-12 justify-center items-center w-[80%] sm:w-[50%] text-gray-500 text-md sm:text-lg mt-4 sm:mt-8">
             {[
                 `В последните години технологиите, свързани с виртуалната
           реалност, бързо се развиват и намират все по-широко
@@ -363,12 +367,12 @@ const Carousel = () => {
         >
             <h2
                 id="gallery-heading"
-                className="mb-8 mt-20 text-3xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-2"
+                className="mb-8 mt-20 text-2xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 inline-block pb-2"
             >
                 Приложение на 3D разходките
             </h2>
-            <div className="relative w-[50%]">
-                <div className="relative flex w-full h-[29rem] overflow-hidden">
+            <div className="relative w-[80%] sm:w-[50%]">
+                <div className="relative flex w-full h-[38rem] sm:h-[29rem] overflow-hidden">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentIndex}
@@ -413,13 +417,13 @@ const Carousel = () => {
                 </div>
                 <button
                     onClick={prevSlide}
-                    className="absolute top-1/2 left-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center focus:outline-none"
+                    className="absolute top-1/2 left-[-2.2rem] sm:left-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center focus:outline-none"
                 >
                     &larr;
                 </button>
                 <button
                     onClick={nextSlide}
-                    className="absolute top-1/2 right-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center focus:outline-none"
+                    className="absolute top-1/2 right-[-2.2rem] sm:right-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white  w-8 h-8 sm:w-10 sm:h-10 items-center justify-center focus:outline-none"
                 >
                     &rarr;
                 </button>
@@ -465,7 +469,7 @@ const Benefits = () => {
     return (
         <section
             key={animationKey} // Reset animation on revisit
-            className=" bg-gradient-to-r from-dark-700 to-dark-500  mt-24"
+            className=" bg-gradient-to-r from-dark-700 to-dark-500 mt-12 sm:mt-24"
         >
             <div className="container mx-auto px-6 sm:px-0">
                 <div className="-mx-4 flex flex-wrap">
