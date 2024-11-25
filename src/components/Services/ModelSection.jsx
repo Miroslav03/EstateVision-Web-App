@@ -402,7 +402,7 @@ const Carousel = () => {
                 </div>
 
                 {/* Indicators */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div className="absolute bottom-9 left-1/2 transform -translate-x-1/2 flex space-x-2">
                     {items.map((_, index) => (
                         <button
                             key={index}
