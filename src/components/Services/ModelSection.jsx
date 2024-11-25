@@ -22,10 +22,10 @@ export default function ModelSection({ modelSectionRef }) {
                     initial={{ opacity: 0, y: 50 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: false }}
-                    className="text-white text-2xl sm:text-6xl  mt-10 sm:mt-24 border-b-4 sm:border-b-8 border-b-yellow-400 pb-4  text-center"
+                    className="text-white text-3xl sm:text-6xl  mt-10 sm:mt-24 border-b-4 sm:border-b-8 border-b-yellow-400 pb-2  text-center"
                     id="save-time-heading"
                 >
-                    <span className="text-yellow-400 text-2xl sm:text-6xl ">
+                    <span className="text-yellow-400 text-3xl sm:text-6xl ">
                         3D{" "}
                     </span>
                     виртуални разходки.
@@ -372,7 +372,7 @@ const Carousel = () => {
                 Приложение на 3D разходките
             </h2>
             <div className="relative w-[80%] sm:w-[50%]">
-                <div className="relative flex w-full h-[38rem] sm:h-[29rem] overflow-hidden">
+                <div className="relative flex w-full h-[47rem] sm:h-[29rem] overflow-hidden">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentIndex}

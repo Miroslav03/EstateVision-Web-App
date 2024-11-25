@@ -25,11 +25,9 @@ export default function DroneSection() {
                 animate={isInView1 ? "visible" : "hidden"}
                 className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end sm:items-center gap-4"
             >
-                <div className="border-b-8 border-yellow-500">
-                    <h1 className="text-3xl sm:text-6xl font-semibold text-white mb-4">
-                        Заснемане с дрон
-                    </h1>
-                </div>
+                <h1 className="text-3xl sm:text-6xl font-semibold text-white mb-4 border-b-4 sm:border-b-8 border-yellow-500">
+                    Заснемане с дрон
+                </h1>
                 <p className="text-gray-500 text-md sm:text-xl">
                     Перфектният ъгъл за всяко пространство!
                 </p>

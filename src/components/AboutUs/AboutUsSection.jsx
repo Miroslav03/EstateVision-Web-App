@@ -69,7 +69,7 @@ export default function AboutUsSection() {
                     viewport={{ once: true }}
                     variants={fadeInUp}
                 >
-                    <div className="border-b-8 border-yellow-500 pb-4">
+                    <div className="border-b-4 sm:border-b-8 border-yellow-500 ">
                         <h2 className="text-white text-2xl sm:text-4xl lg:text-5xl font-semibold">
                             Кои сме ние
                         </h2>

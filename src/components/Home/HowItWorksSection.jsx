@@ -28,6 +28,13 @@ export default function HowItWorksSection() {
         },
     };
 
+    const handleScroll = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     const headingVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: {
@@ -48,14 +55,16 @@ export default function HowItWorksSection() {
                         <article className="w-full lg:w-1/2 px-5 mb-4 sm:mb-20 lg:mb-0">
                             <header className="max-w-md">
                                 <motion.div
-                                    className="border-b-8 border-yellow-500 mb-4 sm:mb-4"
+                                    className="border-b-4 sm:border-b-8 border-yellow-500 mb-4 sm:mb-4"
                                     initial="hidden"
                                     animate={isInView ? "visible" : "hidden"}
                                     variants={headingVariants}
                                 >
-                                    <h2 id="start-business-heading" className="mb-4 text-3xl sm:text-5xl font-extrabold leading-tight text-white">
-                                    Представи пространството си по нов начин
-
+                                    <h2
+                                        id="start-business-heading"
+                                        className="mb-4 text-3xl sm:text-5xl font-extrabold leading-tight text-white"
+                                    >
+                                        Представи пространството си по нов начин
                                     </h2>
                                 </motion.div>
                                 <motion.p
@@ -67,9 +76,9 @@ export default function HowItWorksSection() {
                                     Откроявай се от конкуренцията!
                                 </motion.p>
                                 <div className="w-56">
-                                    <Link
-                                        className="text-white font-main px-5 py-[0.5rem] text-sm sm:text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
-                                        to="/services"
+                                    <div
+                                        onClick={() => handleScroll("services")}
+                                        className="cursor-pointer text-white font-main px-5 py-[0.5rem] text-sm sm:text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                                     >
                                         <p className="z-20 group-hover:text-dark-500">
                                             Разгелдай услуги
@@ -78,7 +87,7 @@ export default function HowItWorksSection() {
                                             &#8593;
                                         </span>
                                         <div className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></div>
-                                    </Link>
+                                    </div>
                                 </div>
                             </header>
                         </article>
@@ -125,7 +134,10 @@ export default function HowItWorksSection() {
                                             </span>
                                         </div>
                                         <div className="max-w-xs">
-                                            <h3 id={`step-title-${step}`} className="mb-2 text-2xl sm:text-3xl font-semibold sm:font-bold text-white">
+                                            <h3
+                                                id={`step-title-${step}`}
+                                                className="mb-2 text-2xl sm:text-3xl font-semibold sm:font-bold text-white"
+                                            >
                                                 {title}
                                             </h3>
                                             <p className="text-md sm:text-xl text-gray-500">

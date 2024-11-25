@@ -97,14 +97,14 @@ export default function AboutSection() {
                         variants={textVariants}
                     >
                         <header className="mt-10 lg:mt-0 px-6 sm:px-0">
-                            <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-start gap-4 mb-8">
+                            <div className="w-full max-w-[90%] lg:max-w-[90%] flex flex-col items-start gap-4 mb-2 sm:mb-4">
                                 <motion.div
-                                    className="border-b-8 border-yellow-500"
+                                    className=""
                                     variants={textVariants}
                                 >
                                     <h2
                                         id="why-us-heading"
-                                        className="text-3xl sm:text-6xl font-semibold mt-2 text-white mb-4"
+                                        className="text-3xl sm:text-6xl font-semibold mt-2 text-white mb-4 border-b-4 sm:border-b-8 border-yellow-500 pb-2"
                                     >
                                         Защо нас
                                     </h2>

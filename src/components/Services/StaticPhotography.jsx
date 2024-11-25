@@ -208,7 +208,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                 whileInView="visible"
                 viewport={{ amount: 0.5 }}
             >
-                <div className="border-b-8 border-yellow-500">
+                <div className="border-b-4 sm:border-b-8 border-yellow-500">
                     <h1
                         id="photography-title"
                         className="text-3xl sm:text-6xl font-semibold mt-2 text-white mb-4"
@@ -291,7 +291,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
                 <header className="max-w-screen-md flex justify-center items-center flex-col">
                     <h2
                         id="gallery-heading"
-                        className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-2"
+                        className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 inline-block pb-2"
                     >
                         Нашата галерия
                     </h2>
@@ -308,7 +308,7 @@ export default function StaticPhotography({ staticPhotographyRef }) {
             <ImageCarousel />
             <h2
                 id="gallery-heading"
-                className="mb-4 text-3xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-2"
+                className="mb-4 text-3xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 inline-block pb-2"
             >
                 Oще за фотографията
             </h2>
