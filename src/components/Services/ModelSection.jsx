@@ -123,9 +123,7 @@ export default function ModelSection({ modelSectionRef }) {
                         subtitle: (
                             <>
                                 Премахни мебелите{" "}
-                                <span className="text-yellow-500">
-                                    с AI
-                                </span>
+                                <span className="text-yellow-500">с AI</span>
                             </>
                         ),
                         description:
@@ -162,7 +160,7 @@ export default function ModelSection({ modelSectionRef }) {
                 ))}
             </motion.article>
 
-     {/*        <motion.article
+            {/*        <motion.article
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 50 }}
                 transition={{ delay: 0.5, duration: 1 }}
@@ -183,7 +181,7 @@ export default function ModelSection({ modelSectionRef }) {
                 </div>
             </motion.article> */}
 
-       {/*      <motion.section
+            {/*      <motion.section
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -50 }}
                 transition={{ duration: 1 }}
@@ -221,6 +219,172 @@ export default function ModelSection({ modelSectionRef }) {
                     />
                 </figure>
             </motion.section> */}
+
+            <h2
+                id="gallery-heading"
+                className="mb-4 text-3xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-2"
+            >
+                Какво представляват 3D виртуалните разходки?
+            </h2>
+
+            <div className="flex flex-col gap-12 justify-center items-center w-[50%] text-gray-500 text-lg mt-8">
+                <div className="">
+                    <p>
+                        В последните години технологиите, свързани с виртуалната
+                        реалност, бързо се развиват и намират все по-широко
+                        приложение в различни индустрии. 3D виртуалните разходки
+                        са една от тези иновации, която прави революция в
+                        начините, по които хората представят имоти и
+                        пространства. С помощта на специализирани камери и
+                        софтуер, тази технология позволява на потребителите да
+                        „обикалят“ даденото пространство чрез компютър или
+                        мобилно устройство, сякаш се намират вътре в него. Това
+                        е като да влезеш в нова сграда или жилище, без да се
+                        налага да напускаш комфортната си зона.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        За разлика от стандартните снимки или видеоклипове, 3D
+                        виртуалната разходка предоставя пълна свобода на
+                        движение, давайки възможност за оглед на всяко кътче на
+                        обекта. Чрез специфични 3D модели и панорами, които
+                        обхващат 360 градуса, този тип виртуална обиколка
+                        създава усещането за реално присъствие, без физически да
+                        бъдеш там.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Въпреки че технологиите за виртуални разходки
+                        съществуват от известно време, тяхното широко приложение
+                        започва да се налага в последните години. Страните,
+                        които най-често използват тази иновация, включват САЩ,
+                        Великобритания, Германия и Австралия. В тези региони 3D
+                        виртуалните обиколки са се доказали като ефективен
+                        инструмент в много индустрии, най-вече при продажбата и
+                        отдаването под наем на имоти.
+                    </p>
+                </div>
+            </div>
+
+            <Carousel />
         </section>
     );
 }
+
+const Carousel = () => {
+    const items = [
+        {
+            imgSrc: "/realEstate.jpg",
+            title: "Недвижими имоти",
+            description:
+                "Една от най-честите употреби на 3D виртуалните разходки е в продажбата и отдаването под наем на имоти. Когато става въпрос за жилищни, търговски или офисни помещения, виртуалните разходки предоставят значително предимство за брокери и собственици на имоти. Те могат да показват на потенциални клиенти или наематели имота по начин, който дава пълно разбиране за пространството, без да се налага физическо присъствие на място.",
+        },
+        {
+            imgSrc: "/tourism.jpg",
+            title: "Туризъм и хотелиерство",
+            description:
+                "Хотелите и туристическите обекти започват да използват 3D виртуалните разходки като средство за привличане на гости. Виртуалната обиколка на стаите и съоръженията в хотелите помага на туристите да получат яснота за условията и да направят информирано решение за резервация.",
+        },
+        {
+            imgSrc: "/architecture.jpg",
+            title: "Архитектура и строителство",
+            description:
+                "В строителството и архитектурата, 3D виртуалната разходка може да се използва за представяне на проекти, които още не са завършени. Това дава възможност на инвеститори, архитекти и клиенти да разгледат бъдещото строителство в детайли, преди то да бъде построено.",
+        },
+        {
+            imgSrc: "/museum.jpg",
+            title: "Музеи и галерии",
+            description:
+                "Музеите и художествените галерии използват виртуалните разходки, за да представят своите колекции на онлайн посетителите. Това е особено полезно в условия на ограничения за пътувания или за хора, които не могат да присъстват лично.",
+        },
+        {
+            imgSrc: "/education.jpg",
+            title: "Образование и обучение",
+            description:
+                "Виртуалните разходки могат да се използват в образователния процес, като предоставят на учениците и студентите възможността да разглеждат исторически обекти, научни лаборатории или дори експонати в музеи, без да се налага да напускат учебната си среда.",
+        },
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? items.length - 1 : prevIndex - 1
+        );
+    };
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === items.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    return (
+        <>
+            <h2
+                id="gallery-heading"
+                className="mb-8 mt-20 text-3xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-2"
+            >
+                Приложение на 3D разходките
+            </h2>
+            <div className="relative w-[50%] ">
+                <div className="relative flex w-full h-[29rem] transition-transform duration-500">
+                    {items.map((item, index) => (
+                        <div
+                            key={index}
+                            className={`w-full flex-shrink-0 p-4 ${
+                                index === currentIndex ? "block" : "hidden"
+                            }`}
+                        >
+                            <div className="h-full border border-yellow-500 ">
+                                <img
+                                    src={item.imgSrc}
+                                    alt={item.title}
+                                    className="w-full h-48 object-cover rounded-t-lg"
+                                />
+                                <div className="p-4">
+                                    <h1 className="text-2xl text-white font-bold mb-2">
+                                        {item.title}
+                                    </h1>
+                                    <p className="text-gray-500 text-md sm:text-lg ">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                {/* Slider controls */}
+
+                {/* Indicators */}
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    {items.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentIndex(index)}
+                            className={`w-3 h-3 rounded-full ${
+                                currentIndex === index
+                                    ? "bg-white"
+                                    : "bg-yellow-500"
+                            }`}
+                        ></button>
+                    ))}
+                </div>
+                <button
+                    onClick={prevSlide}
+                    className="absolute top-1/2 left-[-3rem]  transform -translate-y-1/2 bg-yellow-500 text-white  w-10 h-10 flex items-center justify-center focus:outline-none"
+                >
+                    &larr;
+                </button>
+                <button
+                    onClick={nextSlide}
+                    className="absolute top-1/2 right-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white  w-10 h-10 flex items-center justify-center focus:outline-none"
+                >
+                    &rarr;
+                </button>
+            </div>
+        </>
+    );
+};
