@@ -371,8 +371,8 @@ const Carousel = () => {
             >
                 Приложение на 3D разходките
             </h2>
-            <div className="relative w-[80%] sm:w-[50%]">
-                <div className="relative flex w-full h-[47rem] sm:h-[29rem] overflow-hidden">
+            <div className="relative w-[95%] sm:w-[50%]">
+                <div className="relative flex w-full h-[43rem] sm:h-[29rem] overflow-hidden">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentIndex}
@@ -417,13 +417,13 @@ const Carousel = () => {
                 </div>
                 <button
                     onClick={prevSlide}
-                    className="absolute top-1/2 left-[-2.2rem] sm:left-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center focus:outline-none"
+                    className="absolute top-[94%] sm:top-1/2 left-[5.5rem] sm:left-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center focus:outline-none"
                 >
                     &larr;
                 </button>
                 <button
                     onClick={nextSlide}
-                    className="absolute top-1/2 right-[-2.2rem] sm:right-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white  w-8 h-8 sm:w-10 sm:h-10 items-center justify-center focus:outline-none"
+                    className="absolute top-[94%]  sm:top-1/2 right-[5.5rem] sm:right-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white  w-8 h-8 sm:w-10 sm:h-10 items-center justify-center focus:outline-none"
                 >
                     &rarr;
                 </button>
