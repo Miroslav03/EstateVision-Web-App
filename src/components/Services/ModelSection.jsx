@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 export default function ModelSection({ modelSectionRef }) {
@@ -227,51 +227,68 @@ export default function ModelSection({ modelSectionRef }) {
                 Какво представляват 3D виртуалните разходки?
             </h2>
 
-            <div className="flex flex-col gap-12 justify-center items-center w-[50%] text-gray-500 text-lg mt-8">
-                <div className="">
-                    <p>
-                        В последните години технологиите, свързани с виртуалната
-                        реалност, бързо се развиват и намират все по-широко
-                        приложение в различни индустрии. 3D виртуалните разходки
-                        са една от тези иновации, която прави революция в
-                        начините, по които хората представят имоти и
-                        пространства. С помощта на специализирани камери и
-                        софтуер, тази технология позволява на потребителите да
-                        „обикалят“ даденото пространство чрез компютър или
-                        мобилно устройство, сякаш се намират вътре в него. Това
-                        е като да влезеш в нова сграда или жилище, без да се
-                        налага да напускаш комфортната си зона.
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        За разлика от стандартните снимки или видеоклипове, 3D
-                        виртуалната разходка предоставя пълна свобода на
-                        движение, давайки възможност за оглед на всяко кътче на
-                        обекта. Чрез специфични 3D модели и панорами, които
-                        обхващат 360 градуса, този тип виртуална обиколка
-                        създава усещането за реално присъствие, без физически да
-                        бъдеш там.
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        Въпреки че технологиите за виртуални разходки
-                        съществуват от известно време, тяхното широко приложение
-                        започва да се налага в последните години. Страните,
-                        които най-често използват тази иновация, включват САЩ,
-                        Великобритания, Германия и Австралия. В тези региони 3D
-                        виртуалните обиколки са се доказали като ефективен
-                        инструмент в много индустрии, най-вече при продажбата и
-                        отдаването под наем на имоти.
-                    </p>
-                </div>
-            </div>
-
+            <AnimatedTextSection />
+            <Benefits />
             <Carousel />
         </section>
     );
 }
+
+const AnimatedTextSection = () => {
+    const containerVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: { delay: i * 0.2, duration: 0.8, ease: "easeOut" },
+        }),
+    };
+
+    return (
+        <div className="flex flex-col gap-12 justify-center items-center w-[50%] text-gray-500 text-lg mt-8">
+            {[
+                `В последните години технологиите, свързани с виртуалната
+          реалност, бързо се развиват и намират все по-широко
+          приложение в различни индустрии. 3D виртуалните разходки
+          са една от тези иновации, която прави революция в
+          начините, по които хората представят имоти и
+          пространства. С помощта на специализирани камери и
+          софтуер, тази технология позволява на потребителите да
+          „обикалят“ даденото пространство чрез компютър или
+          мобилно устройство, сякаш се намират вътре в него. Това
+          е като да влезеш в нова сграда или жилище, без да се
+          налага да напускаш комфортната си зона.`,
+                `За разлика от стандартните снимки или видеоклипове, 3D
+          виртуалната разходка предоставя пълна свобода на
+          движение, давайки възможност за оглед на всяко кътче на
+          обекта. Чрез специфични 3D модели и панорами, които
+          обхващат 360 градуса, този тип виртуална обиколка
+          създава усещането за реално присъствие, без физически да
+          бъдеш там.`,
+                `Въпреки че технологиите за виртуални разходки
+          съществуват от известно време, тяхното широко приложение
+          започва да се налага в последните години. Страните,
+          които най-често използват тази иновация, включват САЩ,
+          Великобритания, Германия и Австралия. В тези региони 3D
+          виртуалните обиколки са се доказали като ефективен
+          инструмент в много индустрии, най-вече при продажбата и
+          отдаването под наем на имоти.`,
+            ].map((text, index) => (
+                <motion.div
+                    key={index}
+                    custom={index}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={containerVariants}
+                    className=""
+                >
+                    <p>{text}</p>
+                </motion.div>
+            ))}
+        </div>
+    );
+};
 
 const Carousel = () => {
     const items = [
@@ -321,42 +338,64 @@ const Carousel = () => {
         );
     };
 
+    const animationVariants = {
+        initial: { opacity: 0, x: 50 },
+        animate: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+        exit: { opacity: 0, x: -50, transition: { duration: 0.5 } },
+    };
+
+    const carouselSpawnVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, ease: "easeOut" },
+        },
+    };
+
     return (
-        <>
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={carouselSpawnVariants}
+            className="w-full flex flex-col items-center"
+        >
             <h2
                 id="gallery-heading"
                 className="mb-8 mt-20 text-3xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-8 border-yellow-500 inline-block pb-2"
             >
                 Приложение на 3D разходките
             </h2>
-            <div className="relative w-[50%] ">
-                <div className="relative flex w-full h-[29rem] transition-transform duration-500">
-                    {items.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`w-full flex-shrink-0 p-4 ${
-                                index === currentIndex ? "block" : "hidden"
-                            }`}
+            <div className="relative w-[50%]">
+                <div className="relative flex w-full h-[29rem] overflow-hidden">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currentIndex}
+                            variants={animationVariants}
+                            initial="initial"
+                            animate="animate"
+                            exit="exit"
+                            className="w-full flex-shrink-0 p-4"
                         >
-                            <div className="h-full border border-yellow-500 ">
+                            <div className="h-full border border-yellow-500">
                                 <img
-                                    src={item.imgSrc}
-                                    alt={item.title}
+                                    src={items[currentIndex].imgSrc}
+                                    alt={items[currentIndex].title}
                                     className="w-full h-48 object-cover rounded-t-lg"
                                 />
                                 <div className="p-4">
                                     <h1 className="text-2xl text-white font-bold mb-2">
-                                        {item.title}
+                                        {items[currentIndex].title}
                                     </h1>
-                                    <p className="text-gray-500 text-md sm:text-lg ">
-                                        {item.description}
+                                    <p className="text-gray-500 text-md sm:text-lg">
+                                        {items[currentIndex].description}
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
-                {/* Slider controls */}
 
                 {/* Indicators */}
                 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -374,17 +413,100 @@ const Carousel = () => {
                 </div>
                 <button
                     onClick={prevSlide}
-                    className="absolute top-1/2 left-[-3rem]  transform -translate-y-1/2 bg-yellow-500 text-white  w-10 h-10 flex items-center justify-center focus:outline-none"
+                    className="absolute top-1/2 left-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center focus:outline-none"
                 >
                     &larr;
                 </button>
                 <button
                     onClick={nextSlide}
-                    className="absolute top-1/2 right-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white  w-10 h-10 flex items-center justify-center focus:outline-none"
+                    className="absolute top-1/2 right-[-3rem] transform -translate-y-1/2 bg-yellow-500 text-white w-10 h-10 flex items-center justify-center focus:outline-none"
                 >
                     &rarr;
                 </button>
             </div>
-        </>
+        </motion.div>
+    );
+};
+
+const Benefits = () => {
+    const [animationKey, setAnimationKey] = useState(Date.now());
+
+    // Update the key whenever the component is revisited
+    useEffect(() => {
+        setAnimationKey(Date.now());
+    }, []);
+
+    const cardVariants = {
+        hidden: { opacity: 0, scale: 0.95 },
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+    };
+
+    const items = [
+        {
+            icon: "1",
+            title: "Пестене на време и усилия",
+            description: `За клиентите 3D виртуалната разходка означава, че не трябва да губят време в посещения на различни обекти. Вместо това, те могат да разгледат имота онлайн, да се уверят дали отговаря на техните изисквания и да решат дали искат да го посетят лично.
+`,
+        },
+        {
+            icon: "2",
+            title: "Подобрено вземане на решения",
+            description:
+                "Виртуалната разходка позволява на клиентите да видят подробности, които може да са пропуснали при обикновеното физическо посещение. Това може да включва специфични архитектурни особености, местоположението на стаите, както и общото усещане за пространство.",
+        },
+        {
+            icon: "3",
+            title: "Удобство за всички",
+            description:
+                "Много клиенти, особено тези, които живеят в чужбина или имат ограничени физически възможности, ще намерят виртуалната разходка за изключително полезна. Технологията позволява на всеки да се запознае с имота, без да е необходимо да пътува дълго разстояние.",
+        },
+    ];
+
+    return (
+        <section
+            key={animationKey} // Reset animation on revisit
+            className=" bg-gradient-to-r from-dark-700 to-dark-500  mt-24"
+        >
+            <div className="container mx-auto px-6 sm:px-0">
+                <div className="-mx-4 flex flex-wrap">
+                    {items.map((item, index) => (
+                        <motion.article
+                            key={index}
+                            className={`w-full px-4 md:w-1/2 lg:w-1/3 ${
+                                index === 0
+                                    ? "mt-10 sm:mt-[10.5rem]"
+                                    : index === 1
+                                    ? "mt-0 sm:mt-20"
+                                    : ""
+                            }`}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false }} // Set to false to trigger animation each time in view
+                            variants={cardVariants}
+                        >
+                            <div
+                                style={{
+                                    boxShadow:
+                                        "0 0 100px rgba(255, 193, 7, 0.05)",
+                                }}
+                                className="mb-9 border-yellow-500 border-l-4 sm:border-l-8 bg-dark-500 p-10 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10"
+                            >
+                                <div className="mb-8 flex sm:h-[70px] sm:w-[70px] h-[50px] w-[50px] items-center justify-center bg-primary bg-yellow-300">
+                                    <p className=" text-2xl sm:text-4xl text-white font-bold">
+                                        {item.icon}
+                                    </p>
+                                </div>
+                                <h4 className="mb-[14px] text-2xl sm:text-3xl font-semibold text-white">
+                                    {item.title}
+                                </h4>
+                                <p className="text-gray-500 text-md sm:text-xl">
+                                    {item.description}
+                                </p>
+                            </div>
+                        </motion.article>
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 };
