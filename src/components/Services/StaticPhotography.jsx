@@ -250,7 +250,7 @@ const Accordion = () => {
     };
 
     return (
-        <div className="w-full flex flex-col items-center mt-[-0.5rem] sm:mt-[-4rem]">
+        <div className="w-full flex flex-col items-center mt-[-0.5rem] sm:mt-[-4rem] mb-10">
             {accordionData.map((item, index) => (
                 <div
                     key={index}
