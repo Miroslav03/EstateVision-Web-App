@@ -47,7 +47,7 @@ export default function HeroSection({ serviceSectionRef }) {
                 <article className="flex flex-col items-start sm:px-[4.5rem] px-4 mt-4 sm:mt-8 lg:mt-0 pb-8 py-20">
                     <header>
                         <motion.h1
-                            className="text-white font-main lg:text-6xl xl:text-6xl 2xl:text-[5rem] sm:leading-tight text-[2.9rem] leading-[1] px-[1.5rem] sm:px-0 pt-12 lg:pt-8"
+                            className="text-white font-main lg:text-6xl xl:text-6xl 2xl:text-[5rem] sm:leading-tight text-[2.7rem] leading-[1] px-[1.5rem] sm:px-0 pt-12 lg:pt-8"
                             variants={textVariants}
                         >
                             Превърнете всеки вид пространство в{" "}
