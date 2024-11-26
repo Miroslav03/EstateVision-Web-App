@@ -81,7 +81,7 @@ export default function HowItWorksSection() {
                                         className="cursor-pointer text-white font-main px-5 py-[0.5rem] text-sm sm:text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
                                     >
                                         <p className="z-20 group-hover:text-dark-500">
-                                            Разгелдай услуги
+                                            Разгледай услуги
                                         </p>
                                         <span className="ms-2 z-20 group-hover:text-dark-500">
                                             &#8593;
