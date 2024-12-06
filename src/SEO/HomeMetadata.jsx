@@ -6,7 +6,7 @@ export default function HomeMetadata() {
         <Helmet>
             {/* SEO Meta Tags */}
             <title>
-            3D Виртуални Обиколки | Интериорна Фотография | Заснемане с Дрон
+                3D Виртуални Обиколки | Интериорна Фотография | Заснемане с Дрон
             </title>
             <meta
                 name="description"
@@ -46,7 +46,11 @@ export default function HomeMetadata() {
                 name="viewport"
                 content="width=device-width, initial-scale=1"
             />
-
+            {/* Canonical Tag */}
+            <link
+                rel="canonical"
+                href="https://www.estatevisionbulgaria.com/"
+            />
             {/* JSON-LD Structured Data */}
             <script type="application/ld+json">
                 {`

@@ -44,7 +44,10 @@ export default function PricingMetadata() {
                 name="viewport"
                 content="width=device-width, initial-scale=1"
             />
-
+            <link
+                rel="canonical"
+                href="https://www.estatevisionbulgaria.com/prices"
+            />
             {/* JSON-LD Structured Data */}
             <script type="application/ld+json">
                 {`

@@ -42,7 +42,10 @@ export default function ContactUsMetadata() {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-
+                <link
+                    rel="canonical"
+                    href="https://www.estatevisionbulgaria.com/contact"
+                />
                 {/* JSON-LD Structured Data */}
                 <script type="application/ld+json">
                     {`
