@@ -1,5 +1,6 @@
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import ModelServiceMetadata from "../../SEO/3DModelMetadata";
 
 // eslint-disable-next-line react/prop-types
 export default function ModelSection({ modelSectionRef }) {
@@ -12,155 +13,159 @@ export default function ModelSection({ modelSectionRef }) {
     };
 
     return (
-        <section
-            ref={modelSectionRef}
-            className="w-full h-max overflow-hidden flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 pt-20"
-        >
-            <header className="flex flex-col justify-center items-center">
-                <motion.h1
-                    whileInView={{ opacity: 1, y: 0 }}
-                    initial={{ opacity: 0, y: 50 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: false }}
-                    className="text-white text-3xl sm:text-6xl  mt-10 sm:mt-24 border-b-4 sm:border-b-8 border-b-yellow-400 pb-2  text-center"
-                    id="save-time-heading"
-                >
-                    <span className="text-yellow-400 text-3xl sm:text-6xl ">
-                        3D{" "}
-                    </span>
-                    виртуални разходки.
-                </motion.h1>
-
-                <motion.p
-                    whileInView={{ opacity: 1 }}
-                    initial={{ opacity: 0 }}
-                    transition={{ delay: 0.2, duration: 1 }}
-                    viewport={{ once: true }}
-                    className="text-gray-500 text-sm sm:text-lg lg:text-xl mt-4 max-w-full sm:max-w-2xl text-center px-2 sm:px-0"
-                >
-                    Разкрийте пълния потенциал на вашия имот чрез 3D виртуална
-                    обиколка
-                </motion.p>
-            </header>
-
-            <motion.iframe
-                onViewportEnter={handlePlayOnce}
-                whileInView={{ opacity: 1, scale: 1 }}
-                initial={{ opacity: 0, scale: 0.9 }}
-                transition={{ delay: 0.6, duration: 0.3 }}
-                viewport={{ once: true }}
-                style={{
-                    boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
-                }}
-                className="w-full mt-16 sm:mt-16 h-[60vh] sm:h-[57vw] sm:max-h-[57w] border-b-4 sm:border-b-8 border-yellow-500"
-                src="https://my.matterport.com/show/?m=rKEjqUjdNKe&log=0&help=0&nt=0&play=0&qs=0&brand=1&dh=1&tour=1&gt=1&hr=1&mls=0&mt=1&tagNav=1&pin=1&portal=1&f=1&fp=1&nozoom=0&search=1&wh=0&kb=1&lp=0&title=1&tourcta=1&vr=1&title=0"
-                frameBorder="0"
-                allowFullScreen
-                allow="xr-spatial-tracking"
-            ></motion.iframe>
-            <motion.article
-                whileInView="visible"
-                initial="hidden"
-                variants={{
-                    hidden: { opacity: 0 },
-                    visible: {
-                        opacity: 1,
-                        transition: {
-                            staggerChildren: 0.2,
-                            delayChildren: 1.2,
-                        },
-                    },
-                }}
-                viewport={{ once: false }}
-                className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 py-24 gap-y-16 gap-x-16 place-items-center"
+        <>
+            <ModelServiceMetadata />
+            <section
+                ref={modelSectionRef}
+                className="w-full h-max overflow-hidden flex flex-col items-center bg-gradient-to-r from-dark-700 to-dark-500 pt-20"
             >
-                {[
-                    {
-                        src: "/3dInsight.png",
-                        title: "Печели повече клиенти",
-                        subtitle: (
-                            <>
-                                Разгледай{" "}
-                                <span className="text-yellow-500">
-                                    сякаш си там.
-                                </span>
-                            </>
-                        ),
-                        description:
-                            "3D разходката дава свободата да бъдат разгледани всяка стая и ъгъл от имота, сякаш сте физически там. Движете се свободно из пространството, разглеждайте детайлите отблизо и получете пълна представа за имота от удобството на вашия дом.",
-                    },
-                    {
-                        src: "/3dmetrix.png",
-                        title: "Увеличи трафика си",
-                        subtitle: (
-                            <>
-                                Размери{" "}
-                                <span className="text-yellow-500">
-                                    в реално време
-                                </span>
-                            </>
-                        ),
-                        description:
-                            "Получете моментален достъп до точните размери на всяко пространство с един клик чрез интегрираната измервателна система. Планирайте предварително със сигурност и прецизност!",
-                    },
-                    {
-                        src: "/3dAi.png",
-                        title: "Съдържание на по-високо ниво",
-                        subtitle: (
-                            <>
-                                Виж пространството,{" "}
-                                <span className="text-yellow-500">
-                                    както никога досега
-                                </span>
-                            </>
-                        ),
-                        description:
-                            "Dollhouse изгледът е като миниатюрна версия на имота, която ви позволява да видите цялото пространство от птичи поглед. Това ви дава бърза и лесна ориентация в разположението на стаите и обзавеждането.",
-                    },
-                    {
-                        src: "/3dFromTop.png",
-                        title: "Затваряйте клиенти по-бързо",
-                        subtitle: (
-                            <>
-                                Премахни мебелите{" "}
-                                <span className="text-yellow-500">с AI</span>
-                            </>
-                        ),
-                        description:
-                            "С опцията defurnishing  може лесно да премахнете мебелите от 3D обиколката и да създадеш празно пространство, готово за нови идеи.",
-                    },
-                ].map((item, index) => (
-                    <motion.div
-                        key={index}
+                <header className="flex flex-col justify-center items-center">
+                    <motion.h1
                         whileInView={{ opacity: 1, y: 0 }}
                         initial={{ opacity: 0, y: 50 }}
-                        transition={{ duration: 0.8, delay: index * 0.3 }}
+                        transition={{ duration: 1 }}
                         viewport={{ once: false }}
-                        style={{
-                            boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
-                        }}
-                        className="w-[90%] sm:w-[100%] h-[480x]  sm:h-[550px]  sm:max-w-xl overflow-hidden border-yellow-500 sm:border-l-8 border-l-4"
+                        className="text-white text-3xl sm:text-6xl  mt-10 sm:mt-24 border-b-4 sm:border-b-8 border-b-yellow-400 pb-2  text-center"
+                        id="save-time-heading"
                     >
-                        <figure className="h-[50%] sm:h-[60%] w-full relative overflow-hidden">
-                            <img
-                                className="w-full h-full scale-110"
-                                src={item.src}
-                                alt="Estate example"
-                            />
-                        </figure>
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-2xl sm:text-3xl mb-2 text-white">
-                                {item.subtitle}
-                            </div>
-                            <p className="text-gray-500 text-md sm:text-lg">
-                                {item.description}
-                            </p>
-                        </div>
-                    </motion.div>
-                ))}
-            </motion.article>
+                        <span className="text-yellow-400 text-3xl sm:text-6xl ">
+                            3D{" "}
+                        </span>
+                        виртуални разходки.
+                    </motion.h1>
 
-            {/*        <motion.article
+                    <motion.p
+                        whileInView={{ opacity: 1 }}
+                        initial={{ opacity: 0 }}
+                        transition={{ delay: 0.2, duration: 1 }}
+                        viewport={{ once: true }}
+                        className="text-gray-500 text-sm sm:text-lg lg:text-xl mt-4 max-w-full sm:max-w-2xl text-center px-2 sm:px-0"
+                    >
+                        Разкрийте пълния потенциал на вашия имот чрез 3D
+                        виртуална обиколка
+                    </motion.p>
+                </header>
+
+                <motion.iframe
+                    onViewportEnter={handlePlayOnce}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
+                    viewport={{ once: true }}
+                    style={{
+                        boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
+                    }}
+                    className="w-full mt-16 sm:mt-16 h-[60vh] sm:h-[57vw] sm:max-h-[57w] border-b-4 sm:border-b-8 border-yellow-500"
+                    src="https://my.matterport.com/show/?m=rKEjqUjdNKe&log=0&help=0&nt=0&play=0&qs=0&brand=1&dh=1&tour=1&gt=1&hr=1&mls=0&mt=1&tagNav=1&pin=1&portal=1&f=1&fp=1&nozoom=0&search=1&wh=0&kb=1&lp=0&title=1&tourcta=1&vr=1&title=0"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="xr-spatial-tracking"
+                ></motion.iframe>
+                <motion.article
+                    whileInView="visible"
+                    initial="hidden"
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.2,
+                                delayChildren: 1.2,
+                            },
+                        },
+                    }}
+                    viewport={{ once: false }}
+                    className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 py-24 gap-y-16 gap-x-16 place-items-center"
+                >
+                    {[
+                        {
+                            src: "/3dInsight.png",
+                            title: "Печели повече клиенти",
+                            subtitle: (
+                                <>
+                                    Разгледай{" "}
+                                    <span className="text-yellow-500">
+                                        сякаш си там.
+                                    </span>
+                                </>
+                            ),
+                            description:
+                                "3D разходката дава свободата да бъдат разгледани всяка стая и ъгъл от имота, сякаш сте физически там. Движете се свободно из пространството, разглеждайте детайлите отблизо и получете пълна представа за имота от удобството на вашия дом.",
+                        },
+                        {
+                            src: "/3dmetrix.png",
+                            title: "Увеличи трафика си",
+                            subtitle: (
+                                <>
+                                    Размери{" "}
+                                    <span className="text-yellow-500">
+                                        в реално време
+                                    </span>
+                                </>
+                            ),
+                            description:
+                                "Получете моментален достъп до точните размери на всяко пространство с един клик чрез интегрираната измервателна система. Планирайте предварително със сигурност и прецизност!",
+                        },
+                        {
+                            src: "/3dAi.png",
+                            title: "Съдържание на по-високо ниво",
+                            subtitle: (
+                                <>
+                                    Виж пространството,{" "}
+                                    <span className="text-yellow-500">
+                                        както никога досега
+                                    </span>
+                                </>
+                            ),
+                            description:
+                                "Dollhouse изгледът е като миниатюрна версия на имота, която ви позволява да видите цялото пространство от птичи поглед. Това ви дава бърза и лесна ориентация в разположението на стаите и обзавеждането.",
+                        },
+                        {
+                            src: "/3dFromTop.png",
+                            title: "Затваряйте клиенти по-бързо",
+                            subtitle: (
+                                <>
+                                    Премахни мебелите{" "}
+                                    <span className="text-yellow-500">
+                                        с AI
+                                    </span>
+                                </>
+                            ),
+                            description:
+                                "С опцията defurnishing  може лесно да премахнете мебелите от 3D обиколката и да създадеш празно пространство, готово за нови идеи.",
+                        },
+                    ].map((item, index) => (
+                        <motion.div
+                            key={index}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            transition={{ duration: 0.8, delay: index * 0.3 }}
+                            viewport={{ once: false }}
+                            style={{
+                                boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
+                            }}
+                            className="w-[90%] sm:w-[100%] h-[480x]  sm:h-[550px]  sm:max-w-xl overflow-hidden border-yellow-500 sm:border-l-8 border-l-4"
+                        >
+                            <figure className="h-[50%] sm:h-[60%] w-full relative overflow-hidden">
+                                <img
+                                    className="w-full h-full scale-110"
+                                    src={item.src}
+                                    alt="Estate example"
+                                />
+                            </figure>
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-2xl sm:text-3xl mb-2 text-white">
+                                    {item.subtitle}
+                                </div>
+                                <p className="text-gray-500 text-md sm:text-lg">
+                                    {item.description}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.article>
+
+                {/*        <motion.article
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 50 }}
                 transition={{ delay: 0.5, duration: 1 }}
@@ -181,7 +186,7 @@ export default function ModelSection({ modelSectionRef }) {
                 </div>
             </motion.article> */}
 
-            {/*      <motion.section
+                {/*      <motion.section
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -50 }}
                 transition={{ duration: 1 }}
@@ -220,21 +225,22 @@ export default function ModelSection({ modelSectionRef }) {
                 </figure>
             </motion.section> */}
 
-            <motion.h2
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 50 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: false }}
-                id="gallery-heading"
-                className="mb-4 sm:mt-8 text-2xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 pb-2"
-            >
-                Какво е 3D виртуална разходка?
-            </motion.h2>
+                <motion.h2
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: false }}
+                    id="gallery-heading"
+                    className="mb-4 sm:mt-8 text-2xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 pb-2"
+                >
+                    Какво е 3D виртуална разходка?
+                </motion.h2>
 
-            <AnimatedTextSection />
-            <Benefits />
-            <Carousel />
-        </section>
+                <AnimatedTextSection />
+                <Benefits />
+                <Carousel />
+            </section>
+        </>
     );
 }
 

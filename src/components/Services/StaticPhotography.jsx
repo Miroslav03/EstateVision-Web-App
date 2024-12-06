@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
+import PhotographyServiceMetadata from "../../SEO/StaticPhotographyMetadata";
 
 export default function StaticPhotography({ staticPhotographyRef }) {
     const containerRef = useRef(null);
@@ -93,121 +94,128 @@ export default function StaticPhotography({ staticPhotographyRef }) {
     ));
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 pt-24 sm:pt-28">
-            {/* Title Section */}
-            <motion.header
-                className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end gap-4 mt-4 sm:mt-12"
-                variants={fadeIn}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.5 }}
-            >
-                <div className="border-b-4 sm:border-b-8 border-yellow-500">
-                    <h1
-                        id="photography-title"
-                        className="text-3xl sm:text-6xl font-semibold mt-2 text-white mb-4"
-                    >
-                        Интериорна и екстериорна фотография
-                    </h1>
-                </div>
-                <div className="flex flex-col sm:gap-0 gap-6 items-start sm:items-end w-full mt-2">
-                    <p className="text-gray-500 text-md sm:text-xl">
-                        Разгледай и избери услугата за теб
-                    </p>
-                </div>
-            </motion.header>
-            {/* Images Section */}
-            <motion.section
-                className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col lg:flex-row items-center gap-16 sm:gap-32 sm:mb-20"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.5 }}
-                variants={fadeIn}
-                aria-labelledby="presence-through-photography"
-            >
-                <motion.figure
-                    className="flex relative lg:w-1/2 w-full justify-center"
-                    style={{ boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)" }}
-                    variants={slideInLeft}
+        <>
+            <PhotographyServiceMetadata />
+            <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-dark-700 to-dark-500 gap-8 sm:gap-32 pt-24 sm:pt-28">
+                {/* Title Section */}
+                <motion.header
+                    className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col items-end gap-4 mt-4 sm:mt-12"
+                    variants={fadeIn}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ amount: 0.5 }}
                 >
-                    <img
-                        src="/k2-min.jpg"
-                        alt="First"
-                        className="w-[100%] h-auto border-l-4 sm:border-l-8 border-yellow-500"
-                    />
-                    <img
-                        src="/k1-2-min.jpg"
-                        alt="Second"
-                        className="w-[40%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-4 sm:border-l-8 border-yellow-500"
-                    />
-                </motion.figure>
-
-                <motion.article
-                    className="flex flex-col items-start lg:w-1/2 w-full"
-                    variants={slideInRight}
+                    <div className="border-b-4 sm:border-b-8 border-yellow-500">
+                        <h1
+                            id="photography-title"
+                            className="text-3xl sm:text-6xl font-semibold mt-2 text-white mb-4"
+                        >
+                            Интериорна и екстериорна фотография
+                        </h1>
+                    </div>
+                    <div className="flex flex-col sm:gap-0 gap-6 items-start sm:items-end w-full mt-2">
+                        <p className="text-gray-500 text-md sm:text-xl">
+                            Разгледай и избери услугата за теб
+                        </p>
+                    </div>
+                </motion.header>
+                {/* Images Section */}
+                <motion.section
+                    className="w-full max-w-[90%] lg:max-w-[80%] flex flex-col lg:flex-row items-center gap-16 sm:gap-32 sm:mb-20"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ amount: 0.5 }}
+                    variants={fadeIn}
+                    aria-labelledby="presence-through-photography"
                 >
-                    <h2 className="text-2xl sm:text-5xl font-semibold text-white mb-4">
-                        Внимание върху{" "}
-                        <span className="text-yellow-500">детайла </span>
-                    </h2>
-                    <p className="text-gray-500 text:md sm:text-xl mb-6 max-w-lg">
-                        Превръщаме вашите пространства в запомнящи се визуални
-                        истории чрез майсторска фотография, която улавя всеки
-                        значим детайл и специфична атмосфера. С професионален
-                        поглед и внимание към финеса създаваме въздействащи
-                        кадри, които подчертават уникалността на вашите имоти и
-                        оставят трайно впечатление.
-                    </p>
-
-                    <Link
-                        className="text-white font-main px-5 py-2 text-sm sm:text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
-                        to="/prices"
+                    <motion.figure
+                        className="flex relative lg:w-1/2 w-full justify-center"
+                        style={{
+                            boxShadow: "0 0 100px rgba(255, 193, 7, 0.05)",
+                        }}
+                        variants={slideInLeft}
                     >
-                        <span className="z-20 group-hover:text-dark-500">
-                            Цени
-                        </span>
-                        <span className="ms-2 z-20 group-hover:text-dark-500">
-                            &rarr;
-                        </span>
-                        <span className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></span>
-                    </Link>
-                </motion.article>
-            </motion.section>
+                        <img
+                            src="/k2-min.jpg"
+                            alt="First"
+                            className="w-[100%] h-auto border-l-4 sm:border-l-8 border-yellow-500"
+                        />
+                        <img
+                            src="/k1-2-min.jpg"
+                            alt="Second"
+                            className="w-[40%] h-auto absolute -bottom-12 -right-2 sm:-right-12 border-l-4 sm:border-l-8 border-yellow-500"
+                        />
+                    </motion.figure>
 
-            {/* Gallery Header */}
-            <motion.section
-                className="px-4 mx-auto max-w-screen-xl lg:px-6 py-16 sm:py-0"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.5 }}
-                variants={fadeIn}
-            >
-                <header className="max-w-screen-md flex justify-center items-center flex-col">
-                    <h2
-                        id="gallery-heading"
-                        className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 inline-block pb-2"
+                    <motion.article
+                        className="flex flex-col items-start lg:w-1/2 w-full"
+                        variants={slideInRight}
                     >
-                        Нашата галерия
-                    </h2>
-                    <p className="text-white text-2xl sm:text-5xl text-center">
-                        <span className="text-yellow-500 font-bold">72%</span>{" "}
-                        от клиентите са по-склонни да изберат имот, когато
-                        виждат професионални снимки.
-                    </p>
-                </header>
-            </motion.section>
+                        <h2 className="text-2xl sm:text-5xl font-semibold text-white mb-4">
+                            Внимание върху{" "}
+                            <span className="text-yellow-500">детайла </span>
+                        </h2>
+                        <p className="text-gray-500 text:md sm:text-xl mb-6 max-w-lg">
+                            Превръщаме вашите пространства в запомнящи се
+                            визуални истории чрез майсторска фотография, която
+                            улавя всеки значим детайл и специфична атмосфера. С
+                            професионален поглед и внимание към финеса създаваме
+                            въздействащи кадри, които подчертават уникалността
+                            на вашите имоти и оставят трайно впечатление.
+                        </p>
 
-            {/* Image Carousel */}
+                        <Link
+                            className="text-white font-main px-5 py-2 text-sm sm:text-lg transition duration-300 relative overflow-hidden flex items-center justify-center group bg-yellow-500 hover:ring-2 hover:ring-yellow-500"
+                            to="/prices"
+                        >
+                            <span className="z-20 group-hover:text-dark-500">
+                                Цени
+                            </span>
+                            <span className="ms-2 z-20 group-hover:text-dark-500">
+                                &rarr;
+                            </span>
+                            <span className="absolute z-10 w-full h-full bg-white transition-all duration-300 left-full group-hover:left-0"></span>
+                        </Link>
+                    </motion.article>
+                </motion.section>
 
-            <ImageCarousel />
-            <h2
-                id="gallery-heading"
-                className="mb-4 text-3xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 inline-block pb-2"
-            >
-                Oще за фотографията
-            </h2>
-            <Accordion />
-        </section>
+                {/* Gallery Header */}
+                <motion.section
+                    className="px-4 mx-auto max-w-screen-xl lg:px-6 py-16 sm:py-0"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ amount: 0.5 }}
+                    variants={fadeIn}
+                >
+                    <header className="max-w-screen-md flex justify-center items-center flex-col">
+                        <h2
+                            id="gallery-heading"
+                            className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 inline-block pb-2"
+                        >
+                            Нашата галерия
+                        </h2>
+                        <p className="text-white text-2xl sm:text-5xl text-center">
+                            <span className="text-yellow-500 font-bold">
+                                72%
+                            </span>{" "}
+                            от клиентите са по-склонни да изберат имот, когато
+                            виждат професионални снимки.
+                        </p>
+                    </header>
+                </motion.section>
+
+                {/* Image Carousel */}
+
+                <ImageCarousel />
+                <h2
+                    id="gallery-heading"
+                    className="mb-4 text-3xl sm:text-5xl tracking-tight font-extrabold text-white text-center border-b-4 sm:border-b-8 border-yellow-500 inline-block pb-2"
+                >
+                    Oще за фотографията
+                </h2>
+                <Accordion />
+            </section>
+        </>
     );
 }
 
